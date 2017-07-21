@@ -73,3 +73,12 @@ textarea.parsley-error {
 .parsley-errors-list.filled {
   opacity: 1;
 }
+
+.ui-widget-header .ui-icon {
+  background-image: url(../images/ui-icons_444444_256x240.png);
+}
+
+#ui-datepicker-div {
+  background-color: white;
+  padding: 2px;
+}

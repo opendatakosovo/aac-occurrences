@@ -9,7 +9,9 @@
       <title>CAA</title>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style/jquery-ui.min.css">
       <link rel="stylesheet" href="style/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/images/ui-icons_444444_256x240.png">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.js"></script>
 
@@ -17,6 +19,14 @@
       <!-- polyfiller file to detect and load polyfills -->
       <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
 
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+      $( function() {
+        $( "#datepicker" ).datepicker();
+      } );
+      </script>
 
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -107,7 +117,7 @@
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="date" title="Required">Date: * </label>
                 <p class="error-message"></p>
-                <input type="date" class="form-control" name="flight_number" data-parsley-trigger="change" required="" value="" id="flight-number">
+                <input class="form-control" id="datepicker" name="flight_number" data-parsley-trigger="change" required="" value="" id="flight-number">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="time-of-event" title="Required">Time of event: * </label>
@@ -222,128 +232,263 @@
             </div>
             <div class="row">
               <div class="form-group col-xs-12">
-                <p class="text-center">Nature of flight</p>
+                <br/>
+                <br/>
+                <h4 class="text-center">Nature of flight</h4>
+                <br/>
               </div>
               <div class="row text-center">
-                <div class="form-group col-xs-2">
-                  <input type="checkbox" name="" value="" id="passenger"><label for="passenger">Passenger</label>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="passenger" value="" id="passenger"><label for="passenger">Passenger</label>
                 </div>
-                <div class="form-group col-xs-2">
-                  <input type="checkbox" name="" value="" id="positioning"><label for="positioning">Positioning</label>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="positioning" value="" id="positioning"><label for="positioning">Positioning</label>
                 </div>
-                <div class="form-group col-xs-2">
-                  <input type="checkbox" name="" value="" id="passenger"><label for="passenger">Passenger</label>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="test" value="" id="test"><label for="test">Test</label>
                 </div>
-                <div class="form-group col-xs-2">
-                  <input type="checkbox" name="" value="" id="passenger"><label for="passenger">Passenger</label>
-                </div>
-                <div class="form-group col-xs-2">
-                  <input type="checkbox" name="" value="" id="passenger"><label for="passenger">Passenger</label>
-                </div>
-                <div class="form-group col-xs-2">
-                  <input type="checkbox" name="" value="" id="passenger"><label for="passenger">Passenger</label>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="business" value="" id="business"><label for="business">Business</label>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="form-group col-xs-12 col-sm-4 col-sm-4">
-                <label for="proper-shipping-name" title="Required">Proper shipping name: * </label>
-                <p class="error-message"></p>
-                <input type="text" class="form-control" name="proper_shipping_name" required="" value="" id="proper-shipping-name">
-              </div>
-              <div class="form-group col-xs-12 col-sm-4 col-sm-4">
-                <label for="class-division">Class/division: </label>
-                <p class="error-message"></p>
-                <select class="form-control" name="class_division" data-parsley-trigger="change" required=""  id="class-division">
-                  <option value="">Choose class/division</option>
-                  <option value="division1">Division1</option>
-                  <option value="division2">Division2</option>
-                  <option value="division3">Division3</option>
-                </select>
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="subsidary-risk">Subsidary risk(s): </label>
-                <p class="error-message"></p>
-                <select class="form-control" name="subsidary_risk" data-parsley-trigger="change" required=""  id="subsidary-risk">
-                  <option value="">Choose subsidary risk</option>
-                  <option value="division1">BATTERY FLUID</option>
-                  <option value="division2">ACID</option>
-                  <option value="division3">ADHESIVES</option>
-                  <option value="division3">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="packing-group" title="Required">Packing group: *</label>
-                <p class="error-message"></p>
-                <select class="form-control" name="packing_group" data-parsley-trigger="change" required=""  id="packing-group">
-                  <option value="">Choose packing group</option>
-                  <option value="division1">First</option>
-                  <option value="division2">Second</option>
-                  <option value="division3">Third</option>
-                  <option value="division3">Forth</option>
-                </select>
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="category" title="Required" >Category, (class 7 only): *</label>
-                <p class="error-message"></p>
-                <select class="form-control" name="category" data-parsley-trigger="change" required=""  id="category">
-                  <option value="">Choose category</option>
-                  <option value="division1">First</option>
-                  <option value="division2">Second</option>
-                  <option value="division3">Third</option>
-                  <option value="division3">Forth</option>
-                </select>
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="type-of-packaging" title="Required">Type of packaging: *</label>
-                <p class="error-message"></p>
-                <input type="text" class="form-control" name="type_of_packaging" value="" data-parsley-trigger="change" required=""  id="type-of-packaging">
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="packaging-specification-marking" title="Required">Packaging specification marking: *</label>
-                <p class="error-message"></p>
-                <input type="text" class="form-control" name="packaging_specification_marking" value="" data-parsley-trigger="change" required=""  id="packaging-specification-marking">
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="no-of-packages" title="Required">No. of packages: *</label>
-                <p class="error-message"></p>
-                <input type="number" class="form-control" name="no_of_packages" value="" data-parsley-trigger="change" required=""  id="no-of-packages">
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="quantity">Quantity (or transport index, if applicable): </label>
-                <p class="error-message"></p>
-                <input type="number" class="form-control" name="quantity" value="" data-parsley-trigger="change" required=""  id="quantity">
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="reference-no">Reference no. of Air Waybill: *</label>
-                <p class="error-message"></p>
-                <input type="number" class="form-control" title="Required" name="reference_no" value="" data-parsley-trigger="change" required=""  id="reference-no">
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <div class="row">
-                  <label class="col-xs-10" for="reference-ticket" title="Required">Reference ticket: * </label>
-                  <a href="#info" class="col-xs-2 text-center"  data-toggle="tooltip" data-placement="top" title="Reference no. of courier pouch, baggage tag, or passenger ticket:"> ?</a>
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="survey" value="" id="survey"><label for="survey">Survey</label>
                 </div>
-                <p class="error-message"></p>
-                <input type="number" class="form-control" title="Required" name="reference_ticket" value="" ata-parsley-trigger="change" required="" id="reference-ticket">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="club-group" value="" id="club_group"><label for="club-group">Club/group</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="parachuting" value="" id="parachuting"><label for="parachuting">Parachuting</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="police" value="" id="police"><label for="police">Police</label>
+                </div>
               </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="name-and-adrress" title="Required">Name and adrress of shipper, agent, passenger, etc.: *</label>
-                <p class="error-message"></p>
-                <input type="text" name="name_and_adrress" class="form-control" value="" data-parsley-trigger="change" required="" value="" id="name-and-adrress">
+            </div>
+            <div class="row">
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="freight" value="" id="freight"><label for="freight">Freight</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="ferry" value="" id="ferry"><label for="positioning">Ferry</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="training" value="" id="training"><label for="training">Training</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="agricultural" value="" id="agricultural"><label for="agricultural">Agricultural</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="" value="" id="passenger"><label for="passenger">Ems</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="pleasure" value="" id="pleasure"><label for="pleasure">Pleasure</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="private" value="" id="private"><label for="private">Private</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="towing" value="" id="towing"><label for="towing">Towing</label>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-xs-12">
-                <label for="other-relevant-information">Other relevant information: </label>
-                <p class="error-message"></p>
-                <textarea name="other_relevant_information" class="form-control" rows="8" cols="80" data-parsley-trigger="change" required="" id="other-relevant-information"></textarea>
+                <br/>
+                <br/>
+                <h4 class="text-center">Flight phase</h4>
+                <br/>
+              </div>
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="parked" value="" id="parked"><label for="parked">Parked</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="take-off" value="" id="take-off"><label for="take-off">Take-off</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="climb" value="" id="climb"><label for="climb">Climb</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="descent" value="" id="descent"><label for="descent">Descent</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="approach" value="" id="approach"><label for="approach">Approach</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="circuit" value="" id="circuit"><label for="circuit">Circuit</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="hover" value="" id="hover"><label for="hover">Hover</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="taxiing" value="" id="taxiing"><label for="taxiing">Taxiing</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="initial-climb" value="" id="initial-climb"><label for="initial-climb">Initial climb</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="cruise" value="" id="cruise"><label for="cruise">Cruise</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="holding" value="" id="holding"><label for="holding">Holding</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="landing" value="" id="landing"><label for="landing">Landing</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="aerobatics" value="" id="aerobatics"><label for="aerobatics">Aerobatics</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <h4>Precipitation</h4>
+                <br>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <h4>Other meteorological conditions</h4>
+                <br>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <h4>Runway state</h4>
+                <br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="rain" title="Required">Rain: </label><input type="checkbox" name="rain" value="" id="rain">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="sleet" title="alt-ht">Sleet: </label><input type="checkbox" name="sleet" value="sleet" id="sleet">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="snow" title="Required">Snow: </label><input type="checkbox" name="snow" value="" id="snow">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="hail" title="alt-ht">Hail: </label><input type="checkbox" name="hail" value="" id="hail">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="visibility" title="Required">Visibility </label><input type="checkbox" name="visibility" value="visibility" id="visibility">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="icing" title="alt-ht">Icing </label><input type="checkbox" name="icing" value="icing" id="icing">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="turbulence" title="Required">Turbulence </label><input type="checkbox" name="turbulence" value="turbulence" id="turbulence">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="oat" title="alt-ht">Oat (°C) </label><input type="checkbox" name="oat" value="oat" id="oat">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="dry-r">Dry </label><input type="checkbox" name="dry-r" value="dry-r" id="dry-r">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="ice-r">Ice</label><input type="checkbox" name="ice-r" value="ice-r" id="ice-r">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="slush-r">Slush </label><input type="checkbox" name="slush-r" value="slush-r" id="slush-r">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="wet-r">Wet</label><input type="checkbox" name="wet-r" value="wet-r" id="wet-r">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="snow-r">Snow</label><input type="checkbox" name="snow-r" value="snow-r" id="snow-r">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <h4>Wind</h4>
+                <br>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <h4>Cloud</h4>
+                <br>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <h4>Runway state</h4>
+                <br>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="dirn" title="Required">Dirn</label><input type="radio" name="wind" value="" id="dirn">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="speed">speed</label><input type="radio" name="wind" value="speed" id="speed">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="type" title="Required">Type</label><input type="radio" name="cloud" value="type" id="type">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="icing" title="alt-ht">HT (ft) </label><input type="radio" name="cloud" value="type" id="type">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="light">Light </label><input type="checkbox" name="light" value="light" id="light">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="ice-r">Ice</label><input type="checkbox" name="ice-r" value="ice-r" id="light">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="slush-r">Slush </label><input type="checkbox" name="slush-r" value="slush-r" id="slush-r">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="wet-r">Wet</label><input type="checkbox" name="wet-r" value="wet-r" id="wet-r">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="snow-r">Snow</label><input type="checkbox" name="snow-r" value="snow-r" id="snow-r">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
@@ -363,7 +508,7 @@
                 <input type="text" class="form-control" name="company_dept_code" value="" data-parsley-trigger="change" required="" id="company-dept-code">
               </div>
             </div>
-            <div class="row">
+            <div class="row form-group">
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="reporter-ref" title="Required">Reporter ref.: *</label>
                 <p class="error-message"></p>
