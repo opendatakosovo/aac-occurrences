@@ -34,37 +34,6 @@
     </head>
   </head>
   <body>
-    <script>
-
-        $("body").on("click", "#delete", function(){
-          var dataId = $(this).attr("data-id");
-          var click = $(this);
-          $.ajax({
-            url: '/audits/delete',
-            type: 'POST',
-            dataType: 'json',
-            data: {"audit_id": dataId},
-            success: function(data){
-              $(click).parent().parent().remove();
-            }
-
-          });
-        });
-
-        $('body').on('click', '#btn-submit', function(e){
-
-        //AJAX call request POST
-
-            $.post('/audits', $('#form').serialize(), function(data){
-              var dataId = $(this).attr("data-id");
-
-              $("tbody").append("<tr><td>" + data.audit.confidential + "</td><td>" + data.audit.operator_name + "</td><td>" + data.audit.local + "</td><td class='text-center'><a class='btn btn-success' href='/audits/" + data.audit.audit_id + "'>View</a><button id='delete' class='btn btn-danger' data-id=" + data.audit.audit_id + ">Delete</button></td></tr>");
-            });
-            e.preventDefault();
-          });
-
-    </script>
-
     <header>
         <h1 class="text-center">Dangerous Goods Occurrence Repost</h1>
     </header>
@@ -143,9 +112,6 @@
                   <option value="12">12</option>
                   <option value="13">13</option>
                 </select>
-
-                <!-- Day Night Twilight -->
-
               </div>
             </div>
             <div class="row">
@@ -365,6 +331,10 @@
             </div>
 
             <div class="row">
+              <div class="col-xs-12">
+                <h3 class="text-center">ENVIRONMENTAL DETAILS</h3>
+                <br/>
+              </div>
               <div class="col-xs-12 col-sm-4">
                 <h4>Precipitation</h4>
                 <br>
@@ -382,25 +352,34 @@
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="rain" title="Required">Rain: </label><input type="checkbox" name="rain" value="" id="rain">
+                    <label for="rain" title="Required">Rain </label><input type="checkbox" name="rain" value="" id="rain">
                   </div>
                   <div class="col-xs-6">
-                    <label for="sleet" title="alt-ht">Sleet: </label><input type="checkbox" name="sleet" value="sleet" id="sleet">
+                    <label for="sleet" title="alt-ht">Sleet </label><input type="checkbox" name="sleet" value="sleet" id="sleet">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="snow" title="Required">Snow: </label><input type="checkbox" name="snow" value="" id="snow">
+                    <label for="snow" title="Required">Snow </label><input type="checkbox" name="snow" value="" id="snow">
                   </div>
                   <div class="col-xs-6">
-                    <label for="hail" title="alt-ht">Hail: </label><input type="checkbox" name="hail" value="" id="hail">
+                    <label for="hail" title="alt-ht">Hail</label><input type="checkbox" name="hail" value="" id="hail">
                   </div>
                 </div>
               </div>
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="visibility" title="Required">Visibility </label><input type="checkbox" name="visibility" value="visibility" id="visibility">
+                    <label for="visibility" title="Required">Visibility </label>
+                    <div class="row">
+                      <div class="col-xs-7">
+                        <input type="number" name="visibility" class="form-control col-xs-6" value="" id="visibility">
+                      </div>
+                      <div class="col-xs-5">
+                        <label for="km">Km</label><input type="radio" name="speed-unit" value="km" id="km" class="col-sm-6">
+                        <label for="nm">Nm</label><input type="radio" name="speed-unit" value="nm" class="col-sm-6" id="nm">
+                      </div>
+                    </div>
                   </div>
                   <div class="col-xs-6">
                     <label for="icing" title="alt-ht">Icing </label><input type="checkbox" name="icing" value="icing" id="icing">
@@ -438,19 +417,17 @@
               </div>
             </div>
 
-
-
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <h4>Wind</h4>
+                <h4>Wind: *</h4>
                 <br>
               </div>
               <div class="col-xs-12 col-sm-4">
-                <h4>Cloud</h4>
+                <h4>Cloud: *</h4>
                 <br>
               </div>
               <div class="col-xs-12 col-sm-4">
-                <h4>Runway state</h4>
+                <h4>Runway state: *</h4>
                 <br>
               </div>
             </div>
@@ -458,20 +435,20 @@
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="dirn" title="Required">Dirn</label><input type="radio" name="wind" value="" id="dirn">
+                    <label for="dirn" title="Required">Dirn</label><input type="number" class="form-control" name="wind" value="" id="dirn">
                   </div>
                   <div class="col-xs-6">
-                    <label for="speed">speed</label><input type="radio" name="wind" value="speed" id="speed">
+                    <label for="speed">Speed</label><input type="number" class="form-control" name="wind" value="speed" id="speed">
                   </div>
                 </div>
               </div>
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="type" title="Required">Type</label><input type="radio" name="cloud" value="type" id="type">
+                    <label for="type" title="Required">Type</label><input type="number" class="form-control" name="cloud" value="type" id="type">
                   </div>
                   <div class="col-xs-6">
-                    <label for="icing" title="alt-ht">HT (ft) </label><input type="radio" name="cloud" value="type" id="type">
+                    <label for="icing" title="alt-ht">HT (ft) </label><input type="number" class="form-control"  name="cloud" value="type" id="type">
                   </div>
                 </div>
               </div>
