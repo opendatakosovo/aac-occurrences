@@ -11,22 +11,19 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href="style/jquery-ui.min.css">
       <link rel="stylesheet" href="style/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/images/ui-icons_444444_256x240.png">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.js"></script>
 
+
+      <link href="style/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.js"></script>
       <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
       <!-- polyfiller file to detect and load polyfills -->
       <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
 
-
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script>
-      $( function() {
-        $( "#datepicker" ).datepicker();
-      } );
-      </script>
+
 
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,6 +72,7 @@
 
       <form id="form" class="main-form" data-parsley-validate="" method="POST">
         <section class="container form-section">
+
             <section class="container confirm-section text-center">
               <p>Are you concerned about the confidentiality of this report and wish to be contacted before it is processed?
                 If so, please ensure you provide us with your contact details.<p>
@@ -117,7 +115,15 @@
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="date" title="Required">Date: * </label>
                 <p class="error-message"></p>
-                <input class="form-control" id="datepicker" name="flight_number" data-parsley-trigger="change" required="" value="" id="flight-number">
+                <div class="form-group">
+
+                          <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                              <input class="form-control" size="16" type="text" value="" id="date">
+                              <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+          					          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                          </div>
+          				<input type="hidden" id="dtp_input2" value="" /><br/>
+                </div>
               </div>
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="time-of-event" title="Required">Time of event: * </label>
@@ -561,17 +567,46 @@
     </section>
 
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+   <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
    <script src="js/script.js"></script>
    <script src="js/validation.js"></script>
 
    <!-- cdn for modernizr, if you haven't included it already -->
 
-   <script>
-     webshims.setOptions('waitReady', false);
-     webshims.setOptions('forms-ext', {types: 'date'});
-     webshims.polyfill('forms forms-ext');
-   </script>
-
+   <script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'en',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'en',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>
 
  </body>
 </html>

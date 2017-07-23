@@ -9,10 +9,21 @@
       <title>CAA</title>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style/jquery-ui.min.css">
       <link rel="stylesheet" href="style/style.css">
-      <link href="style/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+      <link href="style/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.js"></script>
+      <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+      <!-- polyfiller file to detect and load polyfills -->
+      <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
      <!--[if lt IE 9]>
@@ -81,26 +92,44 @@
                 <input type="text" class="form-control" value="" name="operator_name"  data-parsley-trigger="change" required="" id="operator">
               </div>
 
-              <div class="form-group date form_datetime col-xs-12 col-sm-4" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+              <div class="form-group date col-xs-12 col-sm-4" >
                 <label for="occurrence" title="Required">Date of occurrence: * </label>
                 <p class="error-message"></p>
-                <input type="date" name="occurrence" value="" readonly data-parsley-trigger="change" required="" data-parsley-type="digits" class="form-control form_datetime"  id="occurrence">
-               <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-		           <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
-               <input type="hidden" id="dtp_input1" value="" /><br/>
+                <div class="form-group">
+                      <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                        <input class="form-control" size="16" type="text" value="" name="occurrence" id="occurrence">
+                        <span class="input-group-addon"><span class="glyphicon  glyphicon-remove"></span></span>
+  					            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+          				<input type="hidden" id="dtp_input2" value="" /><br/>
+                </div>
               </div>
 
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="local" title="Required">Local time of occurrence: * </label>
                 <p class="error-message"></p>
-                <input type="time" name="local" data-parsley-trigger="change" required="" class="form-control" id="local">
+                <div class="form-group">
+                  <div class="input-group date form_time" data-date="" data-date-format="hh:ii"  data-link-field="dtp_input3" data-link-format="hh:ii">
+                    <input class="form-control" size="16" type="text" value="" name="local" id="local">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+          					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                  </div>
+          				<input type="hidden" id="dtp_input3" value="" /><br/>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="flight-date" title="Required">Flight date: * </label>
                 <p class="error-message"></p>
-                <input class="form-control" name="flight_date" data-parsley-trigger="change" required="" value="" type="datetime-local" id="flight-date"></input>
+                <div class="form-group">
+                    <div class="input-group date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                        <input class="form-control" size="16" type="text" value="" name="flight_date" id="flight-date">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                    <input type="hidden" id="dtp_input1" value="" /><br/>
+                </div>
               </div>
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="flight-number" title="Required">Flight number: * </label>
@@ -344,48 +373,47 @@
     </section>
 
 
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="js/jquery-1.8.3.min.js" charset="UTF-8"></script>
-   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
-   <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
-   </script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+       <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+       <script src="js/script.js"></script>
+       <script src="js/validation.js"></script>
 
-   <script src="js/script.js"></script>
-   <script src="js/validation.js"></script>
+       <!-- cdn for modernizr, if you haven't included it already -->
 
-         <script type="text/javascript">
-          $('.form_datetime').datetimepicker({
-              //language:  'fr',
-              weekStart: 1,
-              todayBtn:  1,
-      		autoclose: 1,
-      		todayHighlight: 1,
-      		startView: 2,
-      		forceParse: 0,
-              showMeridian: 1
-          });
-      	$('.form_date').datetimepicker({
-              language:  'fr',
-              weekStart: 1,
-              todayBtn:  1,
-      		autoclose: 1,
-      		todayHighlight: 1,
-      		startView: 2,
-      		minView: 2,
-      		forceParse: 0
-          });
-      	$('.form_time').datetimepicker({
-              language:  'en',
-              weekStart: 1,
-              todayBtn:  1,
-      		autoclose: 1,
-      		todayHighlight: 1,
-      		startView: 1,
-      		minView: 0,
-      		maxView: 1,
-      		forceParse: 0
-          });
-      </script>
+       <script type="text/javascript">
+        $('.form_datetime').datetimepicker({
+            //language:  'fr',
+            weekStart: 1,
+            todayBtn:  1,
+    		autoclose: 1,
+    		todayHighlight: 1,
+    		startView: 2,
+    		forceParse: 0,
+            showMeridian: 1
+        });
+    	$('.form_date').datetimepicker({
+            language:  'en',
+            weekStart: 1,
+            todayBtn:  1,
+    		autoclose: 1,
+    		todayHighlight: 1,
+    		startView: 2,
+    		minView: 2,
+    		forceParse: 0
+        });
+    	$('.form_time').datetimepicker({
+            language:  'en',
+            weekStart: 1,
+            todayBtn:  1,
+    		autoclose: 1,
+    		todayHighlight: 1,
+    		startView: 1,
+    		minView: 0,
+    		maxView: 1,
+    		forceParse: 0
+        });
+    </script>
+
  </body>
 </html>
