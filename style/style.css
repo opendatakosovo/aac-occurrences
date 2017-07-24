@@ -82,3 +82,11 @@ textarea.parsley-error {
   background-color: white;
   padding: 2px;
 }
+
+.visibility .col-xs-3 {
+  margin-top: -10px;
+}
+
+.ias .col-xs-2 {
+  margin-top: -10px;
+}

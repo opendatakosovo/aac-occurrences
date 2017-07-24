@@ -134,48 +134,47 @@
             <div class="row">
               <div class="form-group col-xs-12 col-sm-6">
                 <div class="row">
-                  <label for="location-of-occurrence" title="Required" class="col-xs-5">Fly: * </label>
-                  <label for="" title="alt-ht" class="col-xs-5">Alt/ht</label>
-                  <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
+
+
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <input type="radio" class="" data-parsley-trigger="change" required=""  name="fly-alt-ht" value="" id="location-of-occurrence">
+                    <label for="fly" title="Required">Fly</label>
+                    <input type="radio" class="" data-parsley-trigger="change" required=""  name="fly-alt-ht" value="" id="fly">
                   </div>
                   <div class="col-xs-6">
-                    <input type="radio" class="" name="fly-alt-ht" value="">
+                    <label for="alt-ht" title="alt-ht" class="  ">Alt/ht</label>
+                    <input type="radio" class="" name="fly-alt-ht" value="" id="alt-ht">
                   </div>
                 </div>
+                <p></p>
+                <input type="text" name="ft" value="" class="form-control">
               </div>
-              <div class="form-group col-xs-12 col-sm-6">
+              <div class="form-group col-xs-12 col-sm-6 ias">
                 <div class="row">
                     <label for="ias-kt" title="Required" class="col-xs-10">Ias (kt): * </label>
                     <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
                 </div>
                 <p class="error-message"></p>
-                <input type="text" class="form-control" data-parsley-trigger="change" required=""  name="fly-alt-ht" value="" id="ias-kt">
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-sm-4 col-xs-12">
                 <div class="row">
-                  <p class="error-message"></p>
-                  <div class="col-xs-5">
+                  <div class="col-xs-10">
+                    <input type="text" class="form-control " data-parsley-trigger="change" required=""  name="fly-alt-ht" value=""  id="ias-kt">
+                  </div>
+                  <div class="col-xs-2">
                     <label for="ifr">Ifr</label>
                     <input type="radio" name="ifr" data-parsley-trigger="change" required="" value="ifr" id="ifr">
-                  </div>
-                  <div class="col-xs-5">
+                    <br>
                     <label for="vfr">Vfr</label>
                     <input type="radio" name="ifr" data-parsley-trigger="change" required="" value="vfr" id="vfr">
                   </div>
-                  <div class="col-xs-2">
-                    <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
-                  </div>
                 </div>
               </div>
-              <div class="form-group col-sm-4 col-xs-12">
+            </div>
+            <div class="row">
+              <div class="form-group col-sm-6 col-xs-12">
                 <label for="">Tcasra</label>
-                <br />
+                <br>
+                <br>
                 <div class="row">
                   <div class="col-xs-6">
                     <label for="yes-t">Yes</label>
@@ -187,8 +186,9 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group col-sm-4 col-xs-12">
+              <div class="form-group col-sm-6 col-xs-12">
                 <label for="">Etops</label>
+                <br>
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
@@ -230,7 +230,7 @@
                   <input type="checkbox" name="survey" value="" id="survey"><label for="survey">Survey</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="club-group" value="" id="club_group"><label for="club-group">Club/group</label>
+                  <input type="checkbox" name="club-group" value="" id="club-group"><label for="club-group">Club/group</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="parachuting" value="" id="parachuting"><label for="parachuting">Parachuting</label>
@@ -246,7 +246,7 @@
                   <input type="checkbox" name="freight" value="" id="freight"><label for="freight">Freight</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="ferry" value="" id="ferry"><label for="positioning">Ferry</label>
+                  <input type="checkbox" name="ferry" value="" id="ferry"><label for="ferry">Ferry</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="training" value="" id="training"><label for="training">Training</label>
@@ -259,16 +259,16 @@
             <div class="row">
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="" value="" id="passenger"><label for="passenger">Ems</label>
+                  <input type="checkbox" name="ems" value="ems" id="ems"><label for="ems">Ems</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="pleasure" value="" id="pleasure"><label for="pleasure">Pleasure</label>
+                  <input type="checkbox" name="pleasure" value="pleasure" id="pleasure"><label for="pleasure">Pleasure</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="private" value="" id="private"><label for="private">Private</label>
+                  <input type="checkbox" name="private" value="private" id="private"><label for="private">Private</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="towing" value="" id="towing"><label for="towing">Towing</label>
+                  <input type="checkbox" name="towing" value="towing" id="towing"><label for="towing">Towing</label>
                 </div>
               </div>
             </div>
@@ -335,21 +335,14 @@
                 <h3 class="text-center">ENVIRONMENTAL DETAILS</h3>
                 <br/>
               </div>
-              <div class="col-xs-12 col-sm-4">
-                <h4>Precipitation</h4>
-                <br>
-              </div>
-              <div class="col-xs-12 col-sm-4">
-                <h4>Other meteorological conditions</h4>
-                <br>
-              </div>
-              <div class="col-xs-12 col-sm-4">
-                <h4>Runway state</h4>
-                <br>
+              <div class="col-xs-12 col-sm-6">
+
               </div>
             </div>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
+                <h4>Precipitation</h4>
+                <br>
                 <div class="row">
                   <div class="col-xs-6">
                     <label for="rain" title="Required">Rain </label><input type="checkbox" name="rain" value="" id="rain">
@@ -367,34 +360,114 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <label for="visibility" title="Required">Visibility </label>
-                    <div class="row">
-                      <div class="col-xs-7">
-                        <input type="number" name="visibility" class="form-control col-xs-6" value="" id="visibility">
-                      </div>
-                      <div class="col-xs-5">
-                        <label for="km">Km</label><input type="radio" name="speed-unit" value="km" id="km" class="col-sm-6">
-                        <label for="nm">Nm</label><input type="radio" name="speed-unit" value="nm" class="col-sm-6" id="nm">
-                      </div>
+              <div class="col-xs-12 col-sm-8">
+                <div class="form-group col-xs-12 col-sm-6">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h4>Wind</h4>
+                      <br>
+                    </div>
+                    <div class="col-xs-6">
+                      <label for="dirn" title="Required">Dirn</label><input type="number" class="form-control" name="wind" value="" id="dirn">
+                    </div>
+                    <div class="col-xs-6">
+                      <label for="speed">Speed</label><input type="number" class="form-control" name="wind" value="speed" id="speed">
                     </div>
                   </div>
-                  <div class="col-xs-6">
-                    <label for="icing" title="alt-ht">Icing </label><input type="checkbox" name="icing" value="icing" id="icing">
-                  </div>
                 </div>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <label for="turbulence" title="Required">Turbulence </label><input type="checkbox" name="turbulence" value="turbulence" id="turbulence">
-                  </div>
-                  <div class="col-xs-6">
-                    <label for="oat" title="alt-ht">Oat (°C) </label><input type="checkbox" name="oat" value="oat" id="oat">
+                <div class="form-group col-xs-12 col-sm-6">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <h4>Cloud</h4>
+                      <br>
+                    </div>
+                    <div class="col-xs-6">
+                      <label for="type" title="Required">Type</label><input type="number" class="form-control" name="cloud" value="type" id="type">
+                    </div>
+                    <div class="col-xs-6">
+                      <label for="ht" title="alt-ht">HT (ft) </label><input type="number" class="form-control"  name="ht" id="ht">
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <!-- START other meteorological conditions  -->
+
+            <div class="row">
+              <h4 class="text-center">OTHER METEOROLOGICAL CONDITIONS</h4>
+              <br>
+              <div class="col-xs-12 col-sm-3 visibility">
+                <label for="visibility" title="Required">Visibility </label>
+                <br>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <input type="number" name="visibility" class="form-control" value="" id="visibility">
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="row">
+                      <label for="km">Km</label><input type="radio" name="speed-unit" value="km" id="km">
+                    </div>
+                    <div class="row">
+                      <label for="nm">Nm</label><input type="radio" name="speed-unit" value="nm" id="nm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <div class="col-xs-12">
+                  <label>Icing </label>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="none-icing">None</label><input type="checkbox" name="none_icing" value="none-icing" id="none-icing">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="light-icing">Light</label><input type="checkbox" name="light-icing" value="light-icing" id="light-icing">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="moderate-icing">Moderate</label><input type="checkbox" name="moderate-icing" value="moderate-icing" id="moderate-icing">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="severe-icing">Severe</label><input type="checkbox" name="severe-icing" value="severe-icing" id="severe-icing">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <div class="col-xs-12">
+                  <label>Turbulence </label>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="none">None</label><input type="checkbox" name="none" value="none" id="none">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="light-turbulence">Light</label><input type="checkbox" name="light-turbulence" value="light-turbulence" id="light-turbulence">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="moderate-turbulence">Moderate</label><input type="checkbox" name="moderate-turbulence" value="moderate-turbulence" id="moderate-turbulence">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="severe-turbulence">Severe</label><input type="checkbox" name="severe-turbulence" value="severe-turbulence" id="severe-turbulence">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <label for="oat">Oat (°c)</label>
+                <input type="text" name="oat" value="" id="oat" class="form-control">
+              </div>
+            </div>
+
+            <!-- END other meteorological conditions -->
+
+            <br>
+            <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
+                <h4>Runway state</h4>
                 <div class="row">
                   <div class="col-xs-6">
                     <label for="dry-r">Dry </label><input type="checkbox" name="dry-r" value="dry-r" id="dry-r">
@@ -415,99 +488,27 @@
                   </div>
                 </div>
               </div>
+              <div class="form-group col-xs-12 col-sm-4">
+                <h4>Category</h4>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <label for="category-i">I</label><input type="radio" name="category" value="" id="category-i">
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="category-ii">II</label><input type="radio" name="category" value="" id="category-ii">
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="category-iii">III</label><input type="radio" name="category" value="" id="category-iii">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-xs-12 col-sm-4">
+                <label for="brief-title">Brief title</label>
+                <p></p>
+                <input type="text" name="brief_title" value="" id="brief-title" class="form-control">
+              </div>
             </div>
 
-            <div class="row">
-              <div class="col-xs-12 col-sm-4">
-                <h4>Wind: *</h4>
-                <br>
-              </div>
-              <div class="col-xs-12 col-sm-4">
-                <h4>Cloud: *</h4>
-                <br>
-              </div>
-              <div class="col-xs-12 col-sm-4">
-                <h4>Runway state: *</h4>
-                <br>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-xs-12 col-sm-4">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <label for="dirn" title="Required">Dirn</label><input type="number" class="form-control" name="wind" value="" id="dirn">
-                  </div>
-                  <div class="col-xs-6">
-                    <label for="speed">Speed</label><input type="number" class="form-control" name="wind" value="speed" id="speed">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <label for="type" title="Required">Type</label><input type="number" class="form-control" name="cloud" value="type" id="type">
-                  </div>
-                  <div class="col-xs-6">
-                    <label for="icing" title="alt-ht">HT (ft) </label><input type="number" class="form-control"  name="cloud" value="type" id="type">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <div class="row">
-                  <div class="col-xs-6">
-                    <label for="light">Light </label><input type="checkbox" name="light" value="light" id="light">
-                  </div>
-                  <div class="col-xs-6">
-                    <label for="ice-r">Ice</label><input type="checkbox" name="ice-r" value="ice-r" id="light">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-6">
-                    <label for="slush-r">Slush </label><input type="checkbox" name="slush-r" value="slush-r" id="slush-r">
-                  </div>
-                  <div class="col-xs-6">
-                    <label for="wet-r">Wet</label><input type="checkbox" name="wet-r" value="wet-r" id="wet-r">
-                  </div>
-                  <div class="col-xs-6">
-                    <label for="snow-r">Snow</label><input type="checkbox" name="snow-r" value="snow-r" id="snow-r">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="name-and-title" title="Required">Name and title of person making report: *</label>
-                <p class="error-message"></p>
-                <input type="text" class="form-control" name="name_and_title" value="" data-parsley-trigger="change" required="" id="name-and-title">
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="telephone-no" title="Required">Telephone no: *</label>
-                <p class="error-message"></p>
-                <input type="number" name="telephone_no" class="form-control" value="" data-parsley-trigger="change" required="" id="telephone-no" >
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="company-dept-code">Company/dept. code, E-mail or InfoMail code: </label>
-                <p class="error-message"></p>
-                <input type="text" class="form-control" name="company_dept_code" value="" data-parsley-trigger="change" required="" id="company-dept-code">
-              </div>
-            </div>
-            <div class="row form-group">
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="reporter-ref" title="Required">Reporter ref.: *</label>
-                <p class="error-message"></p>
-                <input type="text" class="form-control" name="reporter_ref" value="" data-parsley-trigger="change"  id="reporter-ref">
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="address" title="Required">Address: *</label>
-                <p class="error-message"></p>
-                <input type="text" name="address" class="form-control" value="" data-parsley-trigger="change" id="address">
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="date-signature" title="Required">Date/Signature: *</label>
-                <p class="error-message"></p>
-                <input type="text" class="form-control" name="date_signature" value="" data-parsley-trigger="change" required="" id="date-signature">
-              </div>
-            </div>
             <div class="row">
               <div class="form-group col-xs-12">
                 <label for="description-of-the-occurrence ">Description of the occurrence (continuation):</label>
@@ -515,9 +516,344 @@
                 <textarea name="description_of_the_occurrence" class="form-control" id="description-of-the-occurrence" data-parsley-trigger="change" required="" rows="8" cols="80"></textarea>
               </div>
             </div>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <br>
+                <br>
+                <label for="any-procedures" class="col-xs-12 col-sm-6">Any procedures, manuals, pubs. (AIC, AD, SB, etc.) directly relevant to occurrence and (where appropriate) compliance state of aircraft, equipment or documentation:</label>
+
+                <p class="error-message"></p>
+                <textarea name="any_procedures" class="form-control" id="any-procedures" data-parsley-trigger="change" required="" rows="8" cols="80" ></textarea>
+              </div>
+            </div>
+
+            <!-- START ground staff report -->
+
+            <div class="row">
+              <h3 class="text-center">Ground staff report</h3>
+              <br>
+              <br>
+              <div class="col-xs-12 col-sm-4">
+                <label for="ac-constructor">A/C CONSTRUCTOR’S NO.:</label>
+                <p></p>
+                <input type="text" name="ac_constructor"  class="form-control" value="" id="ac-constructor">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="engine-type-series">Engine type/series</label>
+                <p></p>
+                <input type="text" name="engine_type_series" value="" id="engine-type-series" class="form-control">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="etops-approved">Etops approved</label>
+                <p></p>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="yes-etops">Yes</label><input type="radio" name="etops-approved" value="yes-etops" id="yes-etops">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="no-etops">No</label><input type="radio" name="etops-approved" value="no-etops" id="no-etops">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+
+              <div class="col-xs-12 col-sm-6">
+                <h4>Ground phase</h4>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <label for="maintenance">Maintenance</label><input type="checkbox" name="maintenance" value="" id="maintenance">
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="ground-handling">Ground handling</label><input type="checkbox" name="ground-handling" value="" id="ground-handling">
+                  </div>
+                  <div class="col-xs-4">
+                    <label for="unattended">Unattended</label><input type="checkbox" name="Unattended" value="Unattended" id="unattended">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="row">
+                  <br>
+                  <div class="col-xs-6">
+
+                    <label for="maintenance-organisation">Maintenance organisation</label>
+                    <input type="text" name="maintenance_organisation" value="" class="form-control" id="maintenance-organisation">
+                  </div>
+
+                  <div class="col-xs-6">
+                    <label for="tel-no">Tel. no.</label>
+                    <input type="text" class="form-control" name="tel_no" value="" id="tel-no">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <br>
+              <br>
+              <div class="col-xs-12 col-sm-3">
+                <label for="component-part">Component/part</label>
+                <p></p>
+                <input type="text" name="component_part" class="form-control" value="" id="component-part">
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <label for="manufacturer">Manufacturer</label>
+                <p></p>
+                <input type="text" name="manufacturer" class="form-control" value="" id="manufacturer">
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <label for="part-no">Part no.</label>
+                <p></p>
+                <input type="text" name="part_no" class="form-control" value="" id="part-no">
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <label for="serial-no">Serial no.</label>
+                <p></p>
+                <input type="text" name="serial_no" class="form-control" value="" id="serial-no">
+              </div>
+            </div>
+            <!-- END ground staff report -->
+            <br>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <label for="manual-ata-ipc">References: - manual/ata/ipc</label>
+                <input type="text" name="manual_ata_ipc" value="" class="form-control" id="manual-ata-ipc">
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <label for="omponent-oh-repair">Omponent oh/repair organisation</label>
+                <input type="text" name="omponent_oh_repair" value="" class="form-control" id="omponent-oh-repair">
+              </div>
+            </div>
+
+            <br>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <label for="organisation-and-approval">Organisation and approval reference</label>
+                <input type="text" name="organisation-and-approval" value="" class="form-control" id="organisation-and-approval">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" value="" class="form-control" id="name">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="position">Position</label>
+                <input type="text" name="position" value="" class="form-control" id="position">
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="form-gorup col-xs-12 col-sm-6">
+                <label for="">Signature</label>
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="date" title="Required">Date: * </label>
+                <p class="error-message"></p>
+                <div class="form-group">
+                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                      <input class="form-control" size="16" type="text" value="" id="date">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+  					          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+          				<input type="hidden" id="dtp_input2" value="" /><br/>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4" >
+                <p class="col-xs-8">If report is voluntary (i.e. not subject to mandatory requirements) can the information be published in the interest of safety?</p>
+                <div class="col-xs-4">
+                  <br>
+                  <label for="yes-voluntary">Yes</label><input type="radio" name="voluntary" value="yes-voluntary" id="yes-voluntary">
+                  <br>
+                  <label for="no-voluntary">No</label><input type="radio" name="" value="no-voluntary">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="address-and-tel">Address and tel. no. </label><p style="display:inline"> (if reporter wishes to be contacted privately)</p>
+                <p></p>
+                <input type="text" name="address-and-tel" class="form-control" value="" id="address-and-tel">
+              </div>
+              <div class="col-xs-12 col-sm-4 voluntary">
+                <ol>
+                  <li>Note: If additional information, as below, is available please provide.</li>
+                  <li>Note: If the occurrence is related to a design or manufacturing deficiency, the manufacturer should also be advised promptly.</li>
+                  <li>Note: Where applicable, a report of this incident should be forwarded directly to other agencies involved, e.g. Aerodrome Authority, ATC agency.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <h3>Reporting organisation - report</h3>
+                <label for="organisation-comments">Organisation comments - assessment/action taken/suggestions to prevent</label>
+                <p class="error-message"></p>
+                <textarea name="organisation_comments" class="form-control" id="organisation-comments" data-parsley-trigger="change" required="" rows="8" cols="80"></textarea>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-5">
+                <table class="table">
+                  <thead>
+                    <h4 class="text-center">Utilisation - aircraft</h4>
+                    <tr>
+                      <th></th>
+                      <th>Total</th>
+                      <th>Since oh/repair</th>
+                      <th>Since inspection</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Hours</td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                      <td><input type="text" name="" class="form-control" value="" ></td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                    </tr>
+                    <tr>
+                      <td>Cycles</td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                      <td><input type="text" name="" class="form-control" value="" ></td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                    </tr>
+                    <tr>
+                      <td>Landings</td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                      <td><input type="text" name="" class="form-control" value="" ></td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-xs-12 col-sm-5">
+                <table class="table">
+                  <thead>
+                    <h4 class="text-center">Utilisation - aircraft</h4>
+                    <tr>
+                      <th></th>
+                      <th>Total</th>
+                      <th>Since oh/repair</th>
+                      <th>Since inspection</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Hours</td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                      <td><input type="text" name="" class="form-control" value="" ></td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                    </tr>
+                    <tr>
+                      <td>Cycles</td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                      <td><input type="text" name="" class="form-control" value="" ></td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                    </tr>
+                    <tr>
+                      <td>Landings</td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                      <td><input type="text" name="" class="form-control" value="" ></td>
+                      <td><input type="text" name="" class="form-control" value=""></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="col-xs-12 col-sm-2">
+                <label for="manufacturer-advised">Manufacturer advised</label>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="yes-advised">Yes</label>
+                    <input type="radio" name="yes-advised" value="yes-advised" id="yes-advised">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="no-advised">No</label>
+                    <input type="radio" name="no-advised" value="no-advised" id="no-advised">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 col-xs-4">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <label for="reporting-organisation">Reporting organisation</label>
+                    <p></p>
+                    <input type="text" name="reporting_organisation" value="" class="form-control" id="reporting-organisation">
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <label for="tel">Tel.</label>
+                    <p></p>
+                    <input type="text" name="tel" value="" class="form-control" id="tel">
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6">
+                    <label for="e-mail">E-mail</label>
+                    <p></p>
+                    <input type="text" name="e_mail" value="" class="form-control" id="e-mail">
+                  </div>
+                  <div class="col-xs-12 col-sm-6">
+                    <label for="fax">Fax</label>
+                    <p></p>
+                    <input type="text" name="fax" value="" class="form-control" id="fax">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="reporters-ref">Reporter’s ref</label>
+                <p></p>
+                <input type="text" class="form-control" name="reporters_ref" value="" id="reporters-ref">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="">Report</label>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <label for="new">New</label>
+                    <input type="radio" name="report" value="new" id="new">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="suppl">New</label>
+                    <input type="radio" name="report" value="suppl" id="suppl">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <div class="row">
+              <label for="">Reporter’s investigation</label>
+              <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-4">
+                  <label for="nil">Nil</label>
+                  <input type="radio" name="investigation" value="nil" id="nil">
+                </div>
+                <div class="col-xs-4">
+                  <label for="closed">Closed</label>
+                  <input type="radio" name="investigation" value="closed" id="closed">
+                </div>
+                <div class="col-xs-4">
+                  <label for="open">Open</label>
+                  <input type="radio" name="investigation" value="open" id="open">
+                </div>
+              </div>
+            </div>
             <div class="submit">
-            <input type="submit" class="btn btn-success" id="btn-submit" name="submit" value="Submit"/>
-          </div>
+              <input type="submit" class="btn btn-success" id="btn-submit" name="submit" value="Submit"/>
+            </div>
         </section>
       </form>
 
