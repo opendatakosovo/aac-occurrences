@@ -835,8 +835,8 @@
             <br>
 
             <div class="row">
-              <label for="">Reporter’s investigation</label>
-              <div class="col-xs-12 col-sm-6">
+              <div class="form-group col-xs-12 col-sm-6">
+                <h4><label for="">Reporter’s investigation</label></h4>
                 <div class="col-xs-4">
                   <label for="nil">Nil</label>
                   <input type="radio" name="investigation" value="nil" id="nil">
@@ -850,7 +850,57 @@
                   <input type="radio" name="investigation" value="open" id="open">
                 </div>
               </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <div class="col-xs-6">
+                  <h4><label for="">Fdr data retained</label></h4>
+                  <div class="col-xs-6">
+                    <label for="fdr-yes">Yes</label>
+                    <input type="radio" name="fdr-data" value="fdr-yes" id="fdr-yes">
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="fdr-no">No</label>
+                    <input type="radio" name="fdr-data" value="fdr-no" id="fdr-no">
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <label for="name">Name</label>
+                <input type="text" name="name" value="" class="form-control" id="name">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="position">Position</label>
+                <input type="text" name="position" value="" class="form-control" id="position">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="tel">Name</label>
+                <input type="text" name="tel" value="" class="form-control" id="tel">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <label for="e-mail">E-mail</label>
+                <input type="text" name="e_mail" value="" class="form-control" id="e-mail">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="signature">Signature</label>
+                <input type="text" name="signature" value="" class="form-control" id="signature">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="tel">Date (dd.mm.yyyy)</label>
+                <div class="form-group">
+                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                      <input class="form-control" size="16" type="text" value="" id="date">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+  					          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+          				<input type="hidden" id="dtp_input2" value=""><br>
+                </div>
+              </div>
+            </div>
+
             <div class="submit">
               <input type="submit" class="btn btn-success" id="btn-submit" name="submit" value="Submit"/>
             </div>
@@ -859,7 +909,8 @@
 
       <div class="container">
        <div class="info-part" id="info">
-        <h3>Notes:</h3>
+        <h3 class="text-center form-one-header">ADVICE ON THE COMPLETION OF THE CAAK OCCURRENCE REPORT FORM –
+AACK/DSF/OR-FRM 01:</h3>
         <ol>
           <li>It is important that this form is completed in as much detail as possible; this will help to avoid delays in processing the report and unnecessary additional work by both the reporter and the CAAK.</li>
           <li>Any type of dangerous goods occurrence must be reported, irrespective of whether the dangerous goods are contained in cargo, mail or baggage.</li>

@@ -90,3 +90,8 @@ textarea.parsley-error {
 .ias .col-xs-2 {
   margin-top: -10px;
 }
+
+.form-one-header {
+  margin: 0 auto;
+  max-width: 600px;
+}
