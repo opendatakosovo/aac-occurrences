@@ -46,10 +46,10 @@
               <p>Are you concerned about the confidentiality of this report and wish to be contacted before it is processed?
                 If so, please ensure you provide us with your contact details.<p>
               <h4>CONFIDENTIAL?</h4>
-              <label for="yes">Yes</label>
               <input type="radio" name="confidential" data-parsley-trigger="change" required="" value="yes" id="yes">
-              <label for="no">No</label>
+              <label for="yes">Yes</label>
               <input type="radio" name="confidential" data-parsley-trigger="change" required="" value="no" id="no">
+              <label for="no">No</label>
               <p id="radio-error"></p>
             </section>
             <br/>
@@ -85,12 +85,11 @@
                 <label for="date" title="Required">Date: * </label>
                 <p class="error-message"></p>
                 <div class="form-group">
-
-                          <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                              <input class="form-control" size="16" type="text" value="" id="date">
-                              <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-          					          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                          </div>
+                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                      <input class="form-control" size="16" type="text" value="" id="date">
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+  					          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
           				<input type="hidden" id="dtp_input2" value="" /><br/>
                 </div>
               </div>
@@ -139,12 +138,12 @@
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="fly" title="Required">Fly</label>
                     <input type="radio" class="" data-parsley-trigger="change" required=""  name="fly-alt-ht" value="" id="fly">
+                    <label for="fly" title="Required">Fly</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="alt-ht" title="alt-ht" class="  ">Alt/ht</label>
                     <input type="radio" class="" name="fly-alt-ht" value="" id="alt-ht">
+                    <label for="alt-ht" title="alt-ht" class="  ">Alt/ht</label>
                   </div>
                 </div>
                 <p></p>
@@ -161,11 +160,11 @@
                     <input type="text" class="form-control " data-parsley-trigger="change" required=""  name="fly-alt-ht" value=""  id="ias-kt">
                   </div>
                   <div class="col-xs-2">
-                    <label for="ifr">Ifr</label>
                     <input type="radio" name="ifr" data-parsley-trigger="change" required="" value="ifr" id="ifr">
+                    <label for="ifr">Ifr</label>
                     <br>
-                    <label for="vfr">Vfr</label>
                     <input type="radio" name="ifr" data-parsley-trigger="change" required="" value="vfr" id="vfr">
+                    <label for="vfr">Vfr</label>
                   </div>
                 </div>
               </div>
@@ -177,12 +176,12 @@
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="yes-t">Yes</label>
                     <input type="radio" name="tcasra" value="yes" id="yes-t">
+                    <label for="yes-t">Yes</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="no-t">No</label>
                     <input type="radio" name="tcasra" value="no" id="no-t">
+                    <label for="no-t">No</label>
                   </div>
                 </div>
               </div>
@@ -192,12 +191,12 @@
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="yes-e">Yes</label>
                     <input type="radio" name="etops" value="yes" id="yes-e">
+                    <label for="yes-e">Yes</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="no-e">No</label>
                     <input type="radio" name="etops" value="no" id="no-e">
+                    <label for="no-e">No</label>
                   </div>
                 </div>
               </div>
@@ -211,64 +210,80 @@
               </div>
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="passenger" value="" id="passenger"><label for="passenger">Passenger</label>
+                  <input type="checkbox" name="passenger" value="" id="passenger">
+                  <label for="passenger">Passenger</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="positioning" value="" id="positioning"><label for="positioning">Positioning</label>
+                  <input type="checkbox" name="positioning" value="" id="positioning">
+                  <label for="positioning">Positioning</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="test" value="" id="test"><label for="test">Test</label>
+                  <input type="checkbox" name="test" value="" id="test">
+                  <label for="test">Test</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="business" value="" id="business"><label for="business">Business</label>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="row text-center">
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="survey" value="" id="survey"><label for="survey">Survey</label>
-                </div>
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="club-group" value="" id="club-group"><label for="club-group">Club/group</label>
-                </div>
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="parachuting" value="" id="parachuting"><label for="parachuting">Parachuting</label>
-                </div>
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="police" value="" id="police"><label for="police">Police</label>
+                  <input type="checkbox" name="business" value="" id="business">
+                  <label for="business">Business</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="freight" value="" id="freight"><label for="freight">Freight</label>
+                  <input type="checkbox" name="survey" value="" id="survey">
+                  <label for="survey">Survey</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="ferry" value="" id="ferry"><label for="ferry">Ferry</label>
+                  <input type="checkbox" name="club-group" value="" id="club-group">
+                  <label for="club-group">Club/group</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="training" value="" id="training"><label for="training">Training</label>
+                  <input type="checkbox" name="parachuting" value="" id="parachuting">
+                  <label for="parachuting">Parachuting</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="agricultural" value="" id="agricultural"><label for="agricultural">Agricultural</label>
+                  <input type="checkbox" name="police" value="" id="police">
+                  <label for="police">Police</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="ems" value="ems" id="ems"><label for="ems">Ems</label>
+                  <input type="checkbox" name="freight" value="" id="freight">
+                  <label for="freight">Freight</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="pleasure" value="pleasure" id="pleasure"><label for="pleasure">Pleasure</label>
+                  <input type="checkbox" name="ferry" value="" id="ferry">
+                  <label for="ferry">Ferry</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="private" value="private" id="private"><label for="private">Private</label>
+                  <input type="checkbox" name="training" value="" id="training">
+                  <label for="training">Training</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="towing" value="towing" id="towing"><label for="towing">Towing</label>
+                  <input type="checkbox" name="agricultural" value="" id="agricultural">
+                  <label for="agricultural">Agricultural</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="ems" value="ems" id="ems">
+                  <label for="ems">Ems</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="pleasure" value="pleasure" id="pleasure">
+                  <label for="pleasure">Pleasure</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="private" value="private" id="private">
+                  <label for="private">Private</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="towing" value="towing" id="towing">
+                  <label for="towing">Towing</label>
                 </div>
               </div>
             </div>
@@ -281,51 +296,64 @@
               </div>
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="parked" value="" id="parked"><label for="parked">Parked</label>
+                  <input type="checkbox" name="parked" value="" id="parked">
+                  <label for="parked">Parked</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="take-off" value="" id="take-off"><label for="take-off">Take-off</label>
+                  <input type="checkbox" name="take-off" value="" id="take-off">
+                  <label for="take-off">Take-off</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="climb" value="" id="climb"><label for="climb">Climb</label>
+                  <input type="checkbox" name="climb" value="" id="climb">
+                  <label for="climb">Climb</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="descent" value="" id="descent"><label for="descent">Descent</label>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="row text-center">
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="approach" value="" id="approach"><label for="approach">Approach</label>
-                </div>
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="circuit" value="" id="circuit"><label for="circuit">Circuit</label>
-                </div>
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="hover" value="" id="hover"><label for="hover">Hover</label>
-                </div>
-                <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="taxiing" value="" id="taxiing"><label for="taxiing">Taxiing</label>
+                  <input type="checkbox" name="descent" value="" id="descent">
+                  <label for="descent">Descent</label>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="initial-climb" value="" id="initial-climb"><label for="initial-climb">Initial climb</label>
+                  <input type="checkbox" name="approach" value="" id="approach">
+                  <label for="approach">Approach</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="cruise" value="" id="cruise"><label for="cruise">Cruise</label>
+                  <input type="checkbox" name="circuit" value="" id="circuit">
+                  <label for="circuit">Circuit</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="holding" value="" id="holding"><label for="holding">Holding</label>
+                  <input type="checkbox" name="hover" value="" id="hover">
+                  <label for="hover">Hover</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="landing" value="" id="landing"><label for="landing">Landing</label>
+                  <input type="checkbox" name="taxiing" value="" id="taxiing">
+                  <label for="taxiing">Taxiing</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row text-center">
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="initial-climb" value="" id="initial-climb">
+                  <label for="initial-climb">Initial climb</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
-                  <input type="checkbox" name="aerobatics" value="" id="aerobatics"><label for="aerobatics">Aerobatics</label>
+                  <input type="checkbox" name="cruise" value="" id="cruise">
+                  <label for="cruise">Cruise</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="holding" value="" id="holding">
+                  <label for="holding">Holding</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="landing" value="" id="landing">
+                  <label for="landing">Landing</label>
+                </div>
+                <div class="form-group col-xs-6 col-sm-3">
+                  <input type="checkbox" name="aerobatics" value="" id="aerobatics">
+                  <label for="aerobatics">Aerobatics</label>
                 </div>
               </div>
             </div>
@@ -345,18 +373,22 @@
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="rain" title="Required">Rain </label><input type="checkbox" name="rain" value="" id="rain">
+                    <input type="checkbox" name="rain" value="" id="rain">
+                    <label for="rain" title="Required">Rain </label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="sleet" title="alt-ht">Sleet </label><input type="checkbox" name="sleet" value="sleet" id="sleet">
+                    <input type="checkbox" name="sleet" value="sleet" id="sleet">
+                    <label for="sleet" title="alt-ht">Sleet </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="snow" title="Required">Snow </label><input type="checkbox" name="snow" value="" id="snow">
+                    <input type="checkbox" name="snow" value="" id="snow">
+                    <label for="snow" title="Required">Snow </label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="hail" title="alt-ht">Hail</label><input type="checkbox" name="hail" value="" id="hail">
+                    <input type="checkbox" name="hail" value="" id="hail">
+                    <label for="hail" title="alt-ht">Hail</label>
                   </div>
                 </div>
               </div>
@@ -368,7 +400,8 @@
                       <br>
                     </div>
                     <div class="col-xs-6">
-                      <label for="dirn" title="Required">Dirn</label><input type="number" class="form-control" name="wind" value="" id="dirn">
+                      <label for="dirn" title="Required">Dirn</label>
+                      <input type="number" class="form-control" name="wind" value="" id="dirn">
                     </div>
                     <div class="col-xs-6">
                       <label for="speed">Speed</label><input type="number" class="form-control" name="wind" value="speed" id="speed">
@@ -406,10 +439,12 @@
                   </div>
                   <div class="col-xs-3">
                     <div class="row">
-                      <label for="km">Km</label><input type="radio" name="speed-unit" value="km" id="km">
+                      <input type="radio" name="speed-unit" value="km" id="km">
+                      <label for="km">Km</label>
                     </div>
                     <div class="row">
-                      <label for="nm">Nm</label><input type="radio" name="speed-unit" value="nm" id="nm">
+                      <input type="radio" name="speed-unit" value="nm" id="nm">
+                      <label for="nm">Nm</label>
                     </div>
                   </div>
                 </div>
@@ -420,18 +455,22 @@
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="none-icing">None</label><input type="checkbox" name="none_icing" value="none-icing" id="none-icing">
+                    <input type="checkbox" name="none_icing" value="none-icing" id="none-icing">
+                    <label for="none-icing">None</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="light-icing">Light</label><input type="checkbox" name="light-icing" value="light-icing" id="light-icing">
+                    <input type="checkbox" name="light-icing" value="light-icing" id="light-icing">
+                    <label for="light-icing">Light</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="moderate-icing">Moderate</label><input type="checkbox" name="moderate-icing" value="moderate-icing" id="moderate-icing">
+                    <input type="checkbox" name="moderate-icing" value="moderate-icing" id="moderate-icing">
+                    <label for="moderate-icing">Moderate</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="severe-icing">Severe</label><input type="checkbox" name="severe-icing" value="severe-icing" id="severe-icing">
+                    <input type="checkbox" name="severe-icing" value="severe-icing" id="severe-icing">
+                    <label for="severe-icing">Severe</label>
                   </div>
                 </div>
               </div>
@@ -441,18 +480,22 @@
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="none">None</label><input type="checkbox" name="none" value="none" id="none">
+                    <input type="checkbox" name="none" value="none" id="none">
+                    <label for="none">None</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="light-turbulence">Light</label><input type="checkbox" name="light-turbulence" value="light-turbulence" id="light-turbulence">
+                    <input type="checkbox" name="light-turbulence" value="light-turbulence" id="light-turbulence">
+                    <label for="light-turbulence">Light</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="moderate-turbulence">Moderate</label><input type="checkbox" name="moderate-turbulence" value="moderate-turbulence" id="moderate-turbulence">
+                    <input type="checkbox" name="moderate-turbulence" value="moderate-turbulence" id="moderate-turbulence">
+                    <label for="moderate-turbulence">Moderate</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="severe-turbulence">Severe</label><input type="checkbox" name="severe-turbulence" value="severe-turbulence" id="severe-turbulence">
+                    <input type="checkbox" name="severe-turbulence" value="severe-turbulence" id="severe-turbulence">
+                    <label for="severe-turbulence">Severe</label>
                   </div>
                 </div>
               </div>
@@ -470,21 +513,26 @@
                 <h4>Runway state</h4>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="dry-r">Dry </label><input type="checkbox" name="dry-r" value="dry-r" id="dry-r">
+                    <input type="checkbox" name="dry-r" value="dry-r" id="dry-r">
+                    <label for="dry-r">Dry </label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="ice-r">Ice</label><input type="checkbox" name="ice-r" value="ice-r" id="ice-r">
+                    <input type="checkbox" name="ice-r" value="ice-r" id="ice-r">
+                    <label for="ice-r">Ice</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="slush-r">Slush </label><input type="checkbox" name="slush-r" value="slush-r" id="slush-r">
+                    <input type="checkbox" name="slush-r" value="slush-r" id="slush-r">
+                    <label for="slush-r">Slush </label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="wet-r">Wet</label><input type="checkbox" name="wet-r" value="wet-r" id="wet-r">
+                    <input type="checkbox" name="wet-r" value="wet-r" id="wet-r">
+                    <label for="wet-r">Wet</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="snow-r">Snow</label><input type="checkbox" name="snow-r" value="snow-r" id="snow-r">
+                    <input type="checkbox" name="snow-r" value="snow-r" id="snow-r">
+                    <label for="snow-r">Snow</label>
                   </div>
                 </div>
               </div>
@@ -492,13 +540,16 @@
                 <h4>Category</h4>
                 <div class="row">
                   <div class="col-xs-4">
-                    <label for="category-i">I</label><input type="radio" name="category" value="" id="category-i">
+                    <input type="radio" name="category" value="" id="category-i">
+                    <label for="category-i">I</label>
                   </div>
                   <div class="col-xs-4">
-                    <label for="category-ii">II</label><input type="radio" name="category" value="" id="category-ii">
+                    <input type="radio" name="category" value="" id="category-ii">
+                    <label for="category-ii">II</label>
                   </div>
                   <div class="col-xs-4">
-                    <label for="category-iii">III</label><input type="radio" name="category" value="" id="category-iii">
+                    <input type="radio" name="category" value="" id="category-iii">
+                    <label for="category-iii">III</label>
                   </div>
                 </div>
               </div>
@@ -548,10 +599,12 @@
                 <p></p>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="yes-etops">Yes</label><input type="radio" name="etops-approved" value="yes-etops" id="yes-etops">
+                    <input type="radio" name="etops-approved" value="yes-etops" id="yes-etops">
+                    <label for="yes-etops">Yes</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="no-etops">No</label><input type="radio" name="etops-approved" value="no-etops" id="no-etops">
+                    <input type="radio" name="etops-approved" value="no-etops" id="no-etops">
+                    <label for="no-etops">No</label>
                   </div>
                 </div>
               </div>
@@ -563,13 +616,16 @@
                 <h4>Ground phase</h4>
                 <div class="row">
                   <div class="col-xs-4">
-                    <label for="maintenance">Maintenance</label><input type="checkbox" name="maintenance" value="" id="maintenance">
+                    <input type="checkbox" name="maintenance" value="" id="maintenance">
+                    <label for="maintenance">Maintenance</label>
                   </div>
                   <div class="col-xs-4">
-                    <label for="ground-handling">Ground handling</label><input type="checkbox" name="ground-handling" value="" id="ground-handling">
+                    <input type="checkbox" name="ground-handling" value="" id="ground-handling">
+                    <label for="ground-handling">Ground handling</label>
                   </div>
                   <div class="col-xs-4">
-                    <label for="unattended">Unattended</label><input type="checkbox" name="Unattended" value="Unattended" id="unattended">
+                    <input type="checkbox" name="Unattended" value="Unattended" id="unattended">
+                    <label for="unattended">Unattended</label>
                   </div>
                 </div>
               </div>
@@ -670,9 +726,11 @@
                 <p class="col-xs-8">If report is voluntary (i.e. not subject to mandatory requirements) can the information be published in the interest of safety?</p>
                 <div class="col-xs-4">
                   <br>
-                  <label for="yes-voluntary">Yes</label><input type="radio" name="voluntary" value="yes-voluntary" id="yes-voluntary">
+                  <input type="radio" name="voluntary" value="yes-voluntary" id="yes-voluntary">
+                  <label for="yes-voluntary">Yes</label>
                   <br>
-                  <label for="no-voluntary">No</label><input type="radio" name="" value="no-voluntary">
+                  <input type="radio" name="" value="no-voluntary">
+                  <label for="no-voluntary">No</label>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-4">
@@ -775,12 +833,12 @@
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="yes-advised">Yes</label>
                     <input type="radio" name="yes-advised" value="yes-advised" id="yes-advised">
+                    <label for="yes-advised">Yes</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="no-advised">No</label>
                     <input type="radio" name="no-advised" value="no-advised" id="no-advised">
+                    <label for="no-advised">No</label>
                   </div>
                 </div>
               </div>
@@ -823,12 +881,12 @@
                 <label for="">Report</label>
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="new">New</label>
                     <input type="radio" name="report" value="new" id="new">
+                    <label for="new">New</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="suppl">New</label>
                     <input type="radio" name="report" value="suppl" id="suppl">
+                    <label for="suppl">New</label>
                   </div>
                 </div>
               </div>
@@ -839,28 +897,28 @@
               <div class="form-group col-xs-12 col-sm-6">
                 <h4><label for="">Reporter’s investigation</label></h4>
                 <div class="col-xs-4">
-                  <label for="nil">Nil</label>
                   <input type="radio" name="investigation" value="nil" id="nil">
+                  <label for="nil">Nil</label>
                 </div>
                 <div class="col-xs-4">
-                  <label for="closed">Closed</label>
                   <input type="radio" name="investigation" value="closed" id="closed">
+                  <label for="closed">Closed</label>
                 </div>
                 <div class="col-xs-4">
-                  <label for="open">Open</label>
                   <input type="radio" name="investigation" value="open" id="open">
+                  <label for="open">Open</label>
                 </div>
               </div>
               <div class="form-group col-xs-12 col-sm-6">
                 <div class="col-xs-6">
                   <h4><label for="">Fdr data retained</label></h4>
                   <div class="col-xs-6">
-                    <label for="fdr-yes">Yes</label>
                     <input type="radio" name="fdr-data" value="fdr-yes" id="fdr-yes">
+                    <label for="fdr-yes">Yes</label>
                   </div>
                   <div class="col-xs-6">
-                    <label for="fdr-no">No</label>
                     <input type="radio" name="fdr-data" value="fdr-no" id="fdr-no">
+                    <label for="fdr-no">No</label>
                   </div>
                 </div>
               </div>

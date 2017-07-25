@@ -33,36 +33,6 @@
     </head>
   </head>
   <body>
-    <script>
-
-        $("body").on("click", "#delete", function(){
-          var dataId = $(this).attr("data-id");
-          var click = $(this);
-          $.ajax({
-            url: '/audits/delete',
-            type: 'POST',
-            dataType: 'json',
-            data: {"audit_id": dataId},
-            success: function(data){
-              $(click).parent().parent().remove();
-            }
-
-          });
-        });
-
-        $('body').on('click', '#btn-submit', function(e){
-
-        //AJAX call request POST
-
-            $.post('/audits', $('#form').serialize(), function(data){
-              var dataId = $(this).attr("data-id");
-
-              $("tbody").append("<tr><td>" + data.audit.confidential + "</td><td>" + data.audit.operator_name + "</td><td>" + data.audit.local + "</td><td class='text-center'><a class='btn btn-success' href='/audits/" + data.audit.audit_id + "'>View</a><button id='delete' class='btn btn-danger' data-id=" + data.audit.audit_id + ">Delete</button></td></tr>");
-            });
-            e.preventDefault();
-          });
-
-    </script>
 
     <header>
         <h1 class="text-center">Dangerous Goods Occurrence Repost</h1>
