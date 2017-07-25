@@ -649,6 +649,7 @@
             <div class="row">
               <div class="form-gorup col-xs-12 col-sm-6">
                 <label for="">Signature</label>
+                <input type="file" name="pic" accept="image/*" class="btn">
               </div>
               <div class="form-group col-xs-12 col-sm-6">
                 <label for="date" title="Required">Date: * </label>
@@ -735,7 +736,7 @@
               <div class="col-xs-12 col-sm-5">
                 <table class="table">
                   <thead>
-                    <h4 class="text-center">Utilisation - aircraft</h4>
+                    <h4 class="text-center">Utilisation - engine/component</h4>
                     <tr>
                       <th></th>
                       <th>Total</th>
@@ -886,7 +887,7 @@
               </div>
               <div class="col-xs-12 col-sm-4">
                 <label for="signature">Signature</label>
-                <input type="text" name="signature" value="" class="form-control" id="signature">
+                <input type="file" name="pic" accept="image/*" class="btn">
               </div>
               <div class="col-xs-12 col-sm-4">
                 <label for="tel">Date (dd.mm.yyyy)</label>
@@ -911,21 +912,400 @@
        <div class="info-part" id="info">
         <h3 class="text-center form-one-header">ADVICE ON THE COMPLETION OF THE CAAK OCCURRENCE REPORT FORM –
 AACK/DSF/OR-FRM 01:</h3>
+
         <ol>
-          <li>It is important that this form is completed in as much detail as possible; this will help to avoid delays in processing the report and unnecessary additional work by both the reporter and the CAAK.</li>
-          <li>Any type of dangerous goods occurrence must be reported, irrespective of whether the dangerous goods are contained in cargo, mail or baggage.</li>
-          <li>A dangerous goods accident is an occurrence associated with and related to the transport of dangerous goods which results in fatal or serious injury to a person or major property damage. For this purpose, a serious injury is an injury which is sustained by a person in an accident and which: (a) requires hospitalisation for more than 48 hours, commencing within 7 days from the date the injury was received; or (b) results in a fracture of any bones (except simple fractures of fingers, toes or nose); or (c) involves lacerations which cause severe haemorrhage, nerve, muscle or tendon damage; or (d) involves injury to any internal organ; or (e) involves second or third degree burns, or any burns affecting more than 5% of the body surface; or (f) involves verified exposure to infectious substances or injurious radiation. A dangerous goods accident may also be an aircraft accident; in which case the normal procedure for reporting of air accidents must be followed.</li>
-          <li>A dangerous goods incident is an occurrence, other than a dangerous goods accident, associated with and related to the transport of dangerous goods, not necessarily occurring on board an aircraft, which results in injury to a person, property damage, fire, breakage, spillage, leakage of fluid or radiation or other evidence that the integrity of the packaging has not been maintained. Any occurrence relating to the transport of dangerous goods which seriously jeopardises the aircraft or its occupants is also deemed to constitute a dangerous goods incident.</li>
-          <li>This form should also be used to report any occasion when undeclared or misdeclared dangerous goods are discovered in cargo, mail or unaccompanied baggage or when accompanied baggage contains dangerous goods which passengers or crew are not permitted to take on board aircraft.</li>
-          <li>An initial report should be despatched within 72 hours of the occurrence, to the Authority of the State (a) in which the aircraft is registered (if applicable); and (b) in which the incident occurred, unless exceptional circumstances prevent this. The initial report may be made by any means but a written report should be sent as soon as possible, even if all the information is not available.</li>
-          <li>Copies of all relevant documents and any photographs should be attached to this report.</li>
-          <li>Completed reports must be sent to the Civil Aviation Authority of Kosovo (CAAK), Ahmet Krasniqi Street n.n. (Arbëria), 10000, Prishtina; E-mail address: mor@caa-ks.org , Fax no: +381 (0)38 211 009, Mob no: +377 (0)44 613 567; and any other competent authority required by the Technical Instructions.</li>
-          <li>Providing it is safe to do so, all dangerous goods, packagings, documents, etc, relating to the occurrence must be retained until after the initial report has been sent to the Authorities referred to in 5. and 7. above and they have indicated whether or not these should continue to be retained.</li>
+          <li><strong>GENERAL</strong>
+            <p></p>
+            <p></p>
+            <ol class="foo">
+              <li> Reporters must provide the information required by the Regulation as amended. This means that, wherever possible, they should complete all sections of the Form where the information requested is relevant to a specific occurrence. (Relevance is the important aspect and where any of the information requested is clearly not relevant it may be omitted, e.g. weather details when weather is not a factor.)</li>
+              <p></p>
+              <li> The individual 'box' headings for all items of data are mostly self-explanatory, and the Form comprises a combination of blank boxes for entry of data and boxes listing a number of alternatives: the reporter should annotate the appropriate item.</li>
+              <p></p>
+              <li> Where reports of either in-flight or ground occurrences are channelled to the CAAK via an organisation, any relevant information which is not readily available to the person preparing the initial report should, wherever possible, be added by the person submitting the report on behalf of the organisation. Alternatively, where this is not possible within the required timescale, the outstanding information should be submitted as a supplementary report.</li>
+              <p></p>
+              <li> Evaluation and processing of reports is greatly facilitated if the reports are typewritten but it is appreciated that this may not always be possible in this case the report should be completed in black ink.</li>
+              <p></p>
+              <li><strong>ETOPS Operations.</strong> Operators holding approval for this type of operation should, when submitting any occurrence report on the aircraft type(s) subject to this approval, always complete the appropriate 'box' provided. Those operators not using AACK/DSF/OR-FRM 01 should prominently annotate all reports 'ETOPS'.</li>
+            </ol>
+            <p></p>
+            <li><strong>THE FOLLOWING ARE BRIEF NOTES AGAINST EACH BLOCK</strong>
+              <ol class="foo">
+                <p></p>
+                <li><strong>Operator, Aircraft Type & Series.</strong> To be completed for all occurrences involving an aircraft. Provides basic identification data.</li>
+                <p></p>
+                <li><strong>Flight and Weather Details.</strong> Relates to in-flight occurrences only. Provides flight data in support of the narrative.
+
+                    <p></p>
+
+                    <div class="row">
+                      <p class="col-xs-10 col-xs-offset-1">The flight phases listed on the report are defined as follows:</p>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Parked</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>On ramp with flight crew on board.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Taxiing</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>a). From commencement of moving (including pushback) to start of take-off run.</p>
+                        <p>b). From completion of landing run to terminal gate or point of stopping engines, whichever occurs later.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Take-off</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Start of take-off run to lift-off.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Init Climb</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Lift-off to a height of 1500 ft or aircraft 'clean-up' whichever occurs last.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Climb</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>End of initial climb to top of climb.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Cruise</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Top of climb to top of descent including en-route climb or descent.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Descent</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Top of descent to a height of 1500 ft.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Holding</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Flying to a set procedure at a point which intentionally delays the aircraft, usually according to a set procedure at a 'fix'.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Approach</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>A height of 1500 ft to threshold.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Landing</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Threshold to end of landing run.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Circuit</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Flying to a set pattern in the vicinity of an airfield with intention of landing.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Aerobatics</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Deliberate aerobatic manoeuvres, including spinning.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Hover</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Airborne and stationary.</p>
+                      </div>
+                    </div>
+
+                    <p></p>
+                    <hr>
+
+                    <div class="row">
+                      <div class="col-xs-11 col-xs-offset-1">
+                        <p>The Nature of Flight descriptions listed on the report are defined as follows:</p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Passenger</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Carriage of passengers.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Freight</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Carriage of Cargo.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Positioning</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Positioning without revenue load to/from point of departure/arrival of revenue flight.</p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Ferry</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Flight to a base where the necessary maintenance or alterations can be performed.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Test</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Check of serviceability, issue or renewal of C of A, experimental or development flying.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Training</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>	Training course or examination for any standard of licence or rating type training, continuation training.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Business</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Carriage of company staff in aircraft owned or hired by a company.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Agricultural</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Aerial application, crop spraying, top dressing, etc.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Survey</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Aerial photographic or mapping survey.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Pleasure</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Commercial pleasure flying. e.g. sightseeing.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Club/Group</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Flying other than training by members in a club or group aircraft.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Private</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Other than club/group flying or training.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Parachuting</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Carriage of parachutists for the purpose of parachuting.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Towing</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Towing of gliders, banners, etc.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>Police</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Aircraft operating on a Police Aircraft Operating Certificate.</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <p></p>
+                      <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                        <p><strong>EMS</strong></p>
+                      </div>
+                      <div class="col-xs-12 col-sm-10">
+                        <p>Patient transport, emergency medical service, accident response.</p>
+                      </div>
+                    </div>
+                 </li>
+              </ol>
+            </li>
+          </li>
+          <p></p>
+          <li><strong>DESCRIPTION OF OCCURRENCE - RELATES TO ALL OCCURRENCES</strong>
+            <p></p>
+            <ol>
+              <li>This should be a clear and concise description of the occurrence, preferably starting with a brief title indicating the type of occurrence. The description should contain details of what happened or what was found; what immediate action was taken to contain the situation; any additional information, comments or recommendations which it is considered might assist subsequent assessment of the report and/or investigation.</li>
+              <p></p>
+              <li>
+                Wherever possible the description should be supported by the results of subsequent investigation and details of any action taken by the reporter's organisation to avoid a recurrence.
+              </li>
+            </ol>
+          </li>
+          <p></p>
+          <li><strong>GROUND STAFF/REPORTING ORGANISATION</strong>
+          <p></p>
+          <p>Relates to both in-flight and ground occurrences. Provides maintenance/engineering data in support of the description of occurrence.</p>
+          <p></p>
+          <ol class="foo">
+            <p></p>
+            <li>In the case of reports submitted from a component manufacturer or overhaul/repair agency, the information in this block will provide the primary identification data for the occurrence. Nevertheless, if any of the information contained in paragraph 2 is available and is relevant it should also be provided.</li>
+            <p></p>
+            <li>The ground phases listed on the Form are defined as follows:
+
+              <div class="row">
+                <p></p>
+                <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                  <p><strong>Maintenance</strong></p>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  <p>Aircraft on maintenance, overhaul or repair or at the manufacturer's facility.</p>
+                </div>
+              </div>
+              <div class="row">
+                <p></p>
+                <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                  <p><strong>Ground Handling</strong></p>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  <p>Movements of aircraft on the ground other than as defined in 'Taxiing'.</p>
+                </div>
+              </div>
+              <div class="row">
+                <p></p>
+                <div class="col-xs-12 col-sm-1 col-sm-offset-1">
+                  <p><strong>Unattended</strong></p>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  <p>Standing, with no personnel on board.</p>
+                </div>
+              </div>
+              <ol>
+                <li>Aircraft or component times should be quoted in the units most relevant to the occurrence or to the component function, e.g. flying hours/cycles/landings, or a combination of each. Provision is made for total times and times since overhaul, repair or inspection.</li>
+                <p></p>
+                <li>Information should be provided which allows for the identification of the existence of any such information or procedures (e.g. Mandatory Inspections, Airworthiness Directives, crew drills, etc.) issued for the purposes of controlling or avoiding such or similar occurrences. When such information or procedures exist, the provision of the appropriate reference numbers and the compliance status of the aircraft, equipment, facility or organisation is important both in terms of assessing the occurrence and disseminating the details to others.</li>
+                <p></p>
+                <li>Manufacturer should be advised as the provision of this information is an important aspect of any occurrence report relating to a specific aircraft type or any item of aircraft equipment. Wherever possible such information should be provided as this can significantly reduce any requirements for follow-up activity. The date sent and the content of this information should be entered, together with any requests for strip/repair data.</li>
+                <p></p>
+                <li>t is important that reporters consider whether other agencies, such as Aerodrome Authority, ATS providers etc., should also be notified when occurrences are reported in which they have a direct interest.</li>
+              </ol>
+
+              </li>
+
+            </ol>
+          </li>
+          <p></p>
+          <li><strong>Non-Technical Details - Relevant to all occurrences</strong>
+            <p></p>
+            <ol>
+              <li>Provision is made on the form for important non-technical information, identification of the reporter and/or reporting organisation; whether the report is mandatory or voluntary and whether the report may be disseminated in the interests of air safety.</li>
+              <p></p>
+              <li>The provision of the reporter's address and telephone number is optional and is intended for an individual who may wish to be contacted by this means rather than at his place of employment.</li>
+
+            </ol>
+          </li>
+          <p></p>
+          <li><strong>Acknowledgement of Reports</strong>
+            <ol>
+              <p></p>
+              <li>If, acknowledgement of reports is required, please contact the CAAK direct on e-mail: mor@caa-ks.org or mobile number: +377 (0)44 613 567.</li>
+              <p></p>
+              <li><strong>Confidential Reports</strong>
+                <p></p>
+                <p>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. The CAAK will respect the confidentiality and contact you personally.</p>
+              </li>
+            </ol>
+          </li>
+
         </ol>
-        <div class="confidential-reports">
-          <h3>Confidential Reports</h3>
-          <p>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 20 to 26 should be completed. The CAAK will respect the confidentiality and contact you personally.</p>
-        </div>
+
       </div>
       </div>
     </section>
