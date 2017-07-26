@@ -29,7 +29,7 @@ li:before { content: counters(item, ".") " "; counter-increment: item; }
     width: 350px;
 }
 
-.info-part > ol{
+.info-part{
   height: 400px;
   width: 100%;
   overflow-y: scroll;

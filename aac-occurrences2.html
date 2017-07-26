@@ -57,26 +57,26 @@
               <div class="row">
                 <label class="col-xs-10" for="operator" title="Required">1. Categories of occurrence * </label>
                 <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
-              </div>
-              <p class="error-message"></p>
-              <div class="col-xs-3">
-                <input type="checkbox" value="" name="accident"  data-parsley-trigger="change" required="" id="accident">
-                <label for="accident">Accident</label>
-              </div>
-              <div class="col-xs-3">
-                <input type="checkbox" value="incident" name="incident"  data-parsley-trigger="change" required="" id="incident">
-                <label for="incident">Incident</label>
-              </div>
-              <div class="col-xs-3">
-                <input type="checkbox" value="infringement" name="infringement"  data-parsley-trigger="change" required="" id="infringement">
-                <label for="infringement">Infringement</label>
-              </div>
-              <div class="col-xs-3">
-                <input type="checkbox" value="" name="accident"  data-parsley-trigger="change" required="" id="accident">
-                <label for="">Accident</label>
+
+                <p class="error-message"></p>
+                <div class="col-xs-3">
+                  <input type="checkbox" value="" name="accident"  data-parsley-trigger="change" required="" id="accident">
+                  <label for="accident">Accident</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" value="airprox" name="airprox"  data-parsley-trigger="change" required="" id="airprox">
+                  <label for="airprox">Airprox</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" value="incident" name="incident"  data-parsley-trigger="change" required="" id="incident">
+                  <label for="incident">Incident</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" value="" name="infringement"  data-parsley-trigger="change" required="" id="infringement">
+                  <label for="infringement">Infringement</label>
+                </div>
               </div>
             </div>
-
             <div class="form-group col-xs-12 col-sm-5">
               <label for="occurrence-position" title="Required">2. Occurrence Position: * </label>
               <p class="error-message"></p>
@@ -154,29 +154,28 @@
 
           <div class="row">
             <div class="col-xs-12 col-sm-4">
-              <label for="operator">Operator</label>
+              <label for="operator">OPERATOR</label>
               <p></p>
               <label for="operator-7">7</label>
               <input type="text" name="operator_seven" class="form-control" id="operator-7" value="">
               <p></p>
-              <label for="operator-8"></label>
-              <input type="text" name="operator_eight" class="form-control" id="operator-8" value="">
+              <label for="operator-15">15</label>
+              <input type="text" name="operator_fifteen" class="form-control" id="operator-15" value="">
               <p></p>
-              <label for="operator-9">9</label>
-              <input type="text" name="operator_nine" class="form-control" id="operator-9" value="">
+              <label for="operator-23">23</label>
+              <input type="text" name="operator_twenty_three" class="form-control" id="operator-23" value="">
             </div>
             <div class="col-xs-12 col-sm-4">
-              <label for="operator">CALLSIGN/REGN</label>
+              <label for="callsign-regn">CALLSIGN/REGN</label>
               <p></p>
-
               <label for="operator-8">8</label>
               <input type="text" name="operator_eight" class="form-control" id="operator-8" value="">
               <p></p>
-              <label for="">8</label>
-              <input type="text" name="operator_seven" class="form-control" id="operator-7" value="">
+              <label for="operator-16">16</label>
+              <input type="text" name="operator_sixteen" class="form-control" id="operator-16" value="">
               <p></p>
-              <label for="">8</label>
-              <input type="text" name="operator_seven" class="form-control" id="operator-7" value="">
+              <label for="operator-24">24</label>
+              <input type="text" name="operator_twenty_four" class="form-control" id="operator-24" value="">
             </div>
             <div class="col-xs-12 col-sm-4">
               <label for="operator">TYPE</label>
@@ -184,14 +183,154 @@
               <label for="operator-9">9</label>
               <input type="text" name="operator_nine" class="form-control" id="operator-9" value="">
               <p></p>
-              <label for="">8</label>
-              <input type="text" name="operator_seven" class="form-control" id="operator-7" value="">
+              <label for="operator-17">17</label>
+              <input type="text" name="operator_twenty_five" class="form-control" id="operator-17" value="">
               <p></p>
-              <label for="">8</label>
-              <input type="text" name="operator_seven" class="form-control" id="operator-7" value="">
+              <label for="operator-25">25</label>
+              <input type="text" name="operator_seven" class="form-control" id="operator-25" value="">
             </div>
           </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <label for="operator">FROM</label>
+              <p></p>
+              <label for="operator-10">10</label>
+              <input type="text" name="operator_ten" class="form-control" id="operator-10" value="">
+              <p></p>
+              <label for="operator-18">18</label>
+              <input type="text" name="operator_eighteen" class="form-control" id="operator-18" value="">
+              <p></p>
+              <label for="operator-26">26</label>
+              <input type="text" name="operator_nine" class="form-control" id="operator-26" value="">
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <label for="operator">TO</label>
+              <p></p>
+              <label for="operator-11">11</label>
+              <input type="text" name="operator_eleven" class="form-control" id="operator-11" value="">
+              <p></p>
+              <label for="operator-19">19</label>
+              <input type="text" name="operator_eleven" class="form-control" id="operator-19" value="">
+              <p></p>
+              <label for="operator-27">27</label>
+              <input type="text" name="operator_twenty_seven" class="form-control" id="operator-27" value="">
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <label for="operator">SSR CODE</label>
+              <p></p>
+              <label for="operator-12">12</label>
+              <input type="text" name="operator_twelve" class="form-control" id="operator-12" value="">
+              <p></p>
+              <label for="operator-20">8</label>
+              <input type="text" name="operator_twenty" class="form-control" id="operator-20" value="">
+              <p></p>
+              <label for="operator-28">28</label>
+              <input type="text" name="operator_seven" class="form-control" id="operator-28" value="">
+            </div>
+          </div>
+          <hr>
 
+          <div class="row">
+            <div class="col-xs-12 col-sm-6">
+              <label for="">MODE C DISPLAYED</label>
+              <p></p>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="mode-13">13</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="mode-13" value="yes" id="yes-mode-13">
+                  <label for="yes-mode-13">Yes</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="mode-13" value="no" id="no-mode-13">
+                  <label for="no-mode-13">No</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="mode-21">21</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="mode" value="yes-mode-21" id="yes-mode-21">
+                  <label for="yes-mode-21">Yes</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="mode" value="no-mode-21" id="no-mode-21">
+                  <label for="no-mode-21">No</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="mode-13">29</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="mode" value="yes-mode-29" id="yes-mode-29">
+                  <label for="yes-mode-29">Yes</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="mode" value="no-mode-29" id="no-mode-29">
+                  <label for="no-mode-29">No</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+              <label for="">IFR/VFR/SVFR</label>
+              <p></p>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="mode-14">14</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode-14" value="ifr" id="ifr-mode-14">
+                  <label for="ifr-mode-14">IFR</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode-14" value="vfr" id="vfr-mode-14">
+                  <label for="vfr-mode-14">VFR</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode-14" value="svfr" id="svfr-mode-14">
+                  <label for="svfr-mode-14">SVFR</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="mode-22">22</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode" value="ifr-mode-22" id="ifr-mode-22">
+                  <label for="ifr-mode-22">IFR</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode" value="vfr-mode-22" id="vfr-mode-22">
+                  <label for="vfr-mode-22">VFR</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode" value="svfr-mode-22" id="svfr-mode-22">
+                  <label for="svfr-mode-22">SVFR</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="mode-13">29</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode" value="ifr-mode-29" id="ifr-mode-29">
+                  <label for="ifr-mode-29">IFR</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode" value="vfr-mode-29" id="vfr-mode-29">
+                  <label for="vfr-mode-29">VFR</label>
+                </div>
+                <div class="col-xs-4">
+                  <input type="radio" name="mode" value="svfr-mode-29" id="svfr-mode-29">
+                  <label for="svfr-mode-29">SVFR</label>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <p></p>
             <div class="col-xs-12 col-sm-4">
@@ -227,36 +366,521 @@
 
           <div class="row">
             <div class="form-group col-xs-12 col-sm-4">
-                <h4>36. Class of airspace</h4>
-                <br>
-                <div class="row">
-                  <div class="col-xs-12">
-
-                  </div>
-                  <div class="col-xs-3">
-                    <input type="checkbox" name="a" value="a" id="a">
-                    <label for="a" title="Required">A</label>
-                  </div>
-                  <div class="col-xs-3">
-                    <input type="checkbox" name="b" value="b" id="b">
-                    <label for="b">B</label>
-                  </div>
-                  <div class="col-xs-3">
-                    <input type="checkbox" name="c" value="" id="c">
-                    <label for="c" title="Required">C </label>
-                  </div>
-                  <div class="col-xs-3">
-                    <input type="checkbox" name="hail" value="" id="hail">
-                    <label for="hail" title="alt-ht">G</label>
-                  </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <br>
+                  <label>36. Class of airspace</label>
+                  <br>
                 </div>
-                <div class="row">
+                <div class="col-xs-3">
+                  <input type="checkbox" name="a" value="a" id="a">
+                  <label for="a" title="Required">A</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="c" value="c" id="c">
+                  <label for="c">B</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="e" value="" id="e">
+                  <label for="e" title="Required">E </label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="g" value="" id="g">
+                  <label for="g" >G</label>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-xs-3">
+                  <input type="checkbox" name="b" value="b" id="b">
+                  <label for="b" title="Required">B</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="d" value="d" id="d">
+                  <label for="d">D</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="f" value="" id="f">
+                  <label for="f" title="Required">F </label>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="col-xs-12 col-sm-8">
+              <div class="col-xs-12">
+                <label>37. Type of airspace</label>
+              </div>
+              <div class="row">
+                <div class="col-xs-2">
+                  <input type="checkbox" name="atz" value="atz" id="atz">
+                  <label for="atz">ATZ</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="cta" value="cta" id="cta">
+                  <label for="cta">CTA</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="cvsm" value="cvsm" id="cvsm">
+                  <label for="cvsm">CVSM</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="prohibited_area" value="prohibited-area" id="prohibited-area">
+                  <label for="prohibited-area">Prohibited area</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="rvsm" value="rvsm" id="rvsm">
+                  <label for="rvsm">RVSM</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="transitional_area" value="transitional-area" id="transitional-area">
+                  <label for="transitional-area">Transitional area</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2">
+                  <input type="checkbox" name="other" value="other" id="other">
+                  <label for="other">Other</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="cba" value="cba" id="cba">
+                  <label for="cba">CBA</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="ctr" value="ctr" id="ctr">
+                  <label for="ctr">CTR</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="danger_area" value="danger-area" id="danger-area">
+                  <label for="danger-area">Danger area</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="tma" value="tma" id="tma">
+                  <label for="tma">TMA</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="restricted_area" value="restricted-area" id="restricted-area">
+                  <label for="restricted-area">Restricted area</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2">
+                  <input type="checkbox" name="tsa" value="tsa" id="tsa">
+                  <label for="tsa">TSA</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="unknown" value="unknown" id="unknown">
+                  <label for="unknown">Unknown</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-xs-12 col-sm-9">
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <label>38.  TYPE OF ATS SERVICE</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="radar" value="radar" id="radar">
+                  <label for="radar">Radar</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="approach" value="approach" id="approach">
+                  <label for="approach">Approach</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="other-ats-service" value="other-ats-service" id="other-ats-service">
+                  <label for="other-ats-service">Other</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="radar_control" value="radar-control" id="radar-control">
+                  <label for="radar-control">Radar Control</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="traffic_service" value="traffic-service" id="traffic-service">
+                  <label for="traffic-service">Traffic Service</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="adc" value="adc" id="adc">
+                  <label for="adc">ADC</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-2">
+                  <input type="checkbox" name="alr" value="alr" id="alr">
+                  <label for="alr">ALR</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="area" value="area" id="area">
+                  <label for="area">Area</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="procedural_control" value="procedural-control" id="procedural-control">
+                  <label for="procedural-control">Procedural Control</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="radar_service" value="radar-service" id="radar-service">
+                  <label for="radar-service">Radar Service</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="basic-service" value="basic-service" id="basic-service">
+                  <label for="basic-service">Basic Service</label>
+                </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="gmc" value="gmc" id="gmc">
+                  <label for="gmc">GMC</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <label for="sid-star-route">39. SID/STAR/ROUTE</label>
+              <p></p>
+              <input type="text" name="sid-star-route" value="" class="form-control" id="sid-star-route">
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-xs-12 col-sm-3">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="">40.	Was prescribed
+    	separation lost?</label>
+                </div>
+
+                <p></p>
+                <div class="col-xs-6">
+                  <input type="radio" name="yes-prescribed-separation" value="yes-prescribed-separation" id="yes-prescribed-separation">
+                  <label for="yes-prescribed-separation">Yes</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="no-prescribed-separation" value="no-prescribed-separation" id="no-prescribed-separation">
+                  <label for="no-prescribed-separation">No</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="">41. Min Separation</label>
+                  <p>Horizontal <input type="text" class="form-control" name="" style="display: inline; width: 50%;" value="">NM</p>
+                  <p>Vertical <input type="text" class="form-control" style="display: inline; width: 50%;" name="" value="">ft</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label>42. Alert Activation </label>
+                  <br>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="collision" value="collision" id="collision">
+                  <label for="collision" title="Required">Collision</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="tcas" value="tcas" id="tcas">
+                  <label for="tcas">TCAS</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="smf" value="" id="smf">
+                  <label for="smf">SMF</label>
+                </div>
+                <div class="col-xs-3">
+                  <input type="checkbox" name="conflict-alert" value="conflict-alert" id="conflict-alert">
+                  <label for="conflict-alert">Conflict Alert</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <div class="row">
+                <div class="col-xs-12">
+                  <label for="">43. Traffic info given by
+	ATC?</label>
+                </div>
+                <p></p>
+                <div class="col-xs-6">
+                  <input type="radio" name="traffic_info" value="yes-traffic-info" id="yes-traffic-info">
+                  <label for="yes-traffic-info">Yes</label>
+                </div>
+                <div class="col-xs-6">
+                  <input type="radio" name="traffic_info" value="no-traffic-info" id="no-traffic-info">
+                  <label for="no-traffic-info">No</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-xs-12 ">
+              <label for="brief-title-summary" title="Required">45. BRIEF TITLE
+Summary: *</label>
+              <p class="error-message"></p>
+              <textarea name="brief_title_summary" data-parsley-trigger="change" data-parsley-minlength="20" data-parsley-maxlength="400" required="" class="form-control" rows="2" cols="80" id="brief-title-summary"></textarea>
+            </div>
           </div>
         </div>
+        <br>
+        <div class="row">
+          <div class="form-group col-xs-12 ">
+            <label for="narrative-use">46  NARRATIVE - use a diagram if necessary (Aerodromes submit weather report including local and regional QNH). : *</label>
+            <p class="error-message"></p>
+            <textarea name="narrative_use" data-parsley-trigger="change" data-parsley-minlength="20" data-parsley-maxlength="400" required="" class="form-control" rows="8" cols="80" id="narrative-use"></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <label for="name" >47. Name</label>
+            <p></p>
+            <input type="text" name="name" class="form-control" value="" id="name">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <label for="on-duty-as" >48. On duty as</label>
+            <p></p>
+            <input type="text" name="on_duty_as" class="form-control" value="" id="on-duty-as">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <label for="ats-unit" >49.	ATS Unit</label>
+            <p></p>
+            <input type="text" name="ats_unit" class="form-control" value="" id="ats-unit">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="form-group col-xs-12 col-sm-4">
+            <label for="time-since" title="Required">Time since: * </label>
+              <p class="error-message text-center">last break</p>
+              <select class="form-control" name="time_since" data-parsley-trigger="change" required="">
+                <option value="">Choose an item.</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+              </select>
+
+              <p class="error-message text-center"></p>
+              <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                <option value="">Choose an item.</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+              </select>
+          </div>
+          <div class="form-group col-xs-12 col-sm-4">
+            <label for="start-time-of" title="Required">51.	Start time of: * </label>
+              <p class="error-message text-center">shift</p>
+              <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                <option value="">Choose an item.</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+              </select>
+
+              <p class="error-message text-center"></p>
+              <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                <option value="">Choose an item.</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+              </select>
+          </div>
+          <div class="col-xs-12 col-sm-3">
+            <div class="row">
+              <div class="col-xs-12">
+                <label for="">52	Radar recordings</label>
+              </div>
+
+              <div class="col-xs-6">
+                  <p class="text-center">Held</p>
+                <input type="radio" name="yes-prescribed-separation" value="yes-prescribed-separation" id="yes-prescribed-separation">
+                <label for="yes-prescribed-separation">Yes</label>
+              </div>
+              <div class="col-xs-6">
+                <p style="visibility: hidden">hello</p>
+                <input type="radio" name="no-prescribed-separation" value="no-prescribed-separation" id="no-prescribed-separation">
+                <label for="no-prescribed-separation">No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="row">
+              <div class="col-xs-12">
+                <label for="">52	Radar recordings</label>
+              </div>
+              <p></p>
+              <p></p>
+              <div class="col-xs-6">
+                <p class="text-center">Held</p>
+                <input type="radio" name="yes-prescribed-separation" value="yes-prescribed-separation" id="yes-prescribed-separation">
+                <label for="yes-prescribed-separation">Yes</label>
+              </div>
+              <div class="col-xs-6">
+                <p style="visibility: hidden">hello</p>
+                <input type="radio" name="no-prescribed-separation" value="no-prescribed-separation" id="no-prescribed-separation">
+                <label for="no-prescribed-separation">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+
+              <label for="list-other">54. List other agencies advised</label>
+              <p></p>
+              <input type="text" name="list_other-one" class="form-control" value="">
+              <br>
+              <input type="text" name="list_other-two" class="form-control" value="">
+
+          </div>
+          <div class="form-group col-xs-12 col-sm-4">
+            <label for="date-sign" title="Required">55. Date/Sign: * </label>
+            <p class="error-message"></p>
+            <div class="form-group">
+              <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                  <input class="form-control" size="16" type="text" value="" id="date">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+  			          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+              </div>
+              <input type="file" name="pic" accept="image/*" class="btn">
+      				<input type="hidden" id="dtp_input2" value=""><br>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <label for="address">56.	Address</label>
+            <input type="text" name="address" value="" class="form-control" id="address">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <label for="e-mail-address">E-mail Address</label>
+            <input type="text" name="e_mail_address" class="form-control" value="" id="e-mail-address">
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <label for="telephone">Telephone</label>
+            <input type="text" name="telephone" class="form-control" value="" id="telephone">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="submit">
+        <input type="submit" class="btn btn-success" id="btn-submit" name="submit" value="Submit"/>
+      </div>
+      <br>
       </section>
     </form>
+    <div class="container">
+      <h3 class="text-center form-one-header">ADVICE ON THE COMPLETION OF THE CAAK ATS OCCURRENCE REPORT FORM –
+AACK/DSF/OR-FRM 02</h3>
+      <div class="info-part" id="info">
+
+      <h4>USE AND EXPLANATION OF TERMS IN BOX 1</h4>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">ACCIDENT:</h5>
+        <h5 class="col-xs-12 col-sm-9">A Kosovo reportable accident.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">AIRPROX:</h5>
+        <h5 class="col-xs-12 col-sm-9">An AIRPROX is a situation in which, in the opinion of a pilot or a controller, the distance between aircraft as well as their relative positions and speed have been such that the safety of the aircraft involved was or may have been compromised.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">NCIDENT:</h5>
+        <h5 class="col-xs-12 col-sm-9">Any Occurrence not appropriate to the other categories.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">INFRIGEMENT:</h5>
+        <h5 class="col-xs-12 col-sm-9">An alleged unauthorized infringement of regulated airspace.</h5>
+      </div>
+      <br>
+      <div class="row">
+        <h5 class="col-xs-12"><strong>Explanatory notes</strong> (Please also refer to manual of ATS procedures) </h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">GENERAL:</h5>
+        <h5 class="col-xs-12 col-sm-9">Complete ALL boxes. If NOT APPLICABLE use N/A, or if NOT KNOWN use N/K. Avoid use of technical jargon, hieroglyphics and abbreviations.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">BOX 1:</h5>
+        <h5 class="col-xs-12 col-sm-9">Should the Occurrence involve more than one category, tick both categories.</h5>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <h5>BOXES 7 TO 14</h5>
+          <h5>BOXES 15 TO 22</h5>
+          <h5>BOXES 23 TO 30</h5>
+        </div>
+        <h5 class="col-xs-12 col-sm-9"><br>These boxes cater for up to three involved aircraft. Use the narrative for additional aircraft.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">BOX 40:</h5>
+        <h5 class="col-xs-12 col-sm-9">Must be completed if prescribed separation was required to be achieved in accordance with manual of ATS procedures.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">BOX 41:</h5>
+        <h5 class="col-xs-12 col-sm-9">Should contain your estimate, where possible, of the minimum separation achieved and must be completed for an AIRPROX. This will be coded for computer input purposes and amended if necessary after investigation.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">BOX 45:</h5>
+        <h5 class="col-xs-12 col-sm-9">This box should contain a simple, one-line statement summarizing the Occurrence, i.e. 'Coordination problems', 'Level bust', 'Overload' etc.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">BOX 52/53:</h5>
+        <h5 class="col-xs-12 col-sm-9">Relevant RTF and Radar recordings can be vitally important to subsequent investigations. Retention action should be considered for all reports and is to be in accordance with ATS Manual and any local procedures.</h5>
+      </div>
+      <div class="row">
+        <h5 class="col-xs-12 col-sm-3">BOX 54:</h5>
+        <h5 class="col-xs-12 col-sm-9">It is important to ensure that any involved agency (e.g. Pilot, Operator, ATSU) is informed of the reporting action. This box should also indicate those organisations required by ATS Manual to be informed (e.g. Aeronautical Accident and Incident Investigations Commission (AAIIC))..</h5>
+      </div>
+      <br>
+      <h5><strong>REPORTING TIME</strong></h5>
+      <h5>Report must be dispatched within 72 hours of the event unless exceptional circumstances prevent this.</h5>
+      <br>
+      <h5><strong>ACKNOWLEDGEMENT OF REPORTS</strong></h5>
+      <h5>If, acknowledgement of reports is required, please contact the CAAK direct on e-mail: mor@caa-ks.org or mobile number: +377 (0)44 613 567.</h5>
+      <br>
+      <h5><strong>UNIT MANAGEMENT ACTION</strong></h5>
+      <h5>Reporters are requested to send a copy to the Unit Management. This is for local assessment and any immediate follow-up action. Additional input and/or covering comment from Unit Management is highly desirable for both Safety Data evaluation and any follow-up investigation.</h5>
+      <br>
+      <h5><strong>CONFIDENTIAL REPORTS</strong></h5>
+      <h5>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 47 to 57 should be completed. The CAAK will respect the confidentiality and contact you personally.</h5>
+    </div>
+    </div>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
    <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
