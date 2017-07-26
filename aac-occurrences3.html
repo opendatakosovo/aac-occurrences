@@ -54,7 +54,7 @@
 
             <div class="row">
               <div class="form-group col-xs-12 col-sm-6">
-
+                <div class="row">
                   <label class="col-xs-10" for="operator" title="Required">1. Categories of occurrence * </label>
 
                   <p class="error-message"></p>
@@ -88,10 +88,10 @@
               <p></p>
               <input type="text" name="occurrence-location" value="" class="form-control" id="occurrence-location">
             </div>
-          
+          </div>
           <div class="row">
             <div class="col-xs-12 col-sm-4">
-              <div class="row">
+
                 <label for="tel">Date (dd.mm.yyyy)</label>
                 <p></p>
                 <div class="form-group">
@@ -122,7 +122,6 @@
                   <option value="13">13</option>
                 </select>
               </div>
-            </div>
           </div>
           <div class="col-xs-12 col-sm-4">
             <p></p>
@@ -156,7 +155,102 @@
           </div>
         </div>
         <hr>
+        <div class="row">
+          <div class="form-group col-xs-12 col-sm-4">
+            <label for="service-affected" title="Required">7.	Service Affected: *</label>
+            <p class="error-message"></p>
+            <input type="text" class="form-control" name="service_affected" value="" data-parsley-trigger="change" id="service-affected">
+          </div>
+          <div class="form-group col-xs-12 col-sm-4">
+            <label for="equipment-type-manufacturer" title="Required">8. Equipment Type/Manufacturer: *</label>
+            <p class="error-message"></p>
+            <input type="text" name="equipment_type_manufacturer" class="form-control" value="" data-parsley-trigger="change" id="equipment-type-manufacturer">
+          </div>
+          <div class="form-group col-xs-12 col-sm-4">
+            <label for="frequency" title="Required">9.	Frequency: *</label>
+            <p class="error-message"></p>
+            <input type="text" class="form-control" name="frequency" value="" data-parsley-trigger="change" required="" id="frequency">
+          </div>
+        </div>
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6">
+          <label for="callsign" title="Required">10.	Callsign: *</label>
+          <p class="error-message"></p>
+          <input type="text" name="callsign" class="form-control" value="" data-parsley-trigger="change" id="callsign">
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+          <label for="equipment-location" title="Required">11.	Equipment Location: *</label>
+          <p class="error-message"></p>
+          <input type="text" class="form-control" name="equipment_location" value="" data-parsley-trigger="change" required="" id="equipment-location">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="">
+            <label>12. Facility Configuration</label>
+          </div>
 
+          <div class="col-xs-6">
+            <div class="row">
+
+              <input type="radio" name="service" value="in-service" id="in-service">
+              <label for="in-service">In service</label>
+            </div>
+            <div class="row">
+              <input type="radio" name="standby_test" value="main-mode" id="main-mode">
+              <label for="main-mode">Main-Mode</label>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="row">
+              <span>or</span>
+              <input type="radio" name="service" value="out-of-service" id="out-of-service">
+              <label for="out-of-service">Out of service</label>
+            </div>
+            <div class="row">
+              <span>or</span>
+              <input type="radio" name="standby_test" value="standby-test" id="standby-test">
+              <label for="standby-test">Standby/Test</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <input type="radio" name="channel_a" value="channel-a" id="channel-a">
+              <label for="channel-a">Channel A(1) </label>
+
+            </div>
+            <div class="col-xs-4">
+              <span>or</span>
+                  <input type="radio" name="channel_a" value="B-2" id="B-2">
+                  <label for="B-2">B(2)</label>
+            </div>
+            <div class="col-xs-4">
+              <span>or</span>
+              <input type="radio" name="channel_a" value="other" id="other-channel">
+              <label for="other-channel">Other: </label>
+              <input type="text" name="other-input" value="" class="form-control">
+            </div>
+            <div class="col-xs-12">
+              <label for="external-information-source">External Information Source:</label>
+              <input type="text" name="external_information_source" value="" class="form-control" id="external-information-source">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-6">
+            <label>13.	Equipment Status</label>
+            <br>
+            <input type="radio" name="planned_unplanned" id="planned">
+            <label for="planned">Planned</label>
+            <input type="radio" name="" value="">
+
+          </div>
+        </div>
+        </div>
+        <hr>
+      </div>
+      </div>
       </section>
 
 
