@@ -33,7 +33,7 @@
   <body>
 
     <header>
-        <h1 class="text-center">Dangerous Goods Occurrence Repost</h1>
+        <h1 class="text-center">Dangerous Goods Occurrence Report</h1>
     </header>
 
     <form id="form" class="main-form" data-parsley-validate="" method="POST">
@@ -324,7 +324,88 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-xs-12 col-xs-4">
+          <div class="row">
+            <div class="col-xs-12">
+              <label>17. Recordings impounded?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <input type="radio" name="recordings_impounded" value="no-recordings-impounded" id="no-recordings-impounded">
+              <label for="no-recordings-impounded">No</label>
+            </div>
+            <div class="col-xs-6">
+              <input type="radio" name="recordings_impounded" value="yes-recordings-impounded" id="yes-recordings-impounded">
+              <label for="yes-recordings-impounded">Yes</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <input type="radio" name="recordings_impounded" value="not-known-recordings" id="not-known-recordings">
+              <label for="not-known-recordings">Not Known</label>
+              <input type="text" name="not_known_recordings" value="" class="form-control" id="not-known-recordings">
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-xs-4">
+          <div class="row">
+            <div class="col-xs-12">
+              <label>18. Can the information be
+                      	disseminated in the
+                      	interests of flight safety?</label>
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="col-xs-6">
+              <input type="radio" name="disseminated_interests" value="yes-disseminated-interests" id="yes-disseminated-interests">
+              <label for="yes-disseminated-interests">Yes</label>
+            </div>
+            <div class="col-xs-6">
+              <input type="radio" name="disseminated_interests" value="no-disseminated-interests" id="no-disseminated-interests">
+              <label for="no-disseminated-interests">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="row">
+            <label for="name">Name</label>
+            <p></p>
+            <input type="text" name="name" value="" class="form-control" id="name">
+            <br>
+            <label for="organisation-position">21.	Organisation/Position</label>
+            <p></p>
+            <input type="text" name="organisation_position" class="form-control" value="" id="organisation-position">
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12 col-xs-4">
+          <div class="row">
+            <div class="col-xs-12">
+              <label>19. Other fault report action: *</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <input type="radio" name="other_fault_report" value="atc-manual" id="atc-manual">
+              <label for="atc-manual">ATC Manual</label>
+            </div>
+            <div class="col-xs-6">
+              <input type="radio" name="other_fault_report" value="yes-recordings-impounded" id="yes-recordings-impounded">
+              <label for="yes-recordings-impounded">Local Reporting</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <input type="radio" name="other_fault_report" value="not-known-recordings" id="not-known-recordings">
+              <label for="not-known-recordings">Other:</label>
+              <input type="text" name="not_known_recordings" value="" class="form-control" id="not-known-recordings">
+            </div>
+          </div>
+        </div>
       </div>
       </div>
       </section>
