@@ -173,23 +173,188 @@
               </div>
               <br>
               <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                    <label for="heigh-agl">10. Heigh (AGL)</label>
-                    <p></p>
-                    <input type="text" name="heigh-agl" value="" id="heigh-agl" class="form-control">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="heigh-agl">10. Heigh (AGL)</label>
+                  <p></p>
+                  <input type="text" name="heigh-agl" value="" id="heigh-agl" class="form-control">
                 </div>
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 col-sm-4">
                   <label for="speed-ias">11. Speed (IAS)</label>
                   <p></p>
                   <input type="text" name="speed-ias" value="" id="speed-ias" class="form-control">
                 </div>
+                <div class="col-xs-12 col-sm-4">
+                <br>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <label for="">12. Phase of Flight</label>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="col-xs-6">
+                    <input type="checkbox" name="a_parked" value="" id="a-parked" >
+                    <label for="a-parked">A. Parked</label>
+                    <br>
+                    <input type="checkbox" name="b_taxi" value="b-taxi" id="b-taxi">
+                    <label for="b-taxi">B. Taxi</label>
+                    <br>
+                    <input type="checkbox" name="take_off_run" value="take-off-run" id="take-off-run">
+                    <label for="take-off-run">C. Take-off Run</label>
+                    <br>
+                    <input type="checkbox" name="climb" value="climb" id="climb">
+                    <label for="climb">D. Climb</label>
+                    <br>
+                  </div>
+                  <div class="col-xs-6">
+                    <input type="checkbox" name="en_route" value="en-route" id="en-route" >
+                    <label for="en-route">E. En Route</label>
+                    <br>
+                    <input type="checkbox" name="descent" value="descent" id="descent">
+                    <label for="descent">F. Descent</label>
+                    <br>
+                    <input type="checkbox" name="approach" value="approach" id="approach">
+                    <label for="approach">G. Approach</label>
+                    <br>
+                    <input type="checkbox" name="landing_roll" value="landing-roll" id="landing-roll">
+                    <label for="landing-roll">H. Landing Roll</label>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-xs-12 col-sm-6">
+                  <br>
+                  <div class="">
+                    <label for="">13. Part(s) of Aircraft Struck or Damaged</label>
+                  </div>
+                  <br>
+                  <div class="">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Struck</th>
+
+                          <th>Damaged</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>A. Radome</td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Struck"></td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>B. Windshield</td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Struck"></td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>C. Nose</td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Struck"></td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>D. Engine No. 1</td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Struck"></td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>E. Engine No. 2</td>
+                          <td><input type="radio" name="engine_no_two" value="Engine No. 2 Struck"></td>
+                          <td><input type="radio" name="engine_no_two" value="Engine No. 2 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>F. Engine No. 3</td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Struck"></td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>G. Engine No. 4</td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Struck"></td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Damaged"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <br>
+                  <div class="">
+                    <label for="" style="visibility: hidden">13. Part(s) of Aircraft Struck or Damaged</label>
+                  </div>
+                  <br>
+                  <div class="">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Struck</th>
+
+                          <th>Damaged</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>H. Propeller</td>
+                          <td><input type="radio" name="propeller_struck_damaged" value="Propeller Struck"></td>
+                          <td><input type="radio" name="propeller_struck_damaged" value="Propeller Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>I. Wing/Rotor</td>
+                          <td><input type="radio" name="wing_rotor_struck_damaged" value="Wing/Rotor Struck"></td>
+                          <td><input type="radio" name="wing_rotor_struck_damaged" value="Wing/Rotor Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>J. Fuselage</td>
+                          <td><input type="radio" name="fuselage_struck_damaged" value="Fuselage Struck"></td>
+                          <td><input type="radio" name="fuselage_struck_damaged" value="Fuselage Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>K. Landing Gear </td>
+                          <td><input type="radio" name="landing_struck_damaged" value="Landing Gear  Struck"></td>
+                          <td><input type="radio" name="landing_struck_damaged" value="Landing Gear  Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>L. Tail</td>
+                          <td><input type="radio" name="tail_struck_damaged" value="Tail Struck"></td>
+                          <td><input type="radio" name="tail_struck_damaged" value="Tail 2 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>M. Lights</td>
+                          <td><input type="radio" name="lights_struck_damaged" value="M. Lights Struck"></td>
+                          <td><input type="radio" name="lights_struck_damaged" value="M. Lights Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>N. Other (Specify)</td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Struck"></td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Damaged"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
               <div class="row">
                 <div class="col-xs-12 col-sm-4">
-
+                  <br>
+                  <label for="">15. Effect on Flight</label>
+                  <br>
+                  <input type="checkbox" name="none_effect" value="None Effect on Flight" id="none-effect">
+                  <label for="none-effect">None</label>
+                  <br>
+                  <input type="checkbox" name="aborted_take_effect" value="None Effect on Flight" id="aborted-take-effect">
+                  <label for="aborted-take-effect">Aborted Take-Off</label>
+                  <br>
+                  <input type="checkbox" name="precautionary_landing_effect" value="None Effect on Flight" id="precautionary-landing-effect">
+                  <label for="precautionary-landing-effect">Precautionary Landing</label>
+                  <br>
+                  <input type="checkbox" name="engines_shut_effect" value="Engines Shut Down" id="engines-shut-effect">
+                  <label for="engines-shut-effect">Engines Shut Down</label>
                 </div>
               </div>
-
           </section>
         </form>
 
