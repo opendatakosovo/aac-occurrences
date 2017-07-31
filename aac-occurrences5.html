@@ -184,7 +184,6 @@
                   <input type="text" name="speed-ias" value="" id="speed-ias" class="form-control">
                 </div>
                 <div class="col-xs-12 col-sm-4">
-                <br>
                 <div class="row">
                   <div class="col-xs-12">
                     <label for="">12. Phase of Flight</label>
@@ -354,37 +353,241 @@
                   <input type="checkbox" name="engines_shut_effect" value="Engines Shut Down" id="engines-shut-effect">
                   <label for="engines-shut-effect">Engines Shut Down</label>
                 </div>
+                <div class="col-xs-12 col-sm-4">
+                  <br>
+                  <label for="">16. Sky Condition</label>
+                  <br>
+                  <input type="checkbox" name="no_cloud" value="no-cloud" id="no-cloud">
+                  <label for="no-cloud">No Cloud</label>
+                  <br>
+                  <input type="checkbox" name="some_cloud" value="None Effect on Flight" id="some-cloud">
+                  <label for="some-cloud">Some Cloud</label>
+                  <br>
+                  <input type="checkbox" name="aborted_take_effect" value="Aborted Take-Off" id="sky-aborted-take-effect">
+                  <label for="sky-aborted-take-effect">Aborted Take-Off</label>
+                  <br>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <br>
+                  <label for="">17. Precipitation</label>
+                  <br>
+                  <input type="checkbox" name="precipitation_none" value="precipitation-none" id="precipitation-none">
+                  <label for="precipitation-none">None</label>
+                  <br>
+                  <input type="checkbox" name="fog_none" value="fog-none" id="fog-none">
+                  <label for="fog-none">Fog</label>
+                  <br>
+                  <input type="checkbox" name="rain_none" value="rain-none" id="rain-none">
+                  <label for="rain-none">Rain</label>
+                  <br>
+                  <input type="checkbox" name="snow_none" value="snow-none" id="snow-none">
+                  <label for="snow-none">Snow</label>
+                  <br>
+                </div>
               </div>
+              <hr>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <label for="bird-species">18. Bird Species</label>
+                  <br>
+                  <input type="text" name="bird-species" value="" class="form-control" id="bird-species">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="">
+                    <label for="">13. Part(s) of Aircraft Struck or Damaged</label>
+                  </div>
+                  <br>
+                  <div class="">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Seen</th>
+
+                          <th>Struck</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Struck"></td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>2-10</td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Struck"></td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>11-100</td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Struck"></td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>more than 100</td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Struck"></td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Damaged"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <label for="">20. Size of Bird(s)</label>
+                  <br>
+                  <input type="checkbox" name="size_small" value="size-small" id="size-small">
+                  <label for="size-small">Small</label>
+                  <br>
+                  <input type="checkbox" name="medium_small" value="medium-small" id="medium-small">
+                  <label for="medium-small">Medium</label>
+                  <br>
+                  <input type="checkbox" name="Large_small" value="Large-small" id="Large-small">
+                  <label for="Large-small">Large</label>
+                  <br>
+                </div>
+                <div class="form-group col-sm-6 col-xs-12">
+                <label for="">22. Pilot Warned of Birds</label>
+                <br>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <input type="radio" name="yes_pilot" value="yes" id="yes-pilot">
+                    <label for="yes-pilot">Yes</label>
+                  </div>
+                  <div class="col-xs-6">
+                    <input type="radio" name="yes_pilot" value="no" id="no-t">
+                    <label for="no-t">No</label>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <hr>
+              <div class="row">
+              <div class="form-group col-xs-12 ">
+                <label for="remarks" title="Required">23. Remarks (Describe damage, injuries and other pertinent information) </label>
+                <p class="error-message"></p>
+                <textarea name="remarks" data-parsley-trigger="change" data-parsley-minlength="20" data-parsley-maxlength="400" required="" class="form-control" rows="8" cols="80" id="remarks"></textarea>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <label for="aircraft-time">24. Aircraft time out of service</label>
+                <p></p>
+                <input type="text" name="aircraft_time" value="" id="aircraft-time" class="form-control">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="estimated-cost">25. Estimated cost of repairs or replacement (EUR)</label>
+                <p></p>
+                <input type="text" name="estimated_cost" class="form-control" value="" id="estimated-cost">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="estimated-other-costs">26. Estimated other Costs (EUR) (e.g. loss of revenue, fuel, hotels))</label>
+                <p></p>
+                <input type="text" name="estimated_other_costs" class="form-control" value="" id="estimated-other-costs">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <label class="col-xs-10" for="name-and-title" title="Required">27. Name and title of person making report</label>
+                  <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="" data-original-title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
+                </div>
+                <p class="error-message"></p>
+                <input type="text" class="form-control" value="" name="name_and_title" data-parsley-trigger="change" required="" id="name-and-title">
+              </div>
+
+              <div class="form-group date col-xs-12 col-sm-4">
+                <label for="signature-date" title="Required">28. Signature/Date </label>
+                <p class="error-message"></p>
+                <div class="form-group">
+                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" name="signature_date" id="signature-date">
+                    <span class="input-group-addon"><span class="glyphicon  glyphicon-remove"></span></span>
+				            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+          				<input type="hidden" id="dtp_input2" value=""><br>
+                </div>
+              </div>
+
+              <div class="form-group col-xs-12 col-sm-4">
+                <label for="address-and-tel" title="Required">29. Address and tel. no. </label>
+                <p></p>
+                <input type="text" name="address_and_tel" class="form-control" value="" id="address-and-tel">
+              </div>
+            </div>
           </section>
         </form>
 
         <div class="container">
 
-          <h3>Notes:</h3>
+          <h3 class="text-center">ADVICE ON THE COMPLETION OF THE BIRDSTRIKE OCCURRENCE REPORT FORM –
+AACK/DSF/OR-FRM 05</h3>
           <div class="info-part" id="info">
             <ol>
-              <li>It is important that this form is completed in as much detail as possible; this will help to avoid delays in processing the report and unnecessary additional work by both the reporter and the CAAK.</li>
+              <li>Aircraft Operator - This can be an airline (Abbreviations are OK - Operator’s ICAO Designator), business, government agency (Kosovo Police, Kosovo Security Force, etc.) or if a private pilot - his/her name.</li>
               <br>
-              <li>Any type of dangerous goods occurrence must be reported, irrespective of whether the dangerous goods are contained in cargo, mail or baggage.</li>
+              <li>Aircraft Make/Model - Abbreviations are OK, but to include the model (e.g. B737-200, A330-200).</li>
               <br>
-              <li>A dangerous goods accident is an occurrence associated with and related to the transport of dangerous goods which results in fatal or serious injury to a person or major property damage. For this purpose, a serious injury is an injury which is sustained by a person in an accident and which: (a) requires hospitalisation for more than 48 hours, commencing within 7 days from the date the injury was received; or (b) results in a fracture of any bones (except simple fractures of fingers, toes or nose); or (c) involves lacerations which cause severe haemorrhage, nerve, muscle or tendon damage; or (d) involves injury to any internal organ; or (e) involves second or third degree burns, or any burns affecting more than 5% of the body surface; or (f) involves verified exposure to infectious substances or injurious radiation. A dangerous goods accident may also be an aircraft accident; in which case the normal procedure for reporting of air accidents must be followed.</li>
+              <li>Call Sign - The assigned arrival / departure radio call sign of the aircraft.</li>
               <br>
-              <li>A dangerous goods incident is an occurrence, other than a dangerous goods accident, associated with and related to the transport of dangerous goods, not necessarily occurring on board an aircraft, which results in injury to a person, property damage, fire, breakage, spillage, leakage of fluid or radiation or other evidence that the integrity of the packaging has not been maintained. Any occurrence relating to the transport of dangerous goods which seriously jeopardises the aircraft or its occupants is also deemed to constitute a dangerous goods incident.</li>
+              <li>Aircraft Registration - This means nationality and registration marks of the aircraft. </li>
               <br>
-              <li>This form should also be used to report any occasion when undeclared or misdeclared dangerous goods are discovered in cargo, mail or unaccompanied baggage or when accompanied baggage contains dangerous goods which passengers or crew are not permitted to take on board aircraft.</li>
+              <li>Date of Occurrence - Give the local date, not the ZULU or GMT date.</li>
               <br>
-              <li>An initial report should be despatched within 72 hours of the occurrence, to the Authority of the State (a) in which the aircraft is registered (if applicable); and (b) in which the incident occurred, unless exceptional circumstances prevent this. The initial report may be made by any means but a written report should be sent as soon as possible, even if all the information is not available.</li>
+              <li>Local Time of Occurrence - Check the appropriate light conditions and fill in the hour and minute local time, use the 24 clock. </li>
               <br>
-              <li>Copies of all relevant documents and any photographs should be attached to this report.</li>
+              <li>Aerodrome - Use the aerodrome name or 4/3 letter code. If a foreign aerodrome, use the full name or 4/3 letter code and location (city/country).</li>
               <br>
-              <li>Completed reports must be sent to the Civil Aviation Authority of Kosovo (CAAK), Ahmet Krasniqi Street n.n. (Arbëria), 10000, Prishtina; E-mail address: mor@caa-ks.org , Fax no: +381 (0)38 211 009, Mob no: +377 (0)44 613 567; and any other competent authority required by the Technical Instructions.</li>
+              <li>Runway in Use - Self explanatory.</li>
               <br>
-              <li>Providing it is safe to do so, all dangerous goods, packagings, documents, etc, relating to the occurrence must be retained until after the initial report has been sent to the Authorities referred to in 5. and 7. above and they have indicated whether or not these should continue to be retained.</li>
+              <li>Location if En Route - Put the name of the nearest city and state.</li>
+              <br>
+              <li>Height AGL - Put the feet above ground level at the time of the strike (if you don't know, use MSL and indicate this). For take-off run and landing roll, it must be 0. </li>
+              <br>
+              <li>Speed (IAS) - Speed at which the aircraft was traveling when the strike occurred. </li>
+              <br>
+              <li>Phase of Flight - Phase of flight during which the strike occurred. Take-off run and landing roll should both be 0 AGL. </li>
+              <br>
+              <li>Part(s) of Aircraft Struck or Damaged - Check which parts were struck and damaged. If a part was damaged but not struck indicate this with a check on the damaged column only and indicate in Remarks (#21) why this happened (e.g., the landing gear might be damaged by deer strike, causing the aircraft to flip over and damage parts not struck by deer). </li>
+              <br>
+              <li>Effect on Flight - You can check more than one and if you check “Other”, please explain in Remarks (#21).</li>
+              <br>
+              <li>Sky Condition - Check the one that applies.</li>
+              <br>
+              <li>Precipitation - You may check more than one. </li>
+              <br>
+              <li>Bird Species - Try to be accurate. If you don't know, put unknown and some description. Collect feathers or remains for identification for damaging strikes. </li>
+              <br>
+              <li>Number of birds seen and/or struck - check the box in the Seen column with the correct number if you saw the birds (or other wildlife) before the strike and check the box in the Struck column to show how many were hit. The exact number, can be written next to the box. </li>
+              <br>
+              <li>Size of Bird(s) - Check what you think is the correct size (e.g. sparrow = small, gull = medium and geese = large). </li>
+              <br>
+              <li>Pilot Warned of Birds - Check the correct box (even if it was an ATIS warning or NOTAM). </li>
+              <li>Remarks - Be as specific as you can. Include information about the extent of the damage, injuries, anything you think would be helpful to know. (e.g. number of birds ingested).</li>
+              <br>
+              <li>Remarks - Be as specific as you can. Include information about the extent of the damage, injuries, anything you think would be helpful to know. (e.g. number of birds ingested). </li>
+              <br>
+              <li>Aircraft time out of service - Record how many hours the aircraft was out of service. </li>
+              <br>
+              <li>23. Estimated cost of repairs or replacement - This may not be known immediately, but the data can be sent at a later date or put down a contact name and number for this data.</li>
+              <br>
+              <li>Estimated other cost - Include loss of revenue, fuel, hotels, etc. (see directions for #23). </li>
+              <br>
+              <li>Name and title of person making report - The name is helpful if questions arise about the information on the form. The title can be Pilot, Tower, Airport Operations, Airline Operations, Flight Safety, etc. </li>
+              <br>
+              <li>Signature/Date - Signature of the person making report and the date the form was filled out.</li>
+              <br>
+              <li>Address and tel. no. - Address and phone number of the person making report.</li>
             </ol>
           </div>
           <div class="confidential-reports">
-            <h3>Confidential Reports</h3>
-            <p>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 20 to 26 should be completed. The CAAK will respect the confidentiality and contact you personally.</p>
+            <h3>CONFIDENTIAL REPORTS</h3>
+            <p>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 25 to 27 should be completed. The CAAK will respect the confidentiality and contact you personally.</p>
           </div>
         </div>
         </div>
