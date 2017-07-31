@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="author" content="Fisnik Canaj">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>CAA</title>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="style/jquery-ui.min.css">
+      <link rel="stylesheet" href="style/style.css">
+
+
+      <link href="style/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.js"></script>
+      <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+      <!-- polyfiller file to detect and load polyfills -->
+      <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+     <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+     <![endif]-->
+    </head>
+  </head>
+  <body>
+
+    <header>
+        <h1 class="text-center">BIRDSTRIKE OCCURRENCE REP</h1>
+    </header>
+
+      <form id="form" class="main-form" data-parsley-validate="" method="POST">
+        <section class="container form-section">
+            <section class="container confirm-section text-center">
+              <p>Are you concerned about the confidentiality of this report and wish to be contacted before it is processed?
+                If so, please ensure you provide us with your contact details.<p>
+              <h4>CONFIDENTIAL?</h4>
+              <input type="radio" name="confidential" data-parsley-trigger="change" required="" value="yes" id="yes">
+              <label for="yes">Yes</label>
+              <input type="radio" name="confidential" data-parsley-trigger="change" required="" value="no" id="no">
+              <label for="no">No</label>
+              <p id="radio-error"></p>
+            </section>
+            <br/>
+            <br/>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <label class="col-xs-10" for="aircraft-operator" title="Required">1. Aircraft Operator: * </label>
+                  <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
+                </div>
+                <p class="error-message"></p>
+                <input type="text" class="form-control" value="" name="aircraft_operator"  data-parsley-trigger="change" required="" id="aircraft-operator">
+              </div>
+
+              <div class="form-group date col-xs-12 col-sm-4" >
+                <label for="aircraft-make" title="Required">2. Aircraft Make / Model: * </label>
+                <p class="error-message"></p>
+                <input type="text" class="form-control" value="" name="aircraft_make"  data-parsley-trigger="change" required="" id="aircraft-make">
+              </div>
+
+              <div class="form-group col-xs-12 col-sm-4">
+                <label for="call-sign-arrival" title="Required">3. Call Sign Arrival / Departure: * </label>
+                <p class="error-message"></p>
+                <input type="text" class="form-control" value="" name="call_sign_arrival"  data-parsley-trigger="change" required="" id="call-sign-arrival">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <label for="aircraft-registration">4. Aircraft Registration</label>
+                <p></p>
+                <input type="text" name="aircraft_registration" value="" id="aircraft-registration" class="form-control">
+              </div>
+
+              <div class="form-group col-xs-12 col-sm-4">
+                <label for="local" title="Required">Local time of occurrence: * </label>
+                <p class="error-message"></p>
+                <div class="form-group">
+                  <div class="input-group date form_time" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+                    <input class="form-control" size="16" type="text" value="" name="local" id="local">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+          					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                  </div>
+          				<input type="hidden" id="dtp_input3" value=""><br>
+                </div>
+              </div>
+
+              <div class="col-xs-12 col-sm-4">
+
+                  <label for="time-of-event" title="Required">6. Local Time of Occurrence: * </label>
+                  <p class="error-message"></p>
+                  <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                    <option value="">Choose an item.</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                  </select>
+
+                <br>
+
+                  <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                    <option value="">Choose an item.</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                  </select>
+                  <br>
+                  <div class="row">
+                    <div class="col-xs-3">
+                      <input type="radio" name="time_of_occurrence" value="dawn" id="dawn">
+                      <label for="dawn">Dawn</label>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="radio" name="time_of_occurrence" value="day" id="day">
+                      <label for="day">Day</label>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="radio" name="time_of_occurrence" value="dusk" id="dusk">
+                      <label for="dusk">Dusk</label>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="radio" name="time_of_occurrence" value="night" id="night">
+                      <label for="night">Night</label>
+                    </div>
+                  </div>
+              </div>
+
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="aerodrome">7. Aerodrome</label>
+                  <p></p>
+                  <input type="text" name="aerodrome" value="" id="aerodrome" class="form-control">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <label for="runway-in-use">8. Runway in Use</label>
+                  <p></p>
+                  <input type="text" name="runway-in-use"  class="form-control"value="" id="runway-in-use">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <label for="location-if-en-route">9. Location if En Route (Nearest Town / Reference)</label>
+                  <p></p>
+                  <input type="text" name="location-if-en-route"  class="form-control" value="" id="location-if-en-route">
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                  <label for="heigh-agl">10. Heigh (AGL)</label>
+                  <p></p>
+                  <input type="text" name="heigh-agl" value="" id="heigh-agl" class="form-control">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <label for="speed-ias">11. Speed (IAS)</label>
+                  <p></p>
+                  <input type="text" name="speed-ias" value="" id="speed-ias" class="form-control">
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <label for="">12. Phase of Flight</label>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="col-xs-6">
+                    <input type="checkbox" name="a_parked" value="" id="a-parked" >
+                    <label for="a-parked">A. Parked</label>
+                    <br>
+                    <input type="checkbox" name="b_taxi" value="b-taxi" id="b-taxi">
+                    <label for="b-taxi">B. Taxi</label>
+                    <br>
+                    <input type="checkbox" name="take_off_run" value="take-off-run" id="take-off-run">
+                    <label for="take-off-run">C. Take-off Run</label>
+                    <br>
+                    <input type="checkbox" name="climb" value="climb" id="climb">
+                    <label for="climb">D. Climb</label>
+                    <br>
+                  </div>
+                  <div class="col-xs-6">
+                    <input type="checkbox" name="en_route" value="en-route" id="en-route" >
+                    <label for="en-route">E. En Route</label>
+                    <br>
+                    <input type="checkbox" name="descent" value="descent" id="descent">
+                    <label for="descent">F. Descent</label>
+                    <br>
+                    <input type="checkbox" name="approach" value="approach" id="approach">
+                    <label for="approach">G. Approach</label>
+                    <br>
+                    <input type="checkbox" name="landing_roll" value="landing-roll" id="landing-roll">
+                    <label for="landing-roll">H. Landing Roll</label>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row">
+
+                <div class="col-xs-12 col-sm-6">
+                  <br>
+                  <div class="">
+                    <label for="">13. Part(s) of Aircraft Struck or Damaged</label>
+                  </div>
+                  <br>
+                  <div class="">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Struck</th>
+
+                          <th>Damaged</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>A. Radome</td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Struck"></td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>B. Windshield</td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Struck"></td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>C. Nose</td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Struck"></td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>D. Engine No. 1</td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Struck"></td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>E. Engine No. 2</td>
+                          <td><input type="radio" name="engine_no_two" value="Engine No. 2 Struck"></td>
+                          <td><input type="radio" name="engine_no_two" value="Engine No. 2 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>F. Engine No. 3</td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Struck"></td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>G. Engine No. 4</td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Struck"></td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Damaged"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <br>
+                  <div class="">
+                    <label for="" style="visibility: hidden">13. Part(s) of Aircraft Struck or Damaged</label>
+                  </div>
+                  <br>
+                  <div class="">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Struck</th>
+
+                          <th>Damaged</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>H. Propeller</td>
+                          <td><input type="radio" name="propeller_struck_damaged" value="Propeller Struck"></td>
+                          <td><input type="radio" name="propeller_struck_damaged" value="Propeller Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>I. Wing/Rotor</td>
+                          <td><input type="radio" name="wing_rotor_struck_damaged" value="Wing/Rotor Struck"></td>
+                          <td><input type="radio" name="wing_rotor_struck_damaged" value="Wing/Rotor Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>J. Fuselage</td>
+                          <td><input type="radio" name="fuselage_struck_damaged" value="Fuselage Struck"></td>
+                          <td><input type="radio" name="fuselage_struck_damaged" value="Fuselage Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>K. Landing Gear </td>
+                          <td><input type="radio" name="landing_struck_damaged" value="Landing Gear  Struck"></td>
+                          <td><input type="radio" name="landing_struck_damaged" value="Landing Gear  Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>L. Tail</td>
+                          <td><input type="radio" name="tail_struck_damaged" value="Tail Struck"></td>
+                          <td><input type="radio" name="tail_struck_damaged" value="Tail 2 Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>M. Lights</td>
+                          <td><input type="radio" name="lights_struck_damaged" value="M. Lights Struck"></td>
+                          <td><input type="radio" name="lights_struck_damaged" value="M. Lights Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>N. Other (Specify)</td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Struck"></td>
+                          <td><input type="radio" name="engine_no_three" value="Engine No. 3 Damaged"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                  <br>
+                  <label for="">15. Effect on Flight</label>
+                  <br>
+                  <input type="checkbox" name="none_effect" value="None Effect on Flight" id="none-effect">
+                  <label for="none-effect">None</label>
+                  <br>
+                  <input type="checkbox" name="aborted_take_effect" value="None Effect on Flight" id="aborted-take-effect">
+                  <label for="aborted-take-effect">Aborted Take-Off</label>
+                  <br>
+                  <input type="checkbox" name="precautionary_landing_effect" value="None Effect on Flight" id="precautionary-landing-effect">
+                  <label for="precautionary-landing-effect">Precautionary Landing</label>
+                  <br>
+                  <input type="checkbox" name="engines_shut_effect" value="Engines Shut Down" id="engines-shut-effect">
+                  <label for="engines-shut-effect">Engines Shut Down</label>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <br>
+                  <label for="">16. Sky Condition</label>
+                  <br>
+                  <input type="checkbox" name="no_cloud" value="no-cloud" id="no-cloud">
+                  <label for="no-cloud">No Cloud</label>
+                  <br>
+                  <input type="checkbox" name="some_cloud" value="None Effect on Flight" id="some-cloud">
+                  <label for="some-cloud">Some Cloud</label>
+                  <br>
+                  <input type="checkbox" name="aborted_take_effect" value="Aborted Take-Off" id="sky-aborted-take-effect">
+                  <label for="sky-aborted-take-effect">Aborted Take-Off</label>
+                  <br>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                  <br>
+                  <label for="">17. Precipitation</label>
+                  <br>
+                  <input type="checkbox" name="precipitation_none" value="precipitation-none" id="precipitation-none">
+                  <label for="precipitation-none">None</label>
+                  <br>
+                  <input type="checkbox" name="fog_none" value="fog-none" id="fog-none">
+                  <label for="fog-none">Fog</label>
+                  <br>
+                  <input type="checkbox" name="rain_none" value="rain-none" id="rain-none">
+                  <label for="rain-none">Rain</label>
+                  <br>
+                  <input type="checkbox" name="snow_none" value="snow-none" id="snow-none">
+                  <label for="snow-none">Snow</label>
+                  <br>
+                </div>
+              </div>
+              <hr>
+
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <label for="bird-species">18. Bird Species</label>
+                  <br>
+                  <input type="text" name="bird-species" value="" class="form-control" id="bird-species">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="">
+                    <label for="">13. Part(s) of Aircraft Struck or Damaged</label>
+                  </div>
+                  <br>
+                  <div class="">
+                    <table class="table table-condensed">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Seen</th>
+
+                          <th>Struck</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Struck"></td>
+                          <td><input type="radio" name="radome_struck_damaged" value="Radome Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>2-10</td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Struck"></td>
+                          <td><input type="radio" name="windshield_struck_damaged" value="Windshield Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>11-100</td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Struck"></td>
+                          <td><input type="radio" name="nose_struck_damaged" value="Nose Damaged"></td>
+                        </tr>
+                        <tr>
+                          <td>more than 100</td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Struck"></td>
+                          <td><input type="radio" name="engine_no_one" value="Engine No. 1 Damaged"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <label for="">20. Size of Bird(s)</label>
+                  <br>
+                  <input type="checkbox" name="size_small" value="size-small" id="size-small">
+                  <label for="size-small">Small</label>
+                  <br>
+                  <input type="checkbox" name="medium_small" value="medium-small" id="medium-small">
+                  <label for="medium-small">Medium</label>
+                  <br>
+                  <input type="checkbox" name="Large_small" value="Large-small" id="Large-small">
+                  <label for="Large-small">Large</label>
+                  <br>
+                </div>
+                <div class="form-group col-sm-6 col-xs-12">
+                <label for="">22. Pilot Warned of Birds</label>
+                <br>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <input type="radio" name="yes_pilot" value="yes" id="yes-pilot">
+                    <label for="yes-pilot">Yes</label>
+                  </div>
+                  <div class="col-xs-6">
+                    <input type="radio" name="yes_pilot" value="no" id="no-t">
+                    <label for="no-t">No</label>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <hr>
+              <div class="row">
+              <div class="form-group col-xs-12 ">
+                <label for="remarks" title="Required">23. Remarks (Describe damage, injuries and other pertinent information) </label>
+                <p class="error-message"></p>
+                <textarea name="remarks" data-parsley-trigger="change" data-parsley-minlength="20" data-parsley-maxlength="400" required="" class="form-control" rows="8" cols="80" id="remarks"></textarea>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4">
+                <label for="aircraft-time">24. Aircraft time out of service</label>
+                <p></p>
+                <input type="text" name="aircraft_time" value="" id="aircraft-time" class="form-control">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="estimated-cost">25. Estimated cost of repairs or replacement (EUR)</label>
+                <p></p>
+                <input type="text" name="estimated_cost" class="form-control" value="" id="estimated-cost">
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <label for="estimated-other-costs">26. Estimated other Costs (EUR) (e.g. loss of revenue, fuel, hotels))</label>
+                <p></p>
+                <input type="text" name="estimated_other_costs" class="form-control" value="" id="estimated-other-costs">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-4">
+                <div class="row">
+                  <label class="col-xs-10" for="name-and-title" title="Required">27. Name and title of person making report</label>
+                  <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="" data-original-title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
+                </div>
+                <p class="error-message"></p>
+                <input type="text" class="form-control" value="" name="name_and_title" data-parsley-trigger="change" required="" id="name-and-title">
+              </div>
+
+              <div class="form-group date col-xs-12 col-sm-4">
+                <label for="signature-date" title="Required">28. Signature/Date </label>
+                <p class="error-message"></p>
+                <div class="form-group">
+                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" name="signature_date" id="signature-date">
+                    <span class="input-group-addon"><span class="glyphicon  glyphicon-remove"></span></span>
+				            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+          				<input type="hidden" id="dtp_input2" value=""><br>
+                </div>
+              </div>
+
+              <div class="form-group col-xs-12 col-sm-4">
+                <label for="address-and-tel" title="Required">29. Address and tel. no. </label>
+                <p></p>
+                <input type="text" name="address_and_tel" class="form-control" value="" id="address-and-tel">
+              </div>
+            </div>
+          </section>
+        </form>
+
+        <div class="container">
+
+          <h3 class="text-center">ADVICE ON THE COMPLETION OF THE BIRDSTRIKE OCCURRENCE REPORT FORM –
+AACK/DSF/OR-FRM 05</h3>
+          <div class="info-part" id="info">
+            <ol>
+              <li>Aircraft Operator - This can be an airline (Abbreviations are OK - Operator’s ICAO Designator), business, government agency (Kosovo Police, Kosovo Security Force, etc.) or if a private pilot - his/her name.</li>
+              <br>
+              <li>Aircraft Make/Model - Abbreviations are OK, but to include the model (e.g. B737-200, A330-200).</li>
+              <br>
+              <li>Call Sign - The assigned arrival / departure radio call sign of the aircraft.</li>
+              <br>
+              <li>Aircraft Registration - This means nationality and registration marks of the aircraft. </li>
+              <br>
+              <li>Date of Occurrence - Give the local date, not the ZULU or GMT date.</li>
+              <br>
+              <li>Local Time of Occurrence - Check the appropriate light conditions and fill in the hour and minute local time, use the 24 clock. </li>
+              <br>
+              <li>Aerodrome - Use the aerodrome name or 4/3 letter code. If a foreign aerodrome, use the full name or 4/3 letter code and location (city/country).</li>
+              <br>
+              <li>Runway in Use - Self explanatory.</li>
+              <br>
+              <li>Location if En Route - Put the name of the nearest city and state.</li>
+              <br>
+              <li>Height AGL - Put the feet above ground level at the time of the strike (if you don't know, use MSL and indicate this). For take-off run and landing roll, it must be 0. </li>
+              <br>
+              <li>Speed (IAS) - Speed at which the aircraft was traveling when the strike occurred. </li>
+              <br>
+              <li>Phase of Flight - Phase of flight during which the strike occurred. Take-off run and landing roll should both be 0 AGL. </li>
+              <br>
+              <li>Part(s) of Aircraft Struck or Damaged - Check which parts were struck and damaged. If a part was damaged but not struck indicate this with a check on the damaged column only and indicate in Remarks (#21) why this happened (e.g., the landing gear might be damaged by deer strike, causing the aircraft to flip over and damage parts not struck by deer). </li>
+              <br>
+              <li>Effect on Flight - You can check more than one and if you check “Other”, please explain in Remarks (#21).</li>
+              <br>
+              <li>Sky Condition - Check the one that applies.</li>
+              <br>
+              <li>Precipitation - You may check more than one. </li>
+              <br>
+              <li>Bird Species - Try to be accurate. If you don't know, put unknown and some description. Collect feathers or remains for identification for damaging strikes. </li>
+              <br>
+              <li>Number of birds seen and/or struck - check the box in the Seen column with the correct number if you saw the birds (or other wildlife) before the strike and check the box in the Struck column to show how many were hit. The exact number, can be written next to the box. </li>
+              <br>
+              <li>Size of Bird(s) - Check what you think is the correct size (e.g. sparrow = small, gull = medium and geese = large). </li>
+              <br>
+              <li>Pilot Warned of Birds - Check the correct box (even if it was an ATIS warning or NOTAM). </li>
+              <li>Remarks - Be as specific as you can. Include information about the extent of the damage, injuries, anything you think would be helpful to know. (e.g. number of birds ingested).</li>
+              <br>
+              <li>Remarks - Be as specific as you can. Include information about the extent of the damage, injuries, anything you think would be helpful to know. (e.g. number of birds ingested). </li>
+              <br>
+              <li>Aircraft time out of service - Record how many hours the aircraft was out of service. </li>
+              <br>
+              <li>23. Estimated cost of repairs or replacement - This may not be known immediately, but the data can be sent at a later date or put down a contact name and number for this data.</li>
+              <br>
+              <li>Estimated other cost - Include loss of revenue, fuel, hotels, etc. (see directions for #23). </li>
+              <br>
+              <li>Name and title of person making report - The name is helpful if questions arise about the information on the form. The title can be Pilot, Tower, Airport Operations, Airline Operations, Flight Safety, etc. </li>
+              <br>
+              <li>Signature/Date - Signature of the person making report and the date the form was filled out.</li>
+              <br>
+              <li>Address and tel. no. - Address and phone number of the person making report.</li>
+            </ol>
+          </div>
+          <div class="confidential-reports">
+            <h3>CONFIDENTIAL REPORTS</h3>
+            <p>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 25 to 27 should be completed. The CAAK will respect the confidentiality and contact you personally.</p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+         <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+         <script src="js/script.js"></script>
+         <script src="js/validation.js"></script>
+
+         <!-- cdn for modernizr, if you haven't included it already -->
+
+         <script type="text/javascript">
+          $('.form_datetime').datetimepicker({
+              //language:  'fr',
+              weekStart: 1,
+              todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          forceParse: 0,
+              showMeridian: 1
+          });
+        $('.form_date').datetimepicker({
+              language:  'en',
+              weekStart: 1,
+              todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          minView: 2,
+          forceParse: 0
+          });
+        $('.form_time').datetimepicker({
+              language:  'en',
+              weekStart: 1,
+              todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 1,
+          minView: 0,
+          maxView: 1,
+          forceParse: 0
+          });
+      </script>
+
+   </body>
+  </html>
