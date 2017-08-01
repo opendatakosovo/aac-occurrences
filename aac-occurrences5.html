@@ -85,16 +85,16 @@
 
               <div class="form-group col-xs-12 col-sm-4">
                 <br>
-                <label for="local" title="Required">5. Local time of occurrence: * </label>
+                <label for="date-of-occurrence" title="Required">5. Date of Occurrence: * </label>
                 <p class="error-message"></p>
                 <div class="form-group">
-                  <div class="input-group date form_time" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
-                    <input class="form-control" size="16" type="text" value="" name="local" id="local">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-          					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                    <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" >
+                      <input class="form-control" size="16" type="text" value="" name="signature_date" id="date-of-occurrence">
+                      <span class="input-group-addon"><span class="glyphicon  glyphicon-remove"></span></span>
+  				            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    </div>
+            				<input type="hidden" id="dtp_input2" value="2017-08-15"><br>
                   </div>
-          				<input type="hidden" id="dtp_input3" value=""><br>
-                </div>
               </div>
 
               <div class="col-xs-12 col-sm-4">
