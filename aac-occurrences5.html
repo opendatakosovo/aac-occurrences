@@ -75,16 +75,17 @@
               </div>
             </div>
             <hr>
-            <br>
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <label for="aircraft-registration">4. Aircraft Registration</label>
+                <br>
+                <label for="aircraft-registration">4. Aircraft Registration: *</label>
                 <p></p>
                 <input type="text" name="aircraft_registration" value="" id="aircraft-registration" class="form-control">
               </div>
 
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="local" title="Required">Local time of occurrence: * </label>
+                <br>
+                <label for="local" title="Required">5. Local time of occurrence: * </label>
                 <p class="error-message"></p>
                 <div class="form-group">
                   <div class="input-group date form_time" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
@@ -97,7 +98,7 @@
               </div>
 
               <div class="col-xs-12 col-sm-4">
-
+                  <br>
                   <label for="time-of-event" title="Required">6. Local Time of Occurrence: * </label>
                   <p class="error-message"></p>
                   <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
@@ -158,39 +159,45 @@
               <hr>
               <div class="row">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="aerodrome">7. Aerodrome</label>
+                  <br>
+                  <label for="aerodrome">7. Aerodrome: *</label>
                   <p></p>
                   <input type="text" name="aerodrome" value="" id="aerodrome" class="form-control">
                 </div>
                 <div class="col-xs-12 col-sm-4">
-                  <label for="runway-in-use">8. Runway in Use</label>
+                  <br>
+                  <label for="runway-in-use">8. Runway in Use: *</label>
                   <p></p>
                   <input type="text" name="runway-in-use"  class="form-control"value="" id="runway-in-use">
                 </div>
                 <div class="col-xs-12 col-sm-4">
-                  <label for="location-if-en-route">9. Location if En Route (Nearest Town / Reference)</label>
+                  <br>
+                  <label for="location-if-en-route">9. Location if En Route (Nearest Town / Reference): *</label>
                   <p></p>
                   <input type="text" name="location-if-en-route"  class="form-control" value="" id="location-if-en-route">
                 </div>
               </div>
               <br>
               <hr>
-              <br>
+
               <div class="row">
                 <div class="col-xs-12 col-sm-4">
-                  <label for="heigh-agl">10. Heigh (AGL)</label>
+                  <br>
+                  <label for="heigh-agl">10. Heigh (AGL): *</label>
                   <p></p>
                   <input type="text" name="heigh-agl" value="" id="heigh-agl" class="form-control">
                 </div>
                 <div class="col-xs-12 col-sm-4">
-                  <label for="speed-ias">11. Speed (IAS)</label>
+                  <br>
+                  <label for="speed-ias">11. Speed (IAS): *</label>
                   <p></p>
                   <input type="text" name="speed-ias" value="" id="speed-ias" class="form-control">
                 </div>
                 <div class="col-xs-12 col-sm-4">
                 <div class="row">
                   <div class="col-xs-12">
-                    <label for="">12. Phase of Flight</label>
+                    <br>
+                    <label for="">12. Phase of Flight: *</label>
                   </div>
                   <br>
                   <br>
@@ -230,7 +237,7 @@
                 <div class="col-xs-12 col-sm-6">
                   <br>
                   <div class="">
-                    <label for="">13. Part(s) of Aircraft Struck or Damaged</label>
+                    <label for="">13. Part(s) of Aircraft Struck or Damaged: *</label>
                   </div>
                   <br>
                   <div class="">
@@ -344,7 +351,7 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-4">
                   <br>
-                  <label for="">15. Effect on Flight</label>
+                  <label for="">15. Effect on Flight: *</label>
                   <br>
                   <input type="checkbox" name="none_effect" value="None Effect on Flight" id="none-effect">
                   <label for="none-effect">None</label>
@@ -360,7 +367,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-4">
                   <br>
-                  <label for="">16. Sky Condition</label>
+                  <label for="">16. Sky Condition: *</label>
                   <br>
                   <input type="checkbox" name="no_cloud" value="no-cloud" id="no-cloud">
                   <label for="no-cloud">No Cloud</label>
@@ -374,7 +381,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-4">
                   <br>
-                  <label for="">17. Precipitation</label>
+                  <label for="">17. Precipitation: *</label>
                   <br>
                   <input type="checkbox" name="precipitation_none" value="precipitation-none" id="precipitation-none">
                   <label for="precipitation-none">None</label>
@@ -395,13 +402,13 @@
               <br>
               <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                  <label for="bird-species">18. Bird Species</label>
+                  <label for="bird-species">18. Bird Species: *</label>
                   <br>
                   <input type="text" name="bird_species" value="" class="form-control" id="bird-species">
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <div class="">
-                    <label for="">13. Part(s) of Aircraft Struck or Damaged</label>
+                    <label for="">13. Part(s) of Aircraft Struck or Damaged: *</label>
                   </div>
                   <br>
                   <div class="">
@@ -410,7 +417,6 @@
                         <tr>
                           <th></th>
                           <th>Seen</th>
-
                           <th>Struck</th>
                         </tr>
                       </thead>
@@ -445,7 +451,7 @@
               <br>
               <div class="row">
                 <div class="col-xs-12 col-sm-6">
-                  <label for="">20. Size of Bird(s)</label>
+                  <label for="">20. Size of Bird(s): *</label>
                   <br>
                   <input type="checkbox" name="size_small" value="size-small" id="size-small">
                   <label for="size-small">Small</label>
@@ -458,7 +464,7 @@
                   <br>
                 </div>
                 <div class="form-group col-sm-6 col-xs-12">
-                <label for="">22. Pilot Warned of Birds</label>
+                <label for="">22. Pilot Warned of Birds: *</label>
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
@@ -477,7 +483,7 @@
               <br>
               <div class="row">
               <div class="form-group col-xs-12 ">
-                <label for="remarks" title="Required">23. Remarks (Describe damage, injuries and other pertinent information) </label>
+                <label for="remarks" title="Required">23. Remarks (Describe damage, injuries and other pertinent information): *</label>
                 <p class="error-message"></p>
                 <textarea name="remarks" data-parsley-trigger="change" data-parsley-minlength="20" data-parsley-maxlength="400" required="" class="form-control" rows="8" cols="80" id="remarks"></textarea>
               </div>
@@ -487,17 +493,17 @@
             <br>
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <label for="aircraft-time">24. Aircraft time out of service</label>
+                <label for="aircraft-time">24. Aircraft time out of service: *</label>
                 <p></p>
                 <input type="text" name="aircraft_time" value="" id="aircraft-time" class="form-control">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="estimated-cost">25. Estimated cost of repairs or replacement (EUR)</label>
+                <label for="estimated-cost">25. Estimated cost of repairs or replacement (EUR): *</label>
                 <p></p>
                 <input type="text" name="estimated_cost" class="form-control" value="" id="estimated-cost">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="estimated-other-costs">26. Estimated other Costs (EUR) (e.g. loss of revenue, fuel, hotels))</label>
+                <label for="estimated-other-costs">26. Estimated other Costs (EUR) (e.g. loss of revenue, fuel, hotels): *</label>
                 <p></p>
                 <input type="text" name="estimated_other_costs" class="form-control" value="" id="estimated-other-costs">
               </div>
@@ -508,7 +514,7 @@
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
-                  <label class="col-xs-10" for="name-and-title" title="Required">27. Name and title of person making report</label>
+                  <label class="col-xs-10" for="name-and-title" title="Required">27. Name and title of person making report: *</label>
                   <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="" data-original-title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
                 </div>
                 <p class="error-message"></p>
@@ -516,7 +522,7 @@
               </div>
 
               <div class="form-group date col-xs-12 col-sm-4">
-                <label for="signature-date" title="Required">28. Signature/Date </label>
+                <label for="signature-date" title="Required">28. Signature/Date: *</label>
                 <p class="error-message"></p>
                 <div class="form-group">
                   <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -529,7 +535,7 @@
               </div>
 
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="address-and-tel" title="Required">29. Address and tel. no. </label>
+                <label for="address-and-tel" title="Required">29. Address and tel. no.: *</label>
                 <p></p>
                 <input type="text" name="address_and_tel" class="form-control" value="" id="address-and-tel">
               </div>
