@@ -63,7 +63,7 @@
               </div>
 
               <div class="form-group col-xs-12 col-sm-4">
-                  <label for="aircraft-type" title="Required">AIRCRAFT TYPE & SERIES: * </label>
+                <label for="aircraft-type" title="Required">AIRCRAFT TYPE & SERIES: * </label>
                 <p class="error-message"></p>
                 <input name="aircraft_type" value="" type="text" data-parsley-trigger="change" required="" data-parsley-type="digits" class="form-control"  id="aircraft-type">
               </div>
@@ -73,7 +73,7 @@
                 <input name="registration" type="text" data-parsley-trigger="change" required="" class="form-control" id="registration">
               </div>
             </div>
-            <hr>
+
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
                 <label for="location-position-rw" title="Required">LOCATION/POSITION/RW: * </label><p></p>
@@ -92,8 +92,8 @@
           				<input type="hidden" id="dtp_input2" value="" /><br/>
                 </div>
               </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="time-of-event" title="Required">TIME OF EVENT: * </label>
+              <div class="form-group col-xs-10 col-sm-3">
+                <label for="time-of-event" title="Required">TIME OF EVENT (HH:MM): * </label>
                 <p class="error-message"></p>
                 <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
                   <option value="">Choose an item.</option>
@@ -110,9 +110,37 @@
                   <option value="12">12</option>
                   <option value="13">13</option>
                 </select>
+                <br>
+                <p>UTC</p>
+                <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                  <option value="">Choose an item.</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                </select>
+              </div>
+              <div class="col-xs-2 col-sm-1">
+                <br>
+                <input type="radio"  name="registration_time" value="Day" id="registration-day">
+                <label for="registration-day">DAY</label>
+                <br>
+                <input type="radio"  name="registration_time" value="Day" id="registration-night">
+                <label for="registration-night">NIGHT</label>
+                <br>
+                <input type="radio"  name="registration_time" value="Day" id="registration-twilight">
+                <label for="registration-twilight">TWILIGHT</label>
+                <br>
               </div>
             </div>
-
             <hr>
             <br>
             <div class="row">
@@ -402,11 +430,24 @@
                     <label for="hail" title="alt-ht">HAIL</label>
                   </div>
                 </div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <input type="radio" name="precipitation_state" value="" id="precipitation-light">
+                    <label for="precipitation-light">LIGHT</label>
+                  </div>
+                  <div class="col-xs-4">
+                    <input type="radio" name="precipitation_state" value="" id="precipitation-moderate">
+                    <label for="precipitation-moderate">MODERATE</label>
+                  </div>
+                  <div class="col-xs-4">
+                    <input type="radio" name="precipitation_state" value="" id="precipitation-heavy">
+                    <label for="precipitation-heavy">HEAVY</label>
+                  </div>
+                </div>
               </div>
 
               <div class="col-xs-12 col-sm-8">
                 <div class="row">
-
                 <div class="form-group col-xs-12 col-sm-6">
                   <div class="row">
                     <div class="col-xs-12">
@@ -631,7 +672,7 @@
               </div>
             </div>
             <br>
-            <hr>
+            
             <br>
             <div class="row">
 
@@ -1420,6 +1461,7 @@ AACK/DSF/OR-FRM 01:</h3>
             </li>
           </ol>
       </div>
+      <hr>
       </div>
     </section>
 

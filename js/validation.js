@@ -4,9 +4,11 @@ $(document).ready(function() {
   $("input[name='confidential']").on('click', function(event) {
 
     var radioValue = $("input[name='confidential']:checked").val();
-
+      $("#radio-error").html("");
     if(radioValue === "yes"){
     //$(".main-form").show('slow/400/fast');
+
+
       $("#company-dept-code").prop("disabled", true)
       $("#name-and-title").prop("disabled", true)
       $("#telephone-no").prop("disabled", true);
@@ -20,6 +22,7 @@ $(document).ready(function() {
       $("#date-signature").removeAttr('required');
       $("#address").removeAttr('required');
       $("#reporter-ref").removeAttr('required');
+
 
     }
     else{
@@ -37,10 +40,6 @@ $(document).ready(function() {
       $("#date-signature").prop("required", false);
       $("#address").prop("required", false);
       $("#reporter-ref").prop("required", false);
-    }
-
-    if(radioValue =! null){
-      $("#radio-error").html("");
     }
 
   });
