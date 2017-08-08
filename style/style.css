@@ -18,8 +18,11 @@ h1, h2, h3, h4{
   color: #2a57a5;
 }
 
+ol > li::before {font-weight: bold;}
+
 li{ display: block; }
-li:before { content: counters(item, ".") " "; counter-increment: item; }
+li:before { content: counters(item, ".") ". "; counter-increment: item; }
+
 
 .confirm-section {
   max-width: 600px;

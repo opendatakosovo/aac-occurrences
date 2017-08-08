@@ -54,7 +54,7 @@
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
-                  <label class="col-xs-10" for="operator" title="Required">OPERATOR: * </label>
+                  <label class="col-xs-10" for="operator" >Operator: </label>
                   <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
                 </div>
                 <p class="error-message"></p>
@@ -62,12 +62,12 @@
               </div>
 
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="aircraft-type" title="Required">AIRCRAFT TYPE & SERIES: * </label>
+                <label for="aircraft-type" title="Required">Aircraft type & Series: * </label>
                 <p class="error-message"></p>
                 <input name="aircraft_type" value="" type="text" data-parsley-trigger="change" required="" data-parsley-type="digits" class="form-control"  id="aircraft-type">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="registration" title="Required">REGISTRATION: * </label>
+                <label for="registration" title="Required">Registration: * </label>
                 <p class="error-message"></p>
                 <input name="registration" type="text" data-parsley-trigger="change" required="" class="form-control" id="registration">
               </div>
@@ -75,7 +75,7 @@
 
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="location-position-rw" title="Required">LOCATION/POSITION/RW: * </label><p></p>
+                <label for="location-position-rw" title="Required">Location/Position/RW: * </label><p></p>
                 <p class="error-message"></p>
                 <input class="form-control" name="location_position_rw" data-parsley-trigger="change" required="" value="" type="text" id="location-position-rw"></input>
               </div>
@@ -92,7 +92,7 @@
                 </div>
               </div>
               <div class="form-group col-xs-10 col-sm-3">
-                <label for="time-of-event" title="Required">TIME OF EVENT (HH:MM): * </label>
+                <label for="time-of-event" title="Required">Time of event (HH:MM): * </label>
                 <p class="error-message"></p>
                 <div class="input-group date form_time" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
                     <input class="form-control" size="16" type="text" value="" >
@@ -130,13 +130,13 @@
               <div class="col-xs-2 col-sm-1">
                 <br>
                 <input type="radio"  name="registration_time" value="Day" id="registration-day">
-                <label for="registration-day">DAY</label>
+                <label for="registration-day">Day</label>
                 <br>
                 <input type="radio"  name="registration_time" value="Day" id="registration-night">
-                <label for="registration-night">NIGHT</label>
+                <label for="registration-night">Night</label>
                 <br>
                 <input type="radio"  name="registration_time" value="Day" id="registration-twilight">
-                <label for="registration-twilight">TWILIGHT</label>
+                <label for="registration-twilight">Twilight</label>
                 <br>
               </div>
             </div>
@@ -144,17 +144,17 @@
             <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="flight-no" title="Required">FLIGHT NO.: * </label>
+                <label for="flight-no" >Flight No.: * </label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" data-parsley-trigger="change" required="" name="flight_no" value="" id="flight-no">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="route-from" title="Required">ROUTE FROM: * </label>
+                <label for="route-from">Route from: * </label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" data-parsley-trigger="change" required="" name="route-from" value="" id="route-from">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="route-to" title="Required">ROUTE TO: * </label>
+                <label for="route-to">Route to: * </label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" data-parsley-trigger="change" required="" name="route-to" value="" id="route-to">
               </div>
@@ -242,62 +242,62 @@
               <div class="form-group col-xs-12">
                 <br/>
                 <br/>
-                <h4 class="text-center">NATURE OF FLIGHT</h4>
+                <h4 class="text-center">Nature of Flight</h4>
                 <br/>
               </div>
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="passenger" value="" id="passenger">
-                  <label for="passenger">PASSENGER</label>
+                  <label for="passenger">Passenger</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="positioning" value="" id="positioning">
-                  <label for="positioning">POSITIONING</label>
+                  <label for="positioning">Positioning</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="test" value="" id="test">
-                  <label for="test">TEST</label>
+                  <label for="test">Test</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="business" value="" id="business">
-                  <label for="business">BUSINESS</label>
+                  <label for="business">Business</label>
                 </div>
               </div>
             </div>
             <div class="row text-center">
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="survey" value="" id="survey">
-                <label for="survey">SURVEY</label>
+                <label for="survey">Survey</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="club-group" value="" id="club-group">
-                <label for="club-group">CLUB/GROUP</label>
+                <label for="club-group">Club/Group</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="parachuting" value="" id="parachuting">
-                <label for="parachuting">PARACHUTING</label>
+                <label for="parachuting">Parachuting</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="police" value="" id="police">
-                <label for="police">POLICE</label>
+                <label for="police">Police</label>
               </div>
             </div>
             <div class="row text-center">
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="freight" value="" id="freight">
-                <label for="freight">FREIGHT</label>
+                <label for="freight">Freight</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="ferry" value="" id="ferry">
-                <label for="ferry">FERRY</label>
+                <label for="ferry">Ferry</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="training" value="" id="training">
-                <label for="training">TRAINING</label>
+                <label for="training">Training</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="agricultural" value="" id="agricultural">
-                <label for="agricultural">AGRICULTURAL</label>
+                <label for="agricultural">Agricultural</label>
               </div>
             </div>
             <div class="row text-center">
@@ -308,15 +308,15 @@
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="pleasure" value="pleasure" id="pleasure">
-                <label for="pleasure">PLEASURE</label>
+                <label for="pleasure">Pleasure</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="private" value="private" id="private">
-                <label for="private">PRIVATE</label>
+                <label for="private">Private</label>
               </div>
               <div class="form-group col-xs-6 col-sm-3">
                 <input type="checkbox" name="towing" value="towing" id="towing">
-                <label for="towing">TOWING</label>
+                <label for="towing">Towing</label>
               </div>
             </div>
             <br>
@@ -325,25 +325,25 @@
             <div class="row">
               <div class="form-group col-xs-12">
                 <br/>
-                <h4 class="text-center">FLIGHT PHASE</h4>
+                <h4 class="text-center">Flight Phase</h4>
                 <br/>
               </div>
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="parked" value="" id="parked">
-                  <label for="parked">PARKED</label>
+                  <label for="parked">Parked</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="take-off" value="" id="take-off">
-                  <label for="take-off">TAKE-OFF</label>
+                  <label for="take-off">Take-Off</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="climb" value="" id="climb">
-                  <label for="climb">CLIMB</label>
+                  <label for="climb">Climb</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="descent" value="" id="descent">
-                  <label for="descent">DESCENT</label>
+                  <label for="descent">Descent</label>
                 </div>
               </div>
             </div>
@@ -351,19 +351,19 @@
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="approach" value="" id="approach">
-                  <label for="approach">APPROACH</label>
+                  <label for="approach">Approach</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="circuit" value="" id="circuit">
-                  <label for="circuit">CIRCUIT</label>
+                  <label for="circuit">Circuit</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="hover" value="" id="hover">
-                  <label for="hover">HOVER</label>
+                  <label for="hover">Hover</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="taxiing" value="" id="taxiing">
-                  <label for="taxiing">TAXIING</label>
+                  <label for="taxiing">Taxiing</label>
                 </div>
               </div>
             </div>
@@ -371,23 +371,23 @@
               <div class="row text-center">
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="initial-climb" value="" id="initial-climb">
-                  <label for="initial-climb">INITIAL CLIMB</label>
+                  <label for="initial-climb">Initial Climb</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="cruise" value="" id="cruise">
-                  <label for="cruise">CRUISE</label>
+                  <label for="cruise">Cruise</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="holding" value="" id="holding">
-                  <label for="holding">HOLDING</label>
+                  <label for="holding">Holding</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="landing" value="" id="landing">
-                  <label for="landing">LANDING</label>
+                  <label for="landing">Landing</label>
                 </div>
                 <div class="form-group col-xs-6 col-sm-3">
                   <input type="checkbox" name="aerobatics" value="" id="aerobatics">
-                  <label for="aerobatics">AEROBATICS</label>
+                  <label for="aerobatics">Aerobatics</label>
                 </div>
               </div>
             </div>
@@ -395,7 +395,7 @@
             <hr>
             <div class="row">
               <div class="col-xs-12">
-                <h3 class="text-center">ENVIRONMENTAL DETAILS</h3>
+                <h3 class="text-center">Environmental details</h3>
                 <br/>
               </div>
               <div class="col-xs-12 col-sm-6">
@@ -408,7 +408,7 @@
                 <div class="form-group col-xs-12 col-sm-6">
                   <div class="row">
                     <div class="col-xs-12">
-                      <label>WIND: *</label>
+                      <label>Wind: *</label>
                       <br>
                     </div>
                     <div class="col-xs-6">
@@ -416,18 +416,18 @@
                       <input type="number" class="form-control" name="wind" value="" id="dirn">
                     </div>
                     <div class="col-xs-6">
-                      <label for="speed">SPEED (kt): *</label><input type="number" class="form-control" name="wind" value="speed" id="speed">
+                      <label for="speed">Speed (kt): *</label><input type="number" class="form-control" name="wind" value="speed" id="speed">
                     </div>
                   </div>
                 </div>
                 <div class="form-group col-xs-12 col-sm-6">
                   <div class="row">
                     <div class="col-xs-12">
-                      <label>CLOUD: *</label>
+                      <label>Cloud: *</label>
                       <br>
                     </div>
                     <div class="col-xs-6">
-                      <label for="type" title="Required">TYPE</label><input type="text" class="form-control" name="cloud" value="" id="type">
+                      <label for="type" title="Required">Type</label><input type="text" class="form-control" name="cloud" value="" id="type">
                     </div>
                     <div class="col-xs-6">
                       <label for="ht" title="alt-ht">HT (ft) </label><input type="number" class="form-control"  name="ht" id="ht">
@@ -440,40 +440,40 @@
               </div>
 
               <div class="form-group col-xs-12 col-sm-4">
-                <label>PRECIPITATION: *</label>
+                <label>Precipitation: *</label>
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="rain" value="" id="rain">
-                    <label for="rain" title="Required">RAIN </label>
+                    <label for="rain" title="Required">Rain </label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="sleet" value="sleet" id="sleet">
-                    <label for="sleet" title="alt-ht">SLEET </label>
+                    <label for="sleet" title="alt-ht">Sleet </label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="snow" value="" id="snow">
-                    <label for="snow" title="Required">SNOW </label>
+                    <label for="snow" title="Required">Snow </label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="hail" value="" id="hail">
-                    <label for="hail" title="alt-ht">HAIL</label>
+                    <label for="hail" title="alt-ht">Hail</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-4">
                     <input type="radio" name="precipitation_state" value="" id="precipitation-light">
-                    <label for="precipitation-light">LIGHT</label>
+                    <label for="precipitation-light">Light</label>
                   </div>
                   <div class="col-xs-4">
                     <input type="radio" name="precipitation_state" value="" id="precipitation-moderate">
-                    <label for="precipitation-moderate">MODERATE</label>
+                    <label for="precipitation-moderate">Moderate</label>
                   </div>
                   <div class="col-xs-4">
                     <input type="radio" name="precipitation_state" value="" id="precipitation-heavy">
-                    <label for="precipitation-heavy">HEAVY</label>
+                    <label for="precipitation-heavy">Heavy</label>
                   </div>
                 </div>
               </div>
@@ -483,10 +483,10 @@
             <!-- START other meteorological conditions  -->
 
             <div class="row">
-              <h4 class="text-center">OTHER METEOROLOGICAL CONDITIONS</h4>
+              <h4 class="text-center">Other meteorological conditions</h4>
               <br>
               <div class="col-xs-12 col-sm-3 visibility">
-                <label for="visibility" title="Required">VISIBILITY: *</label>
+                <label for="visibility">Visibility: *</label>
                 <p></p>
                 <div class="row">
                   <div class="col-xs-9">
@@ -496,7 +496,7 @@
                   <div class="col-xs-3">
                     <div class="row">
                       <input type="radio" name="speed-unit" value="km" id="km">
-                      <label for="km">KM</label>
+                      <label for="km">km</label>
                     </div>
                     <div class="row">
                       <input type="radio" name="speed-unit" value="nm" id="nm">
@@ -506,50 +506,50 @@
                 </div>
               </div>
               <div class="col-xs-12 col-sm-3">
-                <label>ICING: *</label>
+                <label>Icing: *</label>
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="none_icing" value="none-icing" id="none-icing">
-                    <label for="none-icing">NONE</label>
+                    <label for="none-icing">None</label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="light-icing" value="light-icing" id="light-icing">
-                    <label for="light-icing">LIGHT</label>
+                    <label for="light-icing">Light</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="moderate-icing" value="moderate-icing" id="moderate-icing">
-                    <label for="moderate-icing">MODERATE</label>
+                    <label for="moderate-icing">Moderate</label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="severe-icing" value="severe-icing" id="severe-icing">
-                    <label for="severe-icing">SEVERE</label>
+                    <label for="severe-icing">Severe</label>
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-3">
-                <label>TURBULENCE: *</label>
+                <label>Turbulence: *</label>
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="none" value="none" id="none">
-                    <label for="none">NONE</label>
+                    <label for="none">None</label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="light-turbulence" value="light-turbulence" id="light-turbulence">
-                    <label for="light-turbulence">LIGHT</label>
+                    <label for="light-turbulence">Light</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="moderate-turbulence" value="moderate-turbulence" id="moderate-turbulence">
-                    <label for="moderate-turbulence">MODERATE</label>
+                    <label for="moderate-turbulence">Moderate</label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="severe-turbulence" value="severe-turbulence" id="severe-turbulence">
-                    <label for="severe-turbulence">SEVERE</label>
+                    <label for="severe-turbulence">Severe</label>
                   </div>
                 </div>
               </div>
@@ -565,35 +565,35 @@
             <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-6">
-                <label>RUNWAY STATE: *</label>
+                <label>Runway State: *</label>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="dry-r" value="dry-r" id="dry-r">
-                    <label for="dry-r">DRY </label>
+                    <label for="dry-r">Dry </label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="snow-r" value="snow-r" id="snow-r">
-                    <label for="snow-r">SNOW</label>
+                    <label for="snow-r">Snow</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="checkbox" name="wet-r" value="wet-r" id="wet-r">
-                    <label for="wet-r">WET</label>
+                    <label for="wet-r">Wet</label>
                   </div>
                   <div class="col-xs-6">
                     <input type="checkbox" name="slush-r" value="slush-r" id="slush-r">
-                    <label for="slush-r">SLUSH </label>
+                    <label for="slush-r">Slush </label>
                   </div>
 
                   <div class="col-xs-6">
                     <input type="checkbox" name="ice-r" value="ice-r" id="ice-r">
-                    <label for="ice-r">ICE</label>
+                    <label for="ice-r">Ice</label>
                   </div>
                 </div>
               </div>
               <div class="form-group col-xs-12 col-sm-6">
-                <label>CATEGORY: *</label>
+                <label>Category: *</label>
                 <div class="row">
                   <div class="col-xs-4">
                     <input type="radio" name="category" value="" id="category-i">
@@ -615,7 +615,7 @@
             <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-12">
-                <label for="brief-title">BRIEF TITLE: *</label>
+                <label for="brief-title">Brief Title: *</label>
                 <p></p>
                 <textarea name="name"  name="brief_title" value="" id="brief-title" class="form-control" rows="2" cols="80"></textarea>
               </div>
@@ -625,7 +625,7 @@
             <br>
             <div class="row">
               <div class="form-group col-xs-12">
-                <label for="description-of-the-occurrence ">DESCRIPTION OF THE OCCURRENCE: *</label>
+                <label for="description-of-the-occurrence ">Description of the Occurrence: *</label>
                 <p class="error-message"></p>
                 <textarea name="description_of_the_occurrence" class="form-control" id="description-of-the-occurrence" data-parsley-trigger="change" required="" rows="8" cols="80"></textarea>
               </div>
@@ -647,21 +647,21 @@
             <hr>
 
             <div class="row">
-              <h3 class="text-center">GROUND STAFF REPORT</h3>
+              <h3 class="text-center">Ground Staff Report</h3>
               <br>
               <br>
               <div class="col-xs-12 col-sm-4">
-                <label for="ac-constructor">A/C CONSTRUCTOR’S NO.: *</label>
+                <label for="ac-constructor">A/C Constructor’s No.: *</label>
                 <p></p>
                 <input type="text" name="ac_constructor"  class="form-control" value="" id="ac-constructor">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="engine-type-series">ENGINE TYPE/SERIES: *</label>
+                <label for="engine-type-series">Engine Type/Series: *</label>
                 <p></p>
                 <input type="text" name="engine_type_series" value="" id="engine-type-series" class="form-control">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="etops-approved">ETOPS APPROVED: *</label>
+                <label for="etops-approved">ETOPS Approved: *</label>
                 <p></p>
                 <div class="row">
                   <div class="col-xs-6">
@@ -681,33 +681,33 @@
             <div class="row">
 
               <div class="col-xs-12 col-sm-6">
-                <label>GROUND PHASE: *</label>
+                <label>Ground Phase: *</label>
                 <p></p>
                 <div class="row">
                   <div class="col-xs-4">
                     <input type="checkbox" name="maintenance" value="" id="maintenance">
-                    <label for="maintenance">MAINTENANCE</label>
+                    <label for="maintenance">Maintenance</label>
                   </div>
                   <div class="col-xs-4">
                     <input type="checkbox" name="ground-handling" value="" id="ground-handling">
-                    <label for="ground-handling">GROUND HANDLING</label>
+                    <label for="ground-handling">Ground handling</label>
                   </div>
                   <div class="col-xs-4">
                     <input type="checkbox" name="Unattended" value="Unattended" id="unattended">
-                    <label for="unattended">UNATTENDED</label>
+                    <label for="unattended">Unattended</label>
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-6">
                 <div class="row">
                   <div class="col-xs-6">
-                    <label for="maintenance-organisation">MAINTENANCE ORGANISATION: *</label>
+                    <label for="maintenance-organisation">Maintenance Organisation: *</label>
                     <p></p>
                     <input type="text" name="maintenance_organisation" value="" class="form-control" id="maintenance-organisation">
                   </div>
 
                   <div class="col-xs-6">
-                    <label for="tel-no">TEL. NO.: *</label>
+                    <label for="tel-no">Tel. No.: *</label>
                     <p></p>
                     <input type="text" class="form-control" name="tel_no" value="" id="tel-no">
                   </div>
@@ -720,22 +720,22 @@
             <div class="row">
               <br>
               <div class="col-xs-12 col-sm-3">
-                <label for="component-part">COMPONENT/PART: *</label>
+                <label for="component-part">Component/Part: *</label>
                 <p></p>
                 <input type="text" name="component_part" class="form-control" value="" id="component-part">
               </div>
               <div class="col-xs-12 col-sm-3">
-                <label for="manufacturer">MANUFACTURER: *</label>
+                <label for="manufacturer">manufacturer: *</label>
                 <p></p>
                 <input type="text" name="manufacturer" class="form-control" value="" id="manufacturer">
               </div>
               <div class="col-xs-12 col-sm-3">
-                <label for="part-no">PART NO.: *</label>
+                <label for="part-no">Part No.: *</label>
                 <p></p>
                 <input type="text" name="part_no" class="form-control" value="" id="part-no">
               </div>
               <div class="col-xs-12 col-sm-3">
-                <label for="serial-no">SERIAL NO.: *</label>
+                <label for="serial-no">Serial No.: *</label>
                 <p></p>
                 <input type="text" name="serial_no" class="form-control" value="" id="serial-no">
               </div>
@@ -746,17 +746,17 @@
             <br>
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <label for="manual-ata-ipc">REFERENCES: - MANUAL/ATA/IPC: *</label>
+                <label for="manual-ata-ipc">References: - Manual/ATA/IPC: *</label>
                 <p></p>
                 <input type="text" name="manual_ata_ipc" value="" class="form-control" id="manual-ata-ipc">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="omponent-oh-repair">OMPONENT OH/REPAIR ORGANISATION: *</label>
+                <label for="omponent-oh-repair">Component OH/Repair Organisation: *</label>
                 <p></p>
                 <input type="text" name="omponent_oh_repair" value="" class="form-control" id="omponent-oh-repair">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="organisation-and-approval">ORGANISATION AND APPROVAL REFERENCE: *</label>
+                <label for="organisation-and-approval">Organisation and Approval Reference: *</label>
                 <p></p>
                 <input type="text" name="organisation-and-approval" value="" class="form-control" id="organisation-and-approval">
               </div>
@@ -766,17 +766,17 @@
             <br>
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <label for="name-bottom">NAME: *</label>
+                <label for="name-bottom">Name: *</label>
                 <p></p>
                 <input type="text" name="name" value="" class="form-control" id="position">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="position">POSITION: *</label>
+                <label for="position">Position: *</label>
                 <p></p>
                 <input type="text" name="position" value="" class="form-control" id="position">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="date" title="Required">DATE: </label>
+                <label for="date" title="Required">Date: </label>
                 <p class="error-message"></p>
                 <div class="form-group">
                   <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -822,7 +822,7 @@
             <br>
             <div class="row">
               <div class="form-group col-xs-12">
-                <h3>Reporting organisation - report</h3>
+                <h3>Reporting Organisation - Report</h3>
                 <label for="organisation-comments">Organisation comments - assessment/action taken/suggestions to prevent: *</label>
                 <p class="error-message"></p>
                 <textarea name="organisation_comments" class="form-control" id="organisation-comments" data-parsley-trigger="change" required="" rows="8" cols="80"></textarea>
@@ -835,29 +835,29 @@
               <div class="col-xs-12 col-sm-5">
                 <table class="table">
                   <thead>
-                    <h4 class="text-center">UTILISATION - AIRCRAFT</h4>
+                    <h4 class="text-center">Utilisation - Aircraft</h4>
                     <tr>
                       <th></th>
-                      <th>TOTAL</th>
-                      <th>SINCE OH/REPAIR</th>
-                      <th>SINCE INSPECTION</th>
+                      <th>Total</th>
+                      <th>Since OH/repair</th>
+                      <th>Since Inspection</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>HOURS</td>
+                      <td>Hours</td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                       <td><input type="text" name="" class="form-control" value="" ></td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                     </tr>
                     <tr>
-                      <td>CYCLES</td>
+                      <td>Cycles</td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                       <td><input type="text" name="" class="form-control" value="" ></td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                     </tr>
                     <tr>
-                      <td>LANDINGS</td>
+                      <td>Landings</td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                       <td><input type="text" name="" class="form-control" value="" ></td>
                       <td><input type="text" name="" class="form-control" value=""></td>
@@ -869,29 +869,29 @@
               <div class="col-xs-12 col-sm-5">
                 <table class="table">
                   <thead>
-                    <h4 class="text-center">UTILISATION - ENGINE/COMPONENT</h4>
+                    <h4 class="text-center">Utilisation - Engine/Component</h4>
                     <tr>
                       <th></th>
-                      <th>TOTAL</th>
-                      <th>SINCE OH/REPAIR</th>
-                      <th>SINCE INSPECTION</th>
+                      <th>Total</th>
+                      <th>Since OH/Repair</th>
+                      <th>Since Inspection</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>HOURS</td>
+                      <td>Hours</td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                       <td><input type="text" name="" class="form-control" value="" ></td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                     </tr>
                     <tr>
-                      <td>CYCLES</td>
+                      <td>Cycles</td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                       <td><input type="text" name="" class="form-control" value="" ></td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                     </tr>
                     <tr>
-                      <td>LANDINGS</td>
+                      <td>Landings</td>
                       <td><input type="text" name="" class="form-control" value=""></td>
                       <td><input type="text" name="" class="form-control" value="" ></td>
                       <td><input type="text" name="" class="form-control" value=""></td>
@@ -902,17 +902,17 @@
               </div>
 
               <div class="col-xs-12 col-sm-2">
-                <label for="manufacturer-advised">MANUFACTURER ADVISED</label>
+                <label for="manufacturer-advised">Manufacturer advised</label>
                 <br>
                 <br>
                 <br>
                 <div class="row">
                   <div class="col-xs-6">
-                    <input type="radio" name="yes-advised" value="yes-advised" id="yes-advised">
+                    <input type="radio" name="advised" value="yes-advised" id="yes-advised">
                     <label for="yes-advised">Yes</label>
                   </div>
                   <div class="col-xs-6">
-                    <input type="radio" name="no-advised" value="no-advised" id="no-advised">
+                    <input type="radio" name="advised" value="no-advised" id="no-advised">
                     <label for="no-advised">No</label>
                   </div>
                 </div>
@@ -924,12 +924,12 @@
               <div class="col-xs-12 col-sm-4">
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
-                    <label for="reporting-organisation">REPORTING ORGANISATION: *</label>
+                    <label for="reporting-organisation">Reporting Organisation: *</label>
                     <p></p>
                     <input type="text" name="reporting_organisation" value="" class="form-control" id="reporting-organisation">
                   </div>
                   <div class="col-xs-12 col-sm-6">
-                    <label for="tel">TEL.: *</label>
+                    <label for="tel">Tel.: *</label>
                     <p></p>
                     <input type="text" name="tel" value="" class="form-control" id="tel">
                   </div>
@@ -937,32 +937,32 @@
                 <br>
                 <div class="row">
                   <div class="col-xs-12 col-sm-6">
-                    <label for="e-mail">E-MAIL: *</label>
+                    <label for="e-mail">E-Mail: *</label>
                     <p></p>
                     <input type="text" name="e_mail" value="" class="form-control" id="e-mail">
                   </div>
                   <div class="col-xs-12 col-sm-6">
-                    <label for="fax">FAX: *</label>
+                    <label for="fax">Fax: *</label>
                     <p></p>
                     <input type="text" name="fax" value="" class="form-control" id="fax">
                   </div>
                 </div>
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="reporters-ref">REPORTER’S REF: *</label>
+                <label for="reporters-ref">Reporter’s Ref: *</label>
                 <p></p>
                 <input type="text" class="form-control" name="reporters_ref" value="" id="reporters-ref">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="">REPORT: *</label>
+                <label for="">Report: *</label>
                 <div class="row">
                   <div class="col-xs-6">
                     <input type="radio" name="report" value="new" id="new">
-                    <label for="new">NEW</label>
+                    <label for="new">New</label>
                   </div>
                   <div class="col-xs-6">
                     <input type="radio" name="report" value="suppl" id="suppl">
-                    <label for="suppl">SUPPLEMENT</label>
+                    <label for="suppl">Supplement</label>
                   </div>
                 </div>
               </div>
@@ -972,28 +972,28 @@
             <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-6">
-                <label for="">REPORTER’S INVESTIGATION: *</label>
+                <label for="">Reporter’s Investigation: *</label>
                 <p></p>
                 <div class="row">
 
 
                   <div class="col-xs-4">
                     <input type="radio" name="investigation" value="nil" id="nil">
-                    <label for="nil">NIL</label>
+                    <label for="nil">Nil</label>
                   </div>
                   <div class="col-xs-4">
                     <input type="radio" name="investigation" value="closed" id="closed">
-                    <label for="closed">CLOSED</label>
+                    <label for="closed">Closed</label>
                   </div>
                   <div class="col-xs-4">
                     <input type="radio" name="investigation" value="open" id="open">
-                    <label for="open">OPEN</label>
+                    <label for="open">Open</label>
                   </div>
                 </div>
               </div>
               <div class="form-group col-xs-12 col-sm-6">
 
-                    <label for="">FDR DATA RETAINED: *</label>
+                    <label for="">FDR Data Retained: *</label>
                     <p></p>
                   <div class="row">
                     <div class="col-xs-6">
@@ -1011,17 +1011,17 @@
             <br>
             <div class="row">
               <div class="col-xs-12 col-sm-4">
-                <label for="name">NAME: *</label>
+                <label for="name">Name: *</label>
                 <p></p>
                 <input type="text" name="name" value="" class="form-control" id="name">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="position-bottom">POSITION: *</label>
+                <label for="position-bottom">Position: *</label>
                 <p></p>
                 <input type="text" name="position_bottom" value="" class="form-control" id="position-bottom">
               </div>
               <div class="col-xs-12 col-sm-4">
-                <label for="tel-bottom">TEL.: *</label>
+                <label for="tel-bottom">Tel.: *</label>
                 <p></p>
                 <input type="text" name="tel-bottom" value="" class="form-control" id="tel-bottom">
               </div>
@@ -1029,13 +1029,13 @@
             <br>
             <div class="row">
               <div class="col-xs-12 col-sm-6">
-                <label for="e-mail-bottom">E-MAIL: *</label>
+                <label for="e-mail-bottom">E-mail: *</label>
                 <p></p>
                 <input type="text" name="e_mail_bottom" value="" class="form-control" id="e-mail-bottom">
               </div>
 
               <div class="col-xs-12 col-sm-6">
-                <label for="date-bottom">DATE:</label>
+                <label for="date-bottom">Date:</label>
                 <p></p>
                 <div class="form-group">
                   <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
