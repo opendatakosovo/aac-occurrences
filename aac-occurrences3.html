@@ -29,7 +29,6 @@
        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
      <![endif]-->
     </head>
-  </head>
   <body>
 
     <header>
@@ -55,82 +54,87 @@
             <div class="row">
               <div class="form-group col-xs-12 col-sm-6">
                 <div class="row">
-                  <label class="col-xs-10" for="operator" title="Required">1. Categories of occurrence * </label>
+                  <label class="col-xs-10" for="operator" title="Required">1. Categories of occurrence: * </label>
 
                   <p class="error-message"></p>
                   <div class="col-xs-3">
                     <input type="checkbox" value="" name="accident" data-parsley-trigger="change" required="" id="accident">
-                    <label for="accident">Accident</label>
+                    <label for="accident">ACCIDENT</label>
                   </div>
                   <div class="col-xs-3">
                     <input type="checkbox" value="incident" name="incident" data-parsley-trigger="change" required="" id="incident">
-                    <label for="incident">Incident</label>
+                    <label for="incident">INCIDENT</label>
                   </div>
                   <div class="col-xs-3">
                     <input type="checkbox" value="procedural" name="procedural" data-parsley-trigger="change" required="" id="procedural">
-                    <label for="procedural">Procedural</label>
+                    <label for="procedural">PROCEDURAL</label>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-xs-3">
                     <input type="checkbox" value="" name="failure" data-parsley-trigger="change" required="" id="failure">
-                    <label for="failure">Failure</label>
+                    <label for="failure">FAILURE</label>
                   </div>
                   <div class="col-xs-3">
                     <input type="checkbox" value="" name="hazard" data-parsley-trigger="change" required="" id="hazard">
-                    <label for="hazard">Hazard</label>
+                    <label for="hazard">HAZARD</label>
                 </div>
               </div>
             </div>
             <div class="col-xs-12 col-sm-6">
-              <label for="occurrence-location">2. Occurrence Location</label>
+              <label for="occurrence-location">2. Occurrence location: *</label>
               <p></p>
               <input type="text" name="occurrence-location" value="" class="form-control" id="occurrence-location">
             </div>
           </div>
+          <hr>
+
           <div class="row">
             <div class="col-xs-12 col-sm-4">
-
-                <label for="tel">Date (dd.mm.yyyy)</label>
-                <p></p>
-                <div class="form-group">
-                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16" type="text" value="" id="date">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                  </div>
-                  <input type="hidden" id="dtp_input2" value=""><br>
+              <br>
+              <label for="date">3. Date (dd.mm.yyyy): *</label>
+              <p></p>
+              <div class="form-group">
+                <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                  <input class="form-control" size="16" type="text" value="" id="date">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                 </div>
-
-                <div class="">
-                <label for="time-of-event" title="Required">4. Time (HH:MM): * </label>
-                <p class="error-message"></p>
-                <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
-                  <option value="">Choose an item.</option>
-                  <option value="01">01</option>
-                  <option value="02">02</option>
-                  <option value="03">03</option>
-                  <option value="04">04</option>
-                  <option value="05">05</option>
-                  <option value="06">06</option>
-                  <option value="08">08</option>
-                  <option value="09">09</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                </select>
+                <input type="hidden" id="dtp_input2" value=""><br>
               </div>
+
+              <div class="">
+              <label for="time-of-event" title="Required">4. Time (HH:MM): * </label>
+              <p class="error-message"></p>
+              <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                <option value="">Choose an item.</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+              </select>
+            </div>
           </div>
+
           <div class="col-xs-12 col-sm-4">
-            <p></p>
+            <br>
             <label for="duration">5. 	Duration: *</label>
+            <p></p>
             <input type="text" name="duration" value="" id="duration" class="form-control">
           </div>
 
           <div class="col-xs-12 col-sm-4">
             <div class="row">
+                <br>
                 <label class="col-xs-10" for="operator" title="Required">6.	ATS Facility * </label>
                 <br>
                 <p class="error-message"></p>
@@ -154,7 +158,9 @@
               </div>
           </div>
         </div>
+        <br>
         <hr>
+        <br>
         <div class="row">
           <div class="form-group col-xs-12 col-sm-4">
             <label for="service-affected" title="Required">7.	Service Affected: *</label>
@@ -172,6 +178,8 @@
             <input type="text" class="form-control" name="frequency" value="" data-parsley-trigger="change" required="" id="frequency">
           </div>
         </div>
+        <hr>
+        <br>
       <div class="row">
         <div class="form-group col-xs-12 col-sm-6">
           <label for="callsign" title="Required">10.	Callsign: *</label>
@@ -184,12 +192,12 @@
           <input type="text" class="form-control" name="equipment_location" value="" data-parsley-trigger="change" required="" id="equipment-location">
         </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-          <div class="">
-            <label>12. Facility Configuration</label>
-          </div>
-
+          <br>
+          <label>12. Facility configuration: *</label>
+          <br>
           <div class="col-xs-6">
             <div class="row">
 
@@ -203,6 +211,7 @@
           </div>
           <div class="col-xs-6">
             <div class="row">
+
               <span>or</span>
               <input type="radio" name="service" value="out-of-service" id="out-of-service">
               <label for="out-of-service">Out of service</label>
@@ -216,6 +225,7 @@
 
           <div class="row">
             <div class="col-xs-4">
+
               <input type="radio" name="channel_a" value="channel-a" id="channel-a">
               <label for="channel-a">Channel A(1) </label>
 
@@ -232,15 +242,16 @@
               <input type="text" name="other_input" value="" class="form-control">
             </div>
             <div class="col-xs-12">
-              <label for="external-information-source"> External Information Source:</label>
+              <label for="external-information-source"> External Information Source: *</label>
               <input type="text" name="external_information_source" value="" class="form-control" id="external-information-source">
             </div>
           </div>
         </div>
         <div class="col-xs-12 col-sm-6">
           <div class="row">
+            <br>
             <div class="col-xs-6">
-              <label>13.	Equipment Status</label>
+              <label>13.	Equipment Status: *</label>
               <br>
               <input type="radio" name="planned_unplanned" id="planned">
               <label for="planned">Planned</label>
@@ -281,12 +292,14 @@
           </div>
         </div>
         </div>
+        <br>
         <hr>
         <div class="row">
-          <div class="col-xs-12 col-xs-6">
+          <div class="col-xs-12 col-sm-6">
             <div class="row">
               <div class="col-xs-12">
-                <label>14. Previous Defects/Occurrences?</label>
+                <br>
+                <label>14. Previous Defects/Occurrences?: *</label>
               </div>
             </div>
             <div class="row">
@@ -308,6 +321,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-sm-6">
+            <br>
             <label for="rtf-frequencies">15.	RTF Frequencies/
 	Radar Sources: *</label>
             <p></p>
@@ -315,7 +329,9 @@
           </div>
         </div>
       </div>
+      <br>
       <hr>
+      <br>
       <div class="row">
         <div class="form-group col-xs-12 ">
           <label for="narrative" title="Required">16.	<strong>NARRATIVE</strong> - use a diagram if necessary (attach copies of all relevant information): *</label>
@@ -323,11 +339,14 @@
           <textarea name="narrative" data-parsley-trigger="change" data-parsley-minlength="20" data-parsley-maxlength="400" required="" class="form-control" rows="8" cols="80" id="narrative"></textarea>
         </div>
       </div>
+      <hr>
+
       <div class="row">
-        <div class="col-xs-12 col-xs-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="row">
             <div class="col-xs-12">
-              <label>17. Recordings impounded?</label>
+              <br>
+              <label>17. Recordings impounded?: *</label>
             </div>
           </div>
           <div class="row">
@@ -337,23 +356,22 @@
             </div>
             <div class="col-xs-6">
               <input type="radio" name="recordings_impounded" value="yes-recordings-impounded" id="yes-recordings-impounded">
-              <label for="yes-recordings-impounded">Yes</label>
+              <label for="yes-recordings-impounded">Yes - Details:</label>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <input type="radio" name="recordings_impounded" value="not-known-recordings" id="not-known-recordings">
-              <label for="not-known-recordings">Not Known</label>
               <input type="text" name="not_known_recordings" value="" class="form-control" id="not-known-recordings">
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-xs-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="row">
             <div class="col-xs-12">
+              <br>
               <label>18. Can the information be
                       	disseminated in the
-                      	interests of flight safety?</label>
+                      	interests of flight safety?: *</label>
             </div>
           </div>
 
@@ -369,22 +387,22 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-4">
-          <div class="row">
-            <label for="name">Name</label>
+            <br>
+            <label for="name">20. Name: *</label>
             <p></p>
             <input type="text" name="name" value="" class="form-control" id="name">
             <br>
-            <label for="organisation-position">21.	Organisation/Position</label>
+            <label for="organisation-position">21.	Organisation/Position: *</label>
             <p></p>
             <input type="text" name="organisation_position" class="form-control" value="" id="organisation-position">
-          </div>
         </div>
       </div>
-      <hr>
+
       <div class="row">
-        <div class="col-xs-12 col-xs-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="row">
             <div class="col-xs-12">
+              <br>
               <label>19. Other fault report action: *</label>
             </div>
           </div>
@@ -394,32 +412,34 @@
               <label for="atc-manual">ATC Manual</label>
             </div>
             <div class="col-xs-6">
-              <input type="radio" name="other_fault_report" value="yes-recordings-impounded" id="yes-recordings-impounded">
-              <label for="yes-recordings-impounded">Local Reporting</label>
+              <input type="radio" name="other_fault_report" value="yes-recordings-impounded" id="local-reporting">
+              <label for="local-reporting">Local Reporting</label>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12">
-              <input type="radio" name="other_fault_report" value="not-known-recordings" id="not-known-recordings">
-              <label for="not-known-recordings">Other:</label>
+              <input type="radio" name="other_fault_report" value="not-known-recordings" id="other-other">
+              <label for="other-other">Other:</label>
               <input type="text" name="not_known_recordings" value="" class="form-control" id="not-known-recordings">
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-xs-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="row">
             <div class="col-xs-12">
-              <label for="address-telephone">22.	<strong>Address & Telephone number</strong> (if the reporter wishes to be contacted 	privately):</label>
+              <br>
+              <label for="address-telephone">22. <strong>Address & Telephone number</strong> (if the reporter wishes to be contacted 	privately): *</label>
               <p></p>
               <input type="text" name="address_telephone" value="" class="form-control"  id="address-telephone">
             </div>
           </div>
         </div>
-        <div class="col-xs-12 col-xs-4">
+        <div class="col-xs-12 col-sm-4">
           <div class="row">
             <div class="col-xs-12">
+              <br>
               <label for="start-duration">23. Start time and duration of
-	shift</label>
+	shift: *</label>
               <p></p>
               <br>
               <input type="text" name="start_duration" value="" class="form-control"  id="start-duration">
@@ -427,14 +447,16 @@
           </div>
         </div>
       </div>
+      <br>
       <hr>
+      <br>
       <div class="row">
         <div class="col-xs-12 col-sm-6">
-            <label for="date">Date (dd.mm.yyyy)</label>
+            <label for="date-bottom">24. Date (dd.mm.yyyy): *</label>
             <p></p>
             <div class="form-group">
               <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                  <input class="form-control" size="16" type="text" value="" id="date">
+                  <input class="form-control" size="16" type="text" value="" id="date-bottom">
                   <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
   			          <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>
@@ -442,15 +464,21 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-          <label for="e-mail">26.	E-mail</label>
+          <label for="e-mail">26.	E-mail: *</label>
           <p></p>
           <input type="text" name="e_mail" value="" class="form-control" id="e-mail">
         </div>
       </div>
       </div>
+      <br>
+      <div class="submit">
+        <input type="submit" class="btn btn-success" id="btn-submit" name="submit" value="Submit"/>
+      </div>
       </section>
-
-
+    </form>
+    <br>
+    <hr>
+    <br>
       <div class="container">
         <h3 class="text-center form-one-header">ADVICE ON THE COMPLETION OF THE CAAK ATS ENGINEERING OCCURRENCE REPORT FORM – AACK/DSF/OR-FRM 03</h3>
         <div class="info-part" id="info">
@@ -463,7 +491,7 @@
         </div>
         <div class="row">
           <h5 class="col-xs-12 col-sm-3">INCIDENT:</h5>
-          <h5 class="col-xs-12 col-sm-9"> reportable occurrence (see ‘General’).</h5>
+          <h5 class="col-xs-12 col-sm-9">A reportable occurrence (see ‘General’).</h5>
         </div>
         <div class="row">
           <h5 class="col-xs-12 col-sm-3">PROCEDURAL:</h5>
@@ -548,6 +576,7 @@
       </div>
     </div>
     </div>
+    <hr>
   </section>
 
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

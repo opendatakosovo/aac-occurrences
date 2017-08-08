@@ -12,9 +12,7 @@
       <link rel="stylesheet" href="style/jquery-ui.min.css">
       <link rel="stylesheet" href="style/style.css">
 
-
       <link href="style/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
-
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.js"></script>
       <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
@@ -31,7 +29,6 @@
        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
      <![endif]-->
     </head>
-  </head>
   <body>
 
     <header>
@@ -55,7 +52,7 @@
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
-                  <label class="col-xs-10" for="operator" title="Required">Operator: * </label>
+                  <label class="col-xs-10" for="operator" title="Required">1. Operator: * </label>
                   <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
                 </div>
                 <p class="error-message"></p>
@@ -63,7 +60,7 @@
               </div>
 
               <div class="form-group date col-xs-12 col-sm-4" >
-                <label for="occurrence" title="Required">Date of occurrence: * </label>
+                <label for="occurrence" title="Required">2. Date of occurrence: * </label>
                 <p class="error-message"></p>
                 <div class="form-group">
                   <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -76,21 +73,46 @@
               </div>
 
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="local" title="Required">Local time of occurrence: * </label>
+                <label for="time-of-event" title="Required">3. Local time of occurrence (HH:MM): * </label>
                 <p class="error-message"></p>
-                <div class="form-group">
-                  <div class="input-group date form_time" data-date="" data-date-format="hh:ii"  data-link-field="dtp_input3" data-link-format="hh:ii">
-                    <input class="form-control" size="16" type="text" value="" name="local" id="local">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
-          					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
-                  </div>
-          				<input type="hidden" id="dtp_input3" value="" /><br/>
-                </div>
+                <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                  <option value="">Choose an item.</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                </select>
+                <p class="error-message"></p>
+                <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                  <option value="">Choose an item.</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                </select>
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="flight-date" title="Required">Flight date: * </label>
+                <label for="flight-date" title="Required">4. Flight date: * </label>
                 <p class="error-message"></p>
                 <div class="form-group">
                     <div class="input-group date form_datetime" data-date="1979-09-16T05:25:07Z" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
@@ -102,211 +124,198 @@
                 </div>
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="flight-number" title="Required">Flight number: * </label>
+                <label for="flight-number" title="Required">5. Flight number: * </label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" name="flight_number" data-parsley-trigger="change" required="" value="" id="flight-number">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="departure" title="Required">Departure airport: * </label>
+                <label for="departure" title="Required">6. Departure airport: * </label>
                 <p class="error-message"></p>
-                <select class="form-control" name="departure" data-parsley-trigger="change" required="" id="departure">
-                  <option value="">Choose departure airport</option>
-                  <option value="Italy/Milano">Italy/Milano</option>
-                  <option value="Kosov/Prishtin">Kosov/Prishtin</option>
-                  <option value="Austri/Viena">Austri/Viena</option>
-                </select>
+                <input type="text" name="departure" value="" id="departure" class="form-control">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="destination" title="Required">Destination airport: * </label>
+                <label for="destination" title="Required">7. Destination airport: * </label>
                 <p class="error-message"></p>
-                <select class="form-control" data-parsley-trigger="change" required=""  name="destination" id="destination">
-                  <option value="">Choose destination airport</option>
-                  <option value="
-                  Italy/Milano">Italy/Milano</option>
-                  <option value="Kosov/Prishtin">Kosov/Prishtin</option>
-                  <option value="Austri/Viena">Austri/Viena</option>
-                </select>
+                <input type="text" name="destination" value="" id="destination" class="form-control">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="aircraft-type" title="Required">Aircraft type: * </label>
+                <label for="aircraft-type" title="Required">8. Aircraft type: * </label>
                 <p class="error-message"></p>
-                <select class="form-control" data-parsley-trigger="change" required=""  name="aircraft_type" id="aircraft-type">
-                  <option value="">Choose aircraft type</option>
-                  <option value="Airbus A300">Airbus A300 medium-range widebody airliner</option>
-                  <option value="Airbus A310">Airbus A310 widebody airliner.</option>
-                  <option value="Airbus A318">Airbus A318 100-seat airliner</option>
-                </select>
+                <input type="text" name="aircraft-type" value="" id="aircraft-type" class="form-control">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="aircraft-registration" title="Required">Aircraft registration: * </label>
+                <label for="aircraft-registration" title="Required">9. Aircraft registration: * </label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" data-parsley-trigger="change" required="" name="aircraft_registration" value="" id="aircraft-registration">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-6">
                 <div class="row">
-                  <label for="location-of-occurrence" title="Required" class="col-xs-10">Location of occurrence: * </label>
+                  <label for="location-of-occurrence" title="Required" class="col-xs-10">10. Location of occurrence: * </label>
                   <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
                 </div>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" data-parsley-trigger="change" required=""  name="location_of_occurrence" value="" id="location-of-occurrence">
               </div>
               <div class="form-group col-xs-12 col-sm-6">
-                <label for="origin-of-the-goods" title="Required">Origin of the goods: * </label>
+                <label for="origin-of-the-goods" title="Required">11. Origin of the goods: * </label>
                 <p class="error-message"></p>
-                <select class="form-control" data-parsley-trigger="change" required="" name="origin_of_the_goods" id="origin-of-the-goods">
-                  <option value="">Choose origin of the goods</option>
-                  <option value="Albania">Albania</option>
-                  <option value="Australia">Australia</option>
-                  <option value="Australia">Italy</option>
-                </select>
+                <input type="text" class="form-control" data-parsley-trigger="change" required="" name="origin_of_the_goods" value="" id="origin-of-the-goods">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 ">
-                <label for="description" title="Required">Description: *</label>
+                <label for="description" title="Required">12. Description: *</label>
                 <p class="error-message"></p>
                 <textarea name="description" data-parsley-trigger="change" data-parsley-minlength="20" data-parsley-maxlength="400" required="" class="form-control" rows="8" cols="80" id="description"></textarea>
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
-              <div class="form-group col-xs-12 col-sm-4 col-sm-4">
-                <label for="proper-shipping-name" title="Required">Proper shipping name: * </label>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="proper-shipping-name" title="Required">13. Proper shipping name: * </label>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" name="proper_shipping_name" required="" value="" id="proper-shipping-name">
               </div>
-              <div class="form-group col-xs-12 col-sm-4 col-sm-4">
-                <label for="class-division">Class/division: </label>
+              <div class="col-xs-12 col-sm-6">
+                <label for="un-id" title="Required">14.UN/ID no. (when known):  </label>
                 <p class="error-message"></p>
-                <select class="form-control" name="class_division" data-parsley-trigger="change" required=""  id="class-division">
-                  <option value="">Choose class/division</option>
-                  <option value="division1">Division1</option>
-                  <option value="division2">Division2</option>
-                  <option value="division3">Division3</option>
-                </select>
-              </div>
-              <div class="form-group col-xs-12 col-sm-4">
-                <label for="subsidary-risk">Subsidary risk(s): </label>
-                <p class="error-message"></p>
-                <select class="form-control" name="subsidary_risk" data-parsley-trigger="change" required=""  id="subsidary-risk">
-                  <option value="">Choose subsidary risk</option>
-                  <option value="division1">BATTERY FLUID</option>
-                  <option value="division2">ACID</option>
-                  <option value="division3">ADHESIVES</option>
-                  <option value="division3">Other</option>
-                </select>
+                <input type="text" class="form-control" name="un_id" required="" value="" id="un-id">
               </div>
             </div>
+            <hr>
+            <br>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="class-division">15. Class/division: </label>
+                <p class="error-message"></p>
+                <input type="text" name="class_division" value="" id="class-division" class="form-control">
+              </div>
+              <div class="form-group col-xs-12 col-sm-6">
+                <label for="subsidary-risk">16. Subsidary risk(s): </label>
+                <p class="error-message"></p>
+                <input type="text" class="form-control" name="subsidary_risk" data-parsley-trigger="change" required=""  id="subsidary-risk">
+              </div>
+            </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="packing-group" title="Required">Packing group: *</label>
+                <label for="packing-group" title="Required">17. Packing group: *</label>
                 <p class="error-message"></p>
-                <select class="form-control" name="packing_group" data-parsley-trigger="change" required=""  id="packing-group">
-                  <option value="">Choose packing group</option>
-                  <option value="division1">First</option>
-                  <option value="division2">Second</option>
-                  <option value="division3">Third</option>
-                  <option value="division3">Forth</option>
-                </select>
+                <input type="text" class="form-control" name="packing_group" data-parsley-trigger="change" required=""  id="packing-group">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="category" title="Required" >Category, (class 7 only): *</label>
+                <label for="category" title="Required" >18. Category, (class 7 only): *</label>
                 <p class="error-message"></p>
-                <select class="form-control" name="category" data-parsley-trigger="change" required=""  id="category">
-                  <option value="">Choose category</option>
-                  <option value="division1">First</option>
-                  <option value="division2">Second</option>
-                  <option value="division3">Third</option>
-                  <option value="division3">Forth</option>
-                </select>
+                <input type="text" class="form-control" name="category" data-parsley-trigger="change" required=""  id="category">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="type-of-packaging" title="Required">Type of packaging: *</label>
+                <label for="type-of-packaging" title="Required">19. Type of packaging: *</label>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" name="type_of_packaging" value="" data-parsley-trigger="change" required=""  id="type-of-packaging">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="packaging-specification-marking" title="Required">Packaging specification marking: *</label>
+                <label for="packaging-specification-marking" title="Required">20. Packaging specification marking: *</label>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" name="packaging_specification_marking" value="" data-parsley-trigger="change" required=""  id="packaging-specification-marking">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="no-of-packages" title="Required">No. of packages: *</label>
+                <label for="no-of-packages" title="Required">21. No. of packages: *</label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" name="no_of_packages" value="" data-parsley-trigger="change" required=""  id="no-of-packages">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="quantity">Quantity (or transport index, if applicable): </label>
+                <label for="quantity">22. Quantity (or transport index, if applicable): </label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" name="quantity" value="" data-parsley-trigger="change" required=""  id="quantity">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="reference-no">Reference no. of Air Waybill: *</label>
+                <label for="reference-no">23. Reference no. of Air Waybill: *</label>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" title="Required" name="reference_no" value="" data-parsley-trigger="change" required=""  id="reference-no">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
                 <div class="row">
-                  <label class="col-xs-10" for="reference-ticket" title="Required">Reference ticket: * </label>
+                  <label class="col-xs-10" for="reference-ticket" title="Required">24. Reference no. of courier pouch, baggage tag, or passenger ticket: * </label>
                   <a href="#info" class="col-xs-2 text-center"  data-toggle="tooltip" data-placement="top" title="Reference no. of courier pouch, baggage tag, or passenger ticket:"> ?</a>
                 </div>
                 <p class="error-message"></p>
                 <input type="number" class="form-control" title="Required" name="reference_ticket" value="" ata-parsley-trigger="change" required="" id="reference-ticket">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="name-and-adrress" title="Required">Name and adrress of shipper, agent, passenger, etc.: *</label>
+                <label for="name-and-adrress" title="Required">25. Name and adrress of shipper, agent, passenger, etc.: *</label>
                 <p class="error-message"></p>
                 <input type="text" name="name_and_adrress" class="form-control" value="" data-parsley-trigger="change" required="" value="" id="name-and-adrress">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12">
-                <label for="other-relevant-information">Other relevant information: </label>
+                <label for="other-relevant-information">26. Other relevant information: </label>
                 <p class="error-message"></p>
                 <textarea name="other_relevant_information" class="form-control" rows="8" cols="80" data-parsley-trigger="change" required="" id="other-relevant-information"></textarea>
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="name-and-title" title="Required">Name and title of person making report: *</label>
+                <label for="name-and-title" title="Required">27. Name and title of person making report: *</label>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" name="name_and_title" value="" data-parsley-trigger="change" required="" id="name-and-title">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="telephone-no" title="Required">Telephone no: *</label>
+                <label for="telephone-no" title="Required">28. Telephone no: *</label>
                 <p class="error-message"></p>
                 <input type="number" name="telephone_no" class="form-control" value="" data-parsley-trigger="change" required="" id="telephone-no" >
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="company-dept-code">Company/dept. code, E-mail or InfoMail code: </label>
+                <label for="company-dept-code">29. Company/dept. code, E-mail or InfoMail code: </label>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" name="company_dept_code" value="" data-parsley-trigger="change" required="" id="company-dept-code">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="reporter-ref" title="Required">Reporter ref.: *</label>
+                <label for="reporter-ref" title="Required">30. Reporter ref.: *</label>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" name="reporter_ref" value="" data-parsley-trigger="change"  id="reporter-ref">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="address" title="Required">Address: *</label>
+                <label for="address" title="Required">31. Address: *</label>
                 <p class="error-message"></p>
                 <input type="text" name="address" class="form-control" value="" data-parsley-trigger="change" id="address">
               </div>
               <div class="form-group col-xs-12 col-sm-4">
-                <label for="date-signature" title="Required">Date/Signature: *</label>
+                <label for="date-signature" title="Required">32. Date/Signature: *</label>
                 <p class="error-message"></p>
                 <input type="text" class="form-control" name="date_signature" value="" data-parsley-trigger="change" required="" id="date-signature">
               </div>
             </div>
+            <hr>
+            <br>
             <div class="row">
               <div class="form-group col-xs-12">
                 <label for="description-of-the-occurrence ">Description of the occurrence (continuation):</label>
@@ -349,6 +358,7 @@
           <p>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 20 to 26 should be completed. The CAAK will respect the confidentiality and contact you personally.</p>
         </div>
       </div>
+      <hr>
       </div>
     </section>
 

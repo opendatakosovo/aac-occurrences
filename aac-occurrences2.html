@@ -32,7 +32,6 @@
        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
      <![endif]-->
     </head>
-  </head>
   <body>
 
     <header>
@@ -56,7 +55,7 @@
           <div class="row">
             <div class="form-group col-xs-12 col-sm-7">
               <div class="row">
-                <label class="col-xs-10" for="operator" title="Required">1. Categories of occurrence * </label>
+                <label class="col-xs-10" for="operator" title="Required">1. CATEGORIES OF OCCURRENCE: * </label>
                 <a href="#info" class="col-xs-2 text-center" data-toggle="tooltip" data-placement="top" title="An air operator's certificate (AOC) is the approval granted by a national"> ?</a>
 
                 <p class="error-message"></p>
@@ -79,22 +78,25 @@
               </div>
             </div>
             <div class="form-group col-xs-12 col-sm-5">
-              <label for="occurrence-position" title="Required">2. Occurrence Position: * </label>
+              <label for="occurrence-position" title="Required">2. OCCURRENCE POSITION: * </label>
               <p class="error-message"></p>
               <input name="occurrence_position" value="" type="text" data-parsley-trigger="change" required="" data-parsley-type="digits" class="form-control"  id="occurrence-position">
             </div>
 
           </div>
+          <br>
+          <hr>
+          <br>
           <div class="row">
             <div class="form-group col-xs-12 col-sm-6">
               <div class="row">
                 <div class="col-xs-6">
                   <label>3.</label> <input type="radio" class="" data-parsley-trigger="change" required="" name="fly-alt-ht" value="" id="fly">
-                  <label for="fly" title="Required"> Fly</label>
+                  <label for="fly" title="Required"> FLY</label>
                 </div>
                 <div class="col-xs-6">
                   <input type="radio" class="" name="fly-alt-ht" value="" id="alt-ht">
-                  <label for="alt-ht" title="alt-ht" class="  ">Alt/ht</label>
+                  <label for="alt-ht" title="alt-ht" class="  ">ALT/HT(FT)</label>
                 </div>
               </div>
               <p></p>
@@ -102,7 +104,7 @@
             </div>
 
             <div class="col-xs-12 col-sm-6">
-                <label for="tel">Date (dd.mm.yyyy)</label>
+                <label for="tel">Date (dd.mm.yyyy): *</label>
                 <p></p>
                 <div class="form-group">
                   <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -114,10 +116,28 @@
               </div>
             </div>
           </div>
-
+          <br>
+          <hr>
+          <br>
           <div class="row">
             <div class="form-group col-xs-12 col-sm-6">
-                <label for="time-of-event" title="Required">5. Time of event: * </label>
+                <label for="time-of-event" title="Required">5. Time (HH:MM): * </label>
+                <p class="error-message"></p>
+                <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
+                  <option value="">Choose an item.</option>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                </select>
                 <p class="error-message"></p>
                 <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
                   <option value="">Choose an item.</option>
@@ -151,43 +171,46 @@
               </div>
           </div>
 
+          <br>
+          <hr>
+          <br>
           <!-- Operators not finisht -->
 
           <div class="row">
             <div class="col-xs-12 col-sm-4">
-              <label for="operator">OPERATOR</label>
+              <label for="operator">OPERATOR: *</label>
               <p></p>
-              <label for="operator-7">7</label>
+              <label for="operator-7">7.</label>
               <input type="text" name="operator_seven" class="form-control" id="operator-7" value="">
               <p></p>
-              <label for="operator-15">15</label>
+              <label for="operator-15">15.</label>
               <input type="text" name="operator_fifteen" class="form-control" id="operator-15" value="">
               <p></p>
-              <label for="operator-23">23</label>
+              <label for="operator-23">23.</label>
               <input type="text" name="operator_twenty_three" class="form-control" id="operator-23" value="">
             </div>
             <div class="col-xs-12 col-sm-4">
-              <label for="callsign-regn">CALLSIGN/REGN</label>
+              <label for="callsign-regn">CALLSIGN/REGN: *</label>
               <p></p>
-              <label for="operator-8">8</label>
+              <label for="operator-8">8.</label>
               <input type="text" name="operator_eight" class="form-control" id="operator-8" value="">
               <p></p>
-              <label for="operator-16">16</label>
+              <label for="operator-16">16.</label>
               <input type="text" name="operator_sixteen" class="form-control" id="operator-16" value="">
               <p></p>
-              <label for="operator-24">24</label>
+              <label for="operator-24">24.</label>
               <input type="text" name="operator_twenty_four" class="form-control" id="operator-24" value="">
             </div>
             <div class="col-xs-12 col-sm-4">
-              <label for="operator">TYPE</label>
+              <label for="operator">TYPE: *</label>
               <p></p>
-              <label for="operator-9">9</label>
+              <label for="operator-9">9.</label>
               <input type="text" name="operator_nine" class="form-control" id="operator-9" value="">
               <p></p>
-              <label for="operator-17">17</label>
+              <label for="operator-17">17.</label>
               <input type="text" name="operator_twenty_five" class="form-control" id="operator-17" value="">
               <p></p>
-              <label for="operator-25">25</label>
+              <label for="operator-25">25.</label>
               <input type="text" name="operator_seven" class="form-control" id="operator-25" value="">
             </div>
           </div>
@@ -196,49 +219,50 @@
             <div class="col-xs-12 col-sm-4">
               <label for="operator">FROM</label>
               <p></p>
-              <label for="operator-10">10</label>
+              <label for="operator-10">10.</label>
               <input type="text" name="operator_ten" class="form-control" id="operator-10" value="">
               <p></p>
-              <label for="operator-18">18</label>
+              <label for="operator-18">18.</label>
               <input type="text" name="operator_eighteen" class="form-control" id="operator-18" value="">
               <p></p>
-              <label for="operator-26">26</label>
+              <label for="operator-26">26.</label>
               <input type="text" name="operator_nine" class="form-control" id="operator-26" value="">
             </div>
             <div class="col-xs-12 col-sm-4">
               <label for="operator">TO</label>
               <p></p>
-              <label for="operator-11">11</label>
+              <label for="operator-11">11.</label>
               <input type="text" name="operator_eleven" class="form-control" id="operator-11" value="">
               <p></p>
-              <label for="operator-19">19</label>
+              <label for="operator-19">19.</label>
               <input type="text" name="operator_eleven" class="form-control" id="operator-19" value="">
               <p></p>
-              <label for="operator-27">27</label>
+              <label for="operator-27">27.</label>
               <input type="text" name="operator_twenty_seven" class="form-control" id="operator-27" value="">
             </div>
             <div class="col-xs-12 col-sm-4">
               <label for="operator">SSR CODE</label>
               <p></p>
-              <label for="operator-12">12</label>
+              <label for="operator-12">12.</label>
               <input type="text" name="operator_twelve" class="form-control" id="operator-12" value="">
               <p></p>
-              <label for="operator-20">8</label>
+              <label for="operator-20">20.</label>
               <input type="text" name="operator_twenty" class="form-control" id="operator-20" value="">
               <p></p>
-              <label for="operator-28">28</label>
+              <label for="operator-28">28.</label>
               <input type="text" name="operator_seven" class="form-control" id="operator-28" value="">
             </div>
           </div>
+          <br>
           <hr>
-
+          <br>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
-              <label for="">MODE C DISPLAYED</label>
+              <label for="">MODE C DISPLAYED: *</label>
               <p></p>
               <div class="row">
                 <div class="col-xs-12">
-                  <label for="mode-13">13</label>
+                  <label for="mode-13">13.</label>
                 </div>
                 <div class="col-xs-6">
                   <input type="radio" name="mode-13" value="yes" id="yes-mode-13">
@@ -251,7 +275,7 @@
               </div>
               <div class="row">
                 <div class="col-xs-12">
-                  <label for="mode-21">21</label>
+                  <label for="mode-21">21.</label>
                 </div>
                 <div class="col-xs-6">
                   <input type="radio" name="mode" value="yes-mode-21" id="yes-mode-21">
@@ -264,7 +288,7 @@
               </div>
               <div class="row">
                 <div class="col-xs-12">
-                  <label for="mode-13">29</label>
+                  <label for="mode-13">29.</label>
                 </div>
                 <div class="col-xs-6">
                   <input type="radio" name="mode" value="yes-mode-29" id="yes-mode-29">
@@ -277,11 +301,11 @@
               </div>
             </div>
             <div class="col-xs-12 col-sm-6">
-              <label for="">IFR/VFR/SVFR</label>
+              <label for="">IFR/VFR/SVFR: *</label>
               <p></p>
               <div class="row">
                 <div class="col-xs-12">
-                  <label for="mode-14">14</label>
+                  <label for="mode-14">14.</label>
                 </div>
                 <div class="col-xs-4">
                   <input type="radio" name="mode-14" value="ifr" id="ifr-mode-14">
@@ -298,7 +322,7 @@
               </div>
               <div class="row">
                 <div class="col-xs-12">
-                  <label for="mode-22">22</label>
+                  <label for="mode-22">22.</label>
                 </div>
                 <div class="col-xs-4">
                   <input type="radio" name="mode" value="ifr-mode-22" id="ifr-mode-22">
@@ -315,7 +339,7 @@
               </div>
               <div class="row">
                 <div class="col-xs-12">
-                  <label for="mode-13">29</label>
+                  <label for="mode-13">30.</label>
                 </div>
                 <div class="col-xs-4">
                   <input type="radio" name="mode" value="ifr-mode-29" id="ifr-mode-29">
@@ -332,45 +356,52 @@
               </div>
             </div>
           </div>
+          <br>
+          <hr>
+          <br>
           <div class="row">
             <p></p>
             <div class="col-xs-12 col-sm-4">
-              <label for="rtf-frequencies">31. RTF Frequencies</label>
+              <label for="rtf-frequencies">31. RTF Frequencies: *</label>
               <p></p>
               <input type="text" name="rtf-frequencies" value="" class="form-control" id="rtf-frequencies">
             </div>
             <div class="col-xs-12 col-sm-4">
-              <label for="radar-equipment">32. Radar Equipment</label>
+              <label for="radar-equipment">32. Radar Equipment: *</label>
               <p></p>
               <input type="text" name="radar-equipment" value="" class="form-control" id="radar-equipment">
             </div>
             <div class="col-xs-12 col-sm-4">
-              <label for="equipment-unserviceabilities">33. Equipment Unserviceabilities</label>
+              <label for="equipment-unserviceabilities">33. Equipment Unserviceabilities: *</label>
               <p></p>
               <input type="text" name="equipment-unserviceabilities" value="" class="form-control" id="equipment-unserviceabilities">
             </div>
           </div>
-
+          <br>
+          <hr>
+          <br>
           <div class="row">
             <p></p>
             <div class="col-xs-12 col-sm-6">
-              <label for="qnh">34. Qnh</label>
+              <label for="qnh">34. QNH: *</label>
               <p></p>
               <input type="text" name="qnh" value="" class="form-control" id="qnh">
             </div>
             <div class="col-xs-12 col-sm-6">
-              <label for="runway-in-use">35. Runway in use</label>
+              <label for="runway-in-use">35. Runway in use: *</label>
               <p></p>
               <input type="text" name="qnh" value="" class="form-control" id="qnh">
             </div>
           </div>
-
+          <br>
+          <hr>
+          <br>
           <div class="row">
             <div class="form-group col-xs-12 col-sm-4">
               <div class="row">
                 <div class="col-xs-12">
                   <br>
-                  <label>36. Class of airspace</label>
+                  <label>36. CLASS OF AIRSPACE: *</label>
                   <br>
                 </div>
                 <div class="col-xs-3">
@@ -407,9 +438,7 @@
             </div>
             <br>
             <div class="col-xs-12 col-sm-8">
-              <div class="col-xs-12">
-                <label>37. Type of airspace</label>
-              </div>
+              <label>37. TYPE OF AIRSPACE: *</label>
               <div class="row">
                 <div class="col-xs-2">
                   <input type="checkbox" name="atz" value="atz" id="atz">
@@ -474,13 +503,14 @@
               </div>
             </div>
           </div>
+          <br>
           <hr>
+          <br>
           <div class="row">
             <div class="col-xs-12 col-sm-9">
-
               <div class="row">
                 <div class="col-xs-12">
-                  <label>38.  TYPE OF ATS SERVICE</label>
+                  <label>38.  TYPE OF ATS SERVICE: *</label>
                 </div>
                 <div class="col-xs-2">
                   <input type="checkbox" name="radar" value="radar" id="radar">
@@ -506,6 +536,7 @@
                   <input type="checkbox" name="adc" value="adc" id="adc">
                   <label for="adc">ADC</label>
                 </div>
+
               </div>
               <div class="row">
                 <div class="col-xs-2">
@@ -532,15 +563,22 @@
                   <input type="checkbox" name="gmc" value="gmc" id="gmc">
                   <label for="gmc">GMC</label>
                 </div>
+                <div class="col-xs-2">
+                  <input type="checkbox" name="aerodrome" value="aerodrome" id="aerodrome">
+                  <label for="aerodrome">Aerodrome</label>
+                </div>
               </div>
+
             </div>
             <div class="col-xs-12 col-sm-3">
-              <label for="sid-star-route">39. SID/STAR/ROUTE</label>
+              <label for="sid-star-route">39. SID/STAR/ROUTE: *</label>
               <p></p>
               <input type="text" name="sid-star-route" value="" class="form-control" id="sid-star-route">
             </div>
           </div>
+          <br>
           <hr>
+          <br>
           <div class="row">
             <div class="col-xs-12 col-sm-3">
               <div class="row">
@@ -563,7 +601,7 @@
             <div class="col-xs-12 col-sm-3">
               <div class="row">
                 <div class="col-xs-12">
-                  <label for="">41. Min Separation</label>
+                  <label for="">41. Min Separation: *</label>
                   <p>Horizontal <input type="text" class="form-control" name="" style="display: inline; width: 50%;" value="">NM</p>
                   <p>Vertical <input type="text" class="form-control" style="display: inline; width: 50%;" name="" value="">ft</p>
                 </div>
@@ -572,7 +610,7 @@
             <div class="col-xs-12 col-sm-3">
               <div class="row">
                 <div class="col-xs-12">
-                  <label>42. Alert Activation </label>
+                  <label>42. Alert Activation: *</label>
                   <br>
                 </div>
                 <div class="col-xs-3">
@@ -597,7 +635,7 @@
               <div class="row">
                 <div class="col-xs-12">
                   <label for="">43. Traffic info given by
-	ATC?</label>
+	ATC?: *</label>
                 </div>
                 <p></p>
                 <div class="col-xs-6">
@@ -611,6 +649,9 @@
               </div>
             </div>
           </div>
+          <br>
+          <hr>
+          <br>
           <div class="row">
             <div class="form-group col-xs-12 ">
               <label for="brief-title-summary" title="Required">45. BRIEF TITLE
@@ -621,6 +662,8 @@ Summary: *</label>
           </div>
         </div>
         <br>
+        <hr>
+        <br>
         <div class="row">
           <div class="form-group col-xs-12 ">
             <label for="narrative-use">46  NARRATIVE - use a diagram if necessary (Aerodromes submit weather report including local and regional QNH). : *</label>
@@ -629,27 +672,31 @@ Summary: *</label>
           </div>
         </div>
         <br>
+        <hr>
+        <br>
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <label for="name" >47. Name</label>
+            <label for="name" >47. Name: *</label>
             <p></p>
             <input type="text" name="name" class="form-control" value="" id="name">
           </div>
           <div class="col-xs-12 col-sm-4">
-            <label for="on-duty-as" >48. On duty as</label>
+            <label for="on-duty-as" >48. On duty as: *</label>
             <p></p>
             <input type="text" name="on_duty_as" class="form-control" value="" id="on-duty-as">
           </div>
           <div class="col-xs-12 col-sm-4">
-            <label for="ats-unit" >49.	ATS Unit</label>
+            <label for="ats-unit" >49.	ATS Unit: *</label>
             <p></p>
             <input type="text" name="ats_unit" class="form-control" value="" id="ats-unit">
           </div>
         </div>
         <br>
+        <hr>
+        <br>
         <div class="row">
           <div class="form-group col-xs-12 col-sm-4">
-            <label for="time-since" title="Required">Time since: * </label>
+            <label for="time-since" title="Required">50. Time since: * </label>
               <p class="error-message text-center">last break</p>
               <select class="form-control" name="time_since" data-parsley-trigger="change" required="">
                 <option value="">Choose an item.</option>
@@ -685,7 +732,7 @@ Summary: *</label>
               </select>
           </div>
           <div class="form-group col-xs-12 col-sm-4">
-            <label for="start-time-of" title="Required">51.	Start time of: * </label>
+            <label for="start-time-of" title="Required">51.	Start time of: *</label>
               <p class="error-message text-center">shift</p>
               <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
                 <option value="">Choose an item.</option>
@@ -723,7 +770,7 @@ Summary: *</label>
           <div class="col-xs-12 col-sm-3">
             <div class="row">
               <div class="col-xs-12">
-                <label for="">52	Radar recordings</label>
+                <label for="">52	Radar recordings: *</label>
               </div>
 
               <div class="col-xs-6">
@@ -744,7 +791,7 @@ Summary: *</label>
           <div class="col-xs-12 col-sm-4">
             <div class="row">
               <div class="col-xs-12">
-                <label for="">52	Radar recordings</label>
+                <label for="">52.	Radar recordings: *</label>
               </div>
               <p></p>
               <p></p>
@@ -762,7 +809,7 @@ Summary: *</label>
           </div>
           <div class="col-xs-12 col-sm-4">
 
-              <label for="list-other">54. List other agencies advised</label>
+              <label for="list-other">54. List other agencies advised: *</label>
               <p></p>
               <input type="text" name="list_other-one" class="form-control" value="">
               <br>
@@ -784,21 +831,24 @@ Summary: *</label>
           </div>
         </div>
         <hr>
+        <br>
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <label for="address">56.	Address</label>
+            <label for="address">56. Address: *</label>
             <input type="text" name="address" value="" class="form-control" id="address">
           </div>
           <div class="col-xs-12 col-sm-4">
-            <label for="e-mail-address">E-mail Address</label>
+            <label for="e-mail-address">57. E-mail Address: *</label>
             <input type="text" name="e_mail_address" class="form-control" value="" id="e-mail-address">
           </div>
           <div class="col-xs-12 col-sm-4">
-            <label for="telephone">Telephone</label>
+            <label for="telephone">58. Telephone: *</label>
             <input type="text" name="telephone" class="form-control" value="" id="telephone">
           </div>
         </div>
       </div>
+      <br>
+      <hr>
       <br>
       <div class="submit">
         <input type="submit" class="btn btn-success" id="btn-submit" name="submit" value="Submit"/>
@@ -882,6 +932,7 @@ AACK/DSF/OR-FRM 02</h3>
       <h5>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 47 to 57 should be completed. The CAAK will respect the confidentiality and contact you personally.</h5>
     </div>
     </div>
+    
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
    <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
