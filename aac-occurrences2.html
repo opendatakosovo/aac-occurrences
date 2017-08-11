@@ -44,10 +44,10 @@
             <p>Are you concerned about the confidentiality of this report and wish to be contacted before it is processed?
               If so, please ensure you provide us with your contact details.<p>
             <h4>CONFIDENTIAL?</h4>
-            <label for="yes">Yes</label>
             <input type="radio" name="confidential" data-parsley-trigger="change" required="" value="yes" id="yes">
-            <label for="no">No</label>
+            <label for="yes">Yes</label>
             <input type="radio" name="confidential" data-parsley-trigger="change" required="" value="no" id="no">
+            <label for="no">No</label>
             <p id="radio-error"></p>
           </section>
           <br/>
@@ -123,21 +123,11 @@
             <div class="form-group col-xs-12 col-sm-6">
                 <label for="time-of-event" title="Required">5. Time (HH:MM): * </label>
                 <p class="error-message"></p>
-                <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
-                  <option value="">Choose an item.</option>
-                  <option value="01">01</option>
-                  <option value="02">02</option>
-                  <option value="03">03</option>
-                  <option value="04">04</option>
-                  <option value="05">05</option>
-                  <option value="06">06</option>
-                  <option value="08">08</option>
-                  <option value="09">09</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                </select>
+                <div class="input-group date form_time" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+                    <input class="form-control" size="16" type="text" value="">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                </div>
                 <p class="error-message"></p>
                 <select class="form-control" name="time_of_event" data-parsley-trigger="change" required="" id="time-of-event">
                   <option value="">Choose an item.</option>
@@ -775,13 +765,13 @@ Summary: *</label>
 
               <div class="col-xs-6">
                   <p class="text-center">Held</p>
-                <input type="radio" name="yes-prescribed-separation" value="yes-prescribed-separation" id="yes-prescribed-separation">
-                <label for="yes-prescribed-separation">Yes</label>
+                <input type="radio" name="held-separation" value="Yes" id="yes-prescribed-separation">
+                <label for="yes-held-separation">Yes</label>
               </div>
               <div class="col-xs-6">
                 <p style="visibility: hidden">hello</p>
-                <input type="radio" name="no-prescribed-separation" value="no-prescribed-separation" id="no-prescribed-separation">
-                <label for="no-prescribed-separation">No</label>
+                <input type="radio" name="held-separation" value="No" id="no-held-separation">
+                <label for="no-held-separation">No</label>
               </div>
             </div>
           </div>
@@ -791,7 +781,7 @@ Summary: *</label>
           <div class="col-xs-12 col-sm-4">
             <div class="row">
               <div class="col-xs-12">
-                <label for="">52.	Radar recordings: *</label>
+                <label for="">53.	Radar recordings: *</label>
               </div>
               <p></p>
               <p></p>
@@ -932,7 +922,7 @@ AACK/DSF/OR-FRM 02</h3>
       <h5>An occurrence may be reported confidentially. If the report is ‘CONFIDENTIAL’ please tick the box ‘Yes’ on top of the form to annotate confidentiality of the report, and if it is sent to CAAK’s address, mark the envelope ‘Personal for the Director General of CAAK’. The second copy need not be forwarded to local management. BOXES 47 to 57 should be completed. The CAAK will respect the confidentiality and contact you personally.</h5>
     </div>
     </div>
-    
+
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
    <script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
